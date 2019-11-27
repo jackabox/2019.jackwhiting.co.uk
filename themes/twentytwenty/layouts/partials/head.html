@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ if eq .Description "" }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+  {{- with $.Param "keywords" }}
+  <meta name="keywords" content="{{ delimit . "," }}">
+  {{- end }}
+  {{- with $.Param "author" }}
+  <meta name="author" content="{{ . }}">
+  {{- end }}
+  {{ .Hugo.Generator }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{{ if .Site.IsServer }}
+	    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.dev.config.js") }}
+	    <link rel="stylesheet" href="{{ $style.Permalink }}">
+	{{ else }}
+	    {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
+	    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+	{{ end }}
+
+  <link rel="alternate" href="{{ "index.xml" | relURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+  <title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+</head>
+
+<body>
