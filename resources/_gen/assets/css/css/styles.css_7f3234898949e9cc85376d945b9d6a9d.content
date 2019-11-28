@@ -651,7 +651,7 @@ html {
 }
 
 h1 {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
@@ -675,12 +675,84 @@ h5 {
   font-weight: 600;
 }
 
-p {
-  line-height: 1.6;
+p,
+li {
+  font-size: 1.07rem;
+  line-height: 1.7;
 }
 
 .content * + p {
   margin-top: 20px;
+}
+
+.wysiwyg * + p,
+.wysiwyg * + ul,
+.wysiwyg * + ol,
+.wysiwyg * + pre,
+.wysiwyg * + code {
+  margin-top: 20px;
+}
+
+.wysiwyg * + h1 {
+  margin-top: 50px;
+}
+
+.wysiwyg * + h2,
+.wysiwyg * + h3 {
+  margin-top: 40px;
+}
+
+.wysiwyg * + h4,
+.wysiwyg * + h5 {
+  margin-top: 30px;
+}
+
+.wysiwyg ul {
+  list-style-position: outside;
+  list-style-type: disc;
+  margin-left: 15px;
+}
+
+.wysiwyg ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin-left: 25px;
+}
+
+pre {
+  padding: 20px;
+  background-color: #FDF0F0;
+  font-size: 0.875rem;
+}
+
+a {
+  position: relative;
+}
+
+a.no-underscore:after {
+  background-color: transparent;
+}
+
+a:after {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  content: ' ';
+  z-index: -1;
+  background-color: #E4FAEF;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+a:hover:after {
+  height: 100%;
+}
+
+a.no-underscore:hover:after {
+  background-color: #E4FAEF;
 }
 
 /* Tailwind's utility classes - generated based on config file */

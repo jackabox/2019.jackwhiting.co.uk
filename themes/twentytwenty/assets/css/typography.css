@@ -11,7 +11,7 @@ html {
 }
 
 h1 {
-  @apply text-3xl;
+  @apply text-4xl;
   @apply font-semibold;
 }
 
@@ -35,10 +35,75 @@ h5 {
   @apply font-semibold;
 }
 
-p {
-  line-height: 1.6;
+p,
+li {
+  font-size: 1.07rem;
+  line-height: 1.7;
 }
 
 .content * + p {
   @apply mt-4;
+}
+
+.wysiwyg * + p,
+.wysiwyg * + ul,
+.wysiwyg * + ol,
+.wysiwyg * + pre,
+.wysiwyg * + code {
+  @apply mt-4;
+}
+
+.wysiwyg * + h1 {
+  @apply mt-10;
+}
+
+.wysiwyg * + h2,
+.wysiwyg * + h3 {
+  @apply mt-8;
+}
+
+.wysiwyg * + h4,
+.wysiwyg * + h5 {
+  @apply mt-6;
+}
+
+.wysiwyg ul {
+  @apply list-outside list-disc ml-3;
+}
+
+.wysiwyg ol {
+  @apply list-outside list-decimal ml-5;
+}
+
+pre {
+  @apply p-4 bg-site-pink text-sm;
+}
+
+a {
+  position: relative;
+}
+
+a.no-underscore:after {
+  @apply bg-transparent;
+}
+
+a:after {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  content: ' ';
+  z-index: -1;
+  @apply bg-site-green;
+  transition: 0.2s all ease-in-out;
+}
+
+a:hover:after {
+  height: 100%;
+}
+
+a.no-underscore:hover:after {
+  @apply bg-site-green;
 }

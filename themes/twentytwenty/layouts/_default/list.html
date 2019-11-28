@@ -9,7 +9,8 @@
 
   <!-- Ranges through content/posts/*.md -->
   <div class="flex flex-col post-items">
-    {{ range $index, $element := (.Paginator 10).Pages }}
+    {{ range $index, $element := (.Paginator 8).Pages }}
+    
       <div class="mb-20 pb-20 border-b border-gray-300">
         <div class="w-9/12">
           <h2 class="mb-4"><a href="{{.Permalink}}">{{.Title}}</a></h2>
@@ -32,15 +33,16 @@
           </div>
         </div>
       </div>
-
-      {{ if (eq $index 4) }}
+      
+      {{ if (eq $index 3) }}
       <div class="mb-20 pb-20 border-b border-gray-300">
-        <div class="p-8 rounded-lg bg-site-green text-center">
-          <h2 class="mb-4">Don't just take my word for it...</h2>
-          <p>Testimonial to go here</p>
+        <div class="p-8 rounded-lg bg-site-blue text-center">
+          <h2 class="mb-4">Stay up to date...</h2>
+          <p>Newsletter</p>
         </div>
       </div>
       {{ end }}
+      
     {{ end }}
     
     <div class="pagination mb-20">
