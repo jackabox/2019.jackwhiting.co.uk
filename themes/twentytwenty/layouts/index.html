@@ -1,9 +1,25 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
-	
 
-	<div class="container bg-black">
-		<h1>Hi</h1>
+<section class="container mb-20">
+	<div class="lg:w-8/12 content">
+		{{ .Content }}
 	</div>
+</section>
+
+<section class="container mb-20">
+	<h2>Recent Works</h2>
+	<p>Insert 2x works here</p>
+</section>
+
+<section class="container mb-20">
+	<h2>Latest Posts</h2>
+	<p>5 latest articles + dates</p>
+</section>
+
+<section class="container mb-20">
+	<h2>Newsletter</h2>
+	<p>Mailchimp?</p>
+</section>
 
 {{ partial "footer.html" . }}

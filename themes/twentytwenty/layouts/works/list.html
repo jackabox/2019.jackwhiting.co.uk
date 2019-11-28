@@ -7,16 +7,14 @@
     {{.Content}}
   </div>
 
-  <ul>
   <!-- Ranges through content/posts/*.md -->
   {{ range .Pages }}
-      <li>
-          <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-          <p>{{ .Summary }}</p>
-          {{.Date.Format "2006-01-02"}} 
-      </li>
+      <div class="py-10">
+          <h2>{{.Title}}</h2>
+          {{ .Summary }}
+          <p><a href="{{ .Params.Link }}" title="Link to {{.Title}}" rel="nofollow noreferrer">Visit Website</a></p>
+      </div>
   {{ end }}
-  </ul>
 </section>
 
 {{ partial "footer.html" . }}

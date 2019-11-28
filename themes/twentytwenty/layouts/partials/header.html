@@ -1,13 +1,16 @@
-<header>
-  <div class="container clearfix">
-    <a class="path" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-300">
+    <div><a class="font-medium text-xl tracking-wide" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
 
-    <div class="right">
-      {{ range $i, $page := (where .Site.Pages "Section" "pages") }}
-        {{ if not (eq $i 0) }}|{{ end }}
-        <a class="path" href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
-      {{ end }}
-    </div>
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6"><a href="{{ .Site.BaseURL }}/works" title="Works">Works</a></li>
+        <li class="ml-6"><a href="{{ .Site.BaseURL }}/playground" title="Works">Playground</a></li>
+        <li class="ml-6"><a href="{{ .Site.BaseURL }}/services" title="Services">Services</a></li>
+        <li class="ml-6"><a href="{{ .Site.BaseURL }}/posts" title="Posts">Posts</a></li>
+        <li class="ml-6"><a href="{{ .Site.BaseURL }}/contact" title="Contact Me">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
