@@ -1,22 +1,52 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container">
-  <div>
-    <h1>{{.Title}}</h1>
+<section class="container mt-20">
+  <div class="lg:w-8/12 mb-30">
+    <h1 class="mb-4">{{.Title}}</h1>
     {{.Content}}
   </div>
 
-  <ul>
   <!-- Ranges through content/posts/*.md -->
-  {{ range .Pages }}
-      <li>
-          <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-          <p>{{ .Summary }}</p>
-          {{.Date.Format "2006-01-02"}} 
-      </li>
-  {{ end }}
-  </ul>
+  <div class="flex flex-col post-items">
+    {{ range $index, $element := (.Paginator 10).Pages }}
+      <div class="mb-20 pb-20 border-b border-gray-300">
+        <div class="w-9/12">
+          <h2 class="mb-4"><a href="{{.Permalink}}">{{.Title}}</a></h2>
+        </div>
+
+        <div class="flex flex-wrap row justify-between">  
+          <div class="column w-9/12">
+            <p>{{ .Summary }}</p>
+            <p class="mt-6">
+              <a href="{{.Permalink}}">Read More</a>
+            </p>
+          </div>
+
+          <div class="column w-2/12">
+            <h5 class="mb-2">Date</h5>
+            <p class="text-sm">{{.Date.Format "2006-01-02"}}</p>
+
+            <h5 class="mb-2 mt-6">Categories</h5>
+            <p class="text-sm">Thoughts &middot; Ideas</p>
+          </div>
+        </div>
+      </div>
+
+      {{ if (eq $index 4) }}
+      <div class="mb-20 pb-20 border-b border-gray-300">
+        <div class="p-8 rounded-lg bg-site-green text-center">
+          <h2 class="mb-4">Don't just take my word for it...</h2>
+          <p>Testimonial to go here</p>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+    
+    <div class="pagination mb-20">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
 </section>
 
 {{ partial "footer.html" . }}

@@ -20,7 +20,10 @@ module.exports = {
       '8': '40px',
       '9': '45px',
       '10': '50px',
+      '14': '70px',
       '20': '100px',
+      '30': '150px',
+      '40': '200px',
       '-1': '-5px',
       '-2': '-10px',
       '-3': '-15px',
@@ -84,7 +87,10 @@ module.exports = {
     }),
     extend: {
       colors: theme => ({
-        transparent: 'transparent'
+        'site-green': '#E4FAEF',
+        'site-pink': '#FDF0F0',
+        'site-orange': '#FEF2E2',
+        'site-blue': '#E6F7FF'
       }),
       fontSize: theme => ({})
     }

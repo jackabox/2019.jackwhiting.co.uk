@@ -27,6 +27,12 @@ h3 {
 
 h4 {
   @apply text-lg;
+  @apply font-medium;
+}
+
+h5 {
+  @apply text-base;
+  @apply font-semibold;
 }
 
 p {

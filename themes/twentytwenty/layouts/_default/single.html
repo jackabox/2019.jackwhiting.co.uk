@@ -1,0 +1,12 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="container my-20">
+  <h1>{{ .Title }}</h1>
+  
+  <div class="wysiwyg">
+    {{ .Content }}
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
