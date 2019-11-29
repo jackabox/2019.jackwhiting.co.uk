@@ -1,12 +1,14 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container">
-  <div>
+<section class="container mt-20 mb-20">
+    <div class="lg:w-9/12 content">
     <h1>{{.Title}}</h1>
     {{.Content}}
   </div>
+</section>
 
+<section class="container">
   <!-- Ranges through content/posts/*.md -->
   {{ range .Pages }}
       <div class="py-10">

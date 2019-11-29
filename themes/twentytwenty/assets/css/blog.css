@@ -1,0 +1,38 @@
+.post-items > .post-item {
+  @apply border-b border-gray-200;
+}
+
+.post-items > .post-item:last-child {
+  @apply border-b-0;
+  @apply pb-0;
+}
+
+.pagination {
+  @apply flex justify-center;
+}
+
+.pagination a {
+  @apply bg-gray-100 flex items-center justify-center;
+  @apply mr-1 text-sm;
+  width: 30px;
+  height: 30px;
+  transition: 0.2s all ease-in-out;
+}
+
+.pagination a:hover {
+  @apply bg-site-orange;
+}
+
+.pagination .active a {
+  @apply bg-site-orange;
+}
+
+.pagination a:after {
+  @apply hidden;
+}
+
+.pagination li.disabled,
+.pagination li:first-child,
+.pagination li:last-child {
+  @apply hidden;
+}

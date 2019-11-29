@@ -95,7 +95,9 @@ module.exports = {
       fontSize: theme => ({})
     }
   },
-  variants: {},
+  variants: {
+    borderWidth: ['responsive', 'last', 'hover', 'focus']
+  },
   plugins: [],
   corePlugins: {
     container: false

@@ -18,17 +18,14 @@
       {{ partial "blog/item-large.html" . }}
       
       {{ if (eq $index 3) }}
-      <div class="mb-20 pb-20 border-b border-gray-300">
+      <div class="mb-20 pb-20 post-item">
           {{ partial "newsletter.html" . }}
       </div>
       {{ end }}
-      
     {{ end }}
-    
-    <div class="pagination mb-20">
-      {{ template "_internal/pagination.html" . }}
-    </div>
   </div>
+
+  {{ template "_internal/pagination.html" . }}
 </section>
 
 {{ partial "footer.html" . }}

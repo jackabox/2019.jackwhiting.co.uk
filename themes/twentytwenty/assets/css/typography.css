@@ -106,7 +106,7 @@ a:after {
   position: absolute;
   height: 5px;
   width: 100%;
-  bottom: 0px;
+  bottom: 3px;
   left: 0;
   right: 0;
   content: ' ';

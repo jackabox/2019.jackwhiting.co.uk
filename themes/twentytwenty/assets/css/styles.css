@@ -8,6 +8,7 @@
 @import 'assets/css/site';
 @import 'assets/css/grid';
 @import 'assets/css/typography';
+@import 'assets/css/blog';
 
 /* Tailwind's utility classes - generated based on config file */
 @import 'node_modules/tailwindcss/utilities';

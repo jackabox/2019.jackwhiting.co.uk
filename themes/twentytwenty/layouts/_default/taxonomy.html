@@ -3,7 +3,7 @@
 
 <section class="container mt-20">
   <div class="lg:w-8/12 mb-30">
-    <h1 class="mb-4">Posts in "{{.Title}}"</h1>
+    <h1 class="mb-4">Posts In "{{.Title}}"</h1>
     {{.Content}}
   </div>
 
@@ -14,17 +14,14 @@
       {{ partial "blog/item-large.html" . }}
       
       {{ if (eq $index 3) }}
-      <div class="mb-20 pb-20 border-b border-gray-300">
+      <div class="mb-20 pb-20 post-item">
           {{ partial "newsletter.html" . }}
       </div>
       {{ end }}
-      
     {{ end }}
-    
-    <div class="pagination mb-20">
-      {{ template "_internal/pagination.html" . }}
-    </div>
   </div>
+
+  {{ template "_internal/pagination.html" . }}
 </section>
 
 {{ partial "footer.html" . }}
