@@ -68,11 +68,15 @@ li {
 }
 
 .wysiwyg ul {
-  @apply list-outside list-disc ml-3;
+  @apply list-outside list-disc ml-5;
 }
 
 .wysiwyg ol {
   @apply list-outside list-decimal ml-5;
+}
+
+.wysiwyg li pre {
+  @apply mb-4;
 }
 
 pre {
@@ -90,6 +94,8 @@ pre code {
 
 a {
   position: relative;
+  z-index: 2;
+  display: inline-block;
 }
 
 a.no-underscore:after {

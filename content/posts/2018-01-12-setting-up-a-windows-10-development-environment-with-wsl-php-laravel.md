@@ -7,6 +7,7 @@ categories:
   - Tools
   - Windows
   - WSL
+featured: true
 ---
 
 ## Preface

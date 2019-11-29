@@ -1,7 +1,30 @@
-<div>
-  <h1>{{ .Title }}</h1>
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
 
-  {{ range .Pages }}
-    {{ .Render "summary"}}
-  {{ end }}
-</div>
+<section class="container mt-20">
+  <div class="lg:w-8/12 mb-30">
+    <h1 class="mb-4">Posts in "{{.Title}}"</h1>
+    {{.Content}}
+  </div>
+
+  <!-- Ranges through content/posts/*.md -->
+  <div class="flex flex-col post-items">
+    {{ range $index, $element := (.Paginator 8).Pages }}
+    
+      {{ partial "blog/item-large.html" . }}
+      
+      {{ if (eq $index 3) }}
+      <div class="mb-20 pb-20 border-b border-gray-300">
+          {{ partial "newsletter.html" . }}
+      </div>
+      {{ end }}
+      
+    {{ end }}
+    
+    <div class="pagination mb-20">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,21 @@
+<div class="mb-30">
+    <div class="w-9/12">
+      <p class="inline-block text-sm mb-3 p-2 bg-site-pink rounded"><b>&star; Featured Post</b></p>
+      <h2 class="mb-4"><a href="{{.Permalink}}" class="no-underscore">{{.Title}}</a></h2>
+    </div>
+
+    <div class="flex flex-wrap row justify-between">  
+      <div class="column w-9/12">
+        <p>{{ .Summary }}</p>
+
+        <p class="mt-6">
+          <a class="no-underscore" href="{{.Permalink}}">Read More</a>
+        </p>
+      </div>
+
+      <div class="column w-2/12">
+        {{ partial "blog/date.html" . }}
+        {{ partial "blog/categories.html" . }}
+      </div>
+    </div>
+</div>

@@ -710,13 +710,17 @@ li {
 .wysiwyg ul {
   list-style-position: outside;
   list-style-type: disc;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .wysiwyg ol {
   list-style-position: outside;
   list-style-type: decimal;
   margin-left: 25px;
+}
+
+.wysiwyg li pre {
+  margin-bottom: 20px;
 }
 
 pre {
@@ -741,6 +745,8 @@ pre code {
 
 a {
   position: relative;
+  z-index: 2;
+  display: inline-block;
 }
 
 a.no-underscore:after {
