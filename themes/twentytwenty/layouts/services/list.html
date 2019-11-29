@@ -8,85 +8,50 @@
 	</div>
 </section>
 
+{{ with .Site.GetPage "sections" "offerings" }}
 <section class="container mb-40">
   <div class="lg:w-9/12 mb-14">
-	  <h2 class="mb-4">Services</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, id fuga ratione ipsum officia illo sint laboriosam praesentium iure.</p>
+    <h2 class="mb-4">{{ .Title }}</h2>
+    {{ .Content }}
   </div>
-  
+
   <div class="flex flex-wrap row">
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-green h-full">
-        <h4 class="mb-3">Strategic Planning</h4>
-        <p>Planning is fundamental to a successful project. I'll work with you to find out all of your needs.</p>
+    {{ range (.Pages.ByParam "order")}}
+      <div class="w-4/12 column mb-8">
+        <div class="p-5 rounded-lg {{ .Params.Color }} h-full">
+          <h4 class="mb-3">{{ .Title }}</h4>
+          {{ .Content }}
+        </div>
       </div>
-    </div>
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-orange h-full">
-        <h4 class="mb-3">Web Design</h4>
-        <p>Need a design? I'll work with you by hand crafting the website to your project requirements.</p>
-      </div>
-    </div>
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-blue h-full">
-        <h4 class="mb-3">Web Development</h4>
-        <p>Written from the ground up with the best system for your needs — websites that are built to last years.</p>
-      </div>
-    </div>
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-pink h-full">
-        <h4 class="mb-3">E-Commerce</h4>
-        <p>Sell products online? International or just locall? I'll help you set up the perfect online store.</p>
-      </div>
-    </div>
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-green h-full">
-        <h4 class="mb-3">Web Applications</h4>
-        <p>TBC.</p>
-      </div>
-    </div>
-    <div class="w-4/12 column mb-8">
-      <div class="p-5 rounded-lg bg-site-orange h-full">
-        <h4 class="mb-3">Hosting &amp; After-care</h4>
-        <p>Websites and apps need somewhere to live. I can help keep your site secure and backed up.</p>
-      </div>
-    </div>
+    {{ end }}
   </div>
 </section>
+{{ end }}
 
+{{ with .Site.GetPage "sections" "technologies" }}
 <section class="container mb-40">
   <div class="lg:w-9/12 mb-14">
-    <h2 class="mb-4">Technologies</h2>
-    <p>I predominantly work with PHP and JavaScript and over time have grown to become fond of a set of technologies which help me to deliver a first-class solution to each website's unique requirements. Click through the list below to learn about what each can be used for.</p>
+    <h2 class="mb-4">{{ .Title }}</h2>
+    {{ .Content }}
   </div>
-  
-  <div class="flex flex-wrap row mb-10">
-    <div class="column w-3/12"><h3>WordPress</h3></div>
-    <div class="column w-9/12">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</p>
-      <p class="mt-5"><a href="#">Read More</a></p>
-    </div>
-  </div>
-  <div class="flex flex-wrap row mb-10">
-      <div class="column w-3/12"><h3>Shopify</h3></div>
+
+  {{ range (.Pages.ByParam "order")}}
+    <div class="flex flex-wrap row mb-10">
+      <div class="column w-3/12"><h3>{{ .Title }}</h3></div>
       <div class="column w-9/12">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</p>
-        <p class="mt-5"><a href="#">Read More</a></p>
+        {{ .Content }}
+
+        <a href="#" class="mt-4">Read More</a>
       </div>
     </div>
+  {{ end }}
 </section>
-
-<section class="container mb-40">
-  <div class="p-8 rounded-lg bg-site-orange text-center">
-      <h2 class="mb-4">Don't just take my word for it...</h2>
-      <p>Testimonial to go here</p>
-  </div>
-</section>
+{{ end }}
 
 <section class="container mb-20">
   <div class="lg:w-9/12">
     <h2 class="mb-4">Want to see more?</h2>
-    <p>Why not check out some of my <a href="#">selected works</a>, what I've been playing with in <a href="#">the playground</a> or some of my <a href="#">recent posts</a>.</p>
+    <p>Why not check out some of my <a href="{{ .Site.BaseURL }}works" title="Link to view works">selected works</a>, what I've been playing with in <a href="{{ .Site.BaseURL }}playground" title="Link to playground">the playground</a> or some of my <a href="{{ .Site.BaseURL }}posts" title="Link to recent posts">recent posts</a>.</p>
   </div>
 </section>
 

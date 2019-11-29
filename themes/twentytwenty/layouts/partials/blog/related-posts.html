@@ -1,10 +1,14 @@
 <section class="mt-20 container">
     <div class="p-8 rounded-lg bg-site-blue w-9/12">
-      <h2>Other posts in Thoughts</h2>
-      <ul class="mt-4">
-        <li><h4>Example</h4></li>
-        <li><h4>Example</h4></li>
-        <li><h4>Example</h4></li>
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        {{ range first 3 ( where ( where .Site.Pages.ByDate.Reverse ".Params.categories" "intersect" .Params.categories ) "Permalink" "!=" .Permalink ) }}
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="{{ .RelPermalink }}" title="Link to {{ .Title }}">{{ .Title }}</a></h4>
+            <p class="text-sm">{{.Date.Format "02 Nov 2006"}}</p>
+          </li>
+        {{ end }}
       </ul>
     </div>
 </section>
