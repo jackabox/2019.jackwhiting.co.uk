@@ -3,10 +3,10 @@ title: Handling Redirects in Nuxt.js through Middleware
 slug: handling-redirects-in-nuxtjs-through-middlware
 date: 2019-09-16 14:42:00
 description: 'We can utilise the serverMiddlware provided out of the box with Nuxt.js to read a JSON file and handle the redirects for our application.'
-tags:
-  - vuejs
-  - nuxt
-  - seo
+categories:
+  - Vue
+  - Nuxt
+  - SEO
 ---
 
 I recently published an article about [how to handle redirects in Laravel](/posts/handling-seo-redirects-in-a-laravel-application/), since I also use [Nuxt.js](https://nuxtjs.org/) I thought it would be good to write up how to handle redirects simplistically through pure Nuxt (no server, no advanced configuration).

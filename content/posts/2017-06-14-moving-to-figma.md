@@ -3,9 +3,9 @@ title: 'Moving to Figma'
 slug: moving-to-figma
 date: 2018-06-14 00:00:00
 description: "I recently moved my web design workflow away from Sketch & Adobe XD to Figma full time. Here I'll cover the reasons why it works for me, and how it could for you."
-tags:
-  - tools
-  - design
+categories:
+  - Tools
+  - Design
 ---
 
 In the last 6 months, I've moved to using [Figma](https://www.figma.com) on a permanent basis. I'd spent a fair bit of time in and out of the beta, and now with the official launch, it feels more stable and ready for full time use than ever.

@@ -12,38 +12,14 @@
       </div>
 
       <div class="column w-2/12">
-        <h5 class="mb-2">Date</h5>
-        <p class="text-sm">{{.Date.Format "2006-01-02"}}</p>
-
-        <h5 class="mb-2 mt-6">Categories</h5>
-        <p class="text-sm">Thoughts &middot; Ideas</p> 
-
-        <h5 class="mb-2 mt-6">Share</h5>
-        <div>
-          <a href="#" class="mr-2">Tw</a>
-          <a href="#" class="mr-2">Fb</a>
-          <a href="#">Li</a>
-        </div>
+        {{ partial "blog/date.html" . }}
+        {{ partial "blog/categories.html" . }}
+        {{ partial "blog/share.html" . }}
       </div>
   </div>
 </article>
 
-<section class="mt-20 container">
-    <div class="p-8 rounded-lg bg-site-green w-9/12">
-      <h2>Other posts in Thoughts</h2>
-      <ul class="mt-4">
-        <li><h4>Example</h4></li>
-        <li><h4>Example</h4></li>
-        <li><h4>Example</h4></li>
-      </ul>
-    </div>
-</section>
-
-<div class="mt-20 mb-20 container">
-  <div class="w-9/12">
-    <h2>Comments</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia impedit, optio omnis neque nulla ad reprehenderit iusto est consectetur enim tempora fuga odit facere voluptas amet id! Ea, libero.</p>
-    </div>
-</div>
+{{ partial "blog/related-posts.html" . }}
+{{ partial "blog/comments.html" . }}
 
 {{ partial "footer.html" . }}

@@ -2,12 +2,11 @@
 title: Awesome Laravel Nova Packages to Get You Started
 slug: awesome-laravel-nova-packages
 date: 2019-05-22 23:00:00
-description:
-  A collection of five packages to kickstart your next project with Laravel
+description: A collection of five packages to kickstart your next project with Laravel
   Nova. These are some of my personal favourites that I use on every project.
-tags:
-  - laravel
-  - nova
+categories:
+  - Laravel
+  - Nova
 ---
 
 I've been using Laravel Nova a lot since it's release and find myself using the same packages across projects just because they're awesome and work well. In this post I've compiled a list of my five favourite packages to include in your Laravel Nova install.
@@ -50,4 +49,6 @@ This one is direct from [Spatie](https://github.com/spatie) and provides a slick
 
 GitHub Link: [https://github.com/spatie/nova-backup-tool](https://github.com/spatie/nova-backup-tool)
 
-That's all for this list, but if you have any packages your particularly fond of? Drop me a tweet [@jackabox](https://twitter.com/jackabox) and let me know!
+<br>
+
+That's all for this list, but if you have any packages your particularly fond of then drop me a tweet [@jackabox](https://twitter.com/jackabox) and let me know!

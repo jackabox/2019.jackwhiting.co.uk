@@ -3,9 +3,9 @@ title: 'Using Visual Studio Code (with 5  Recommended Extensions)'
 slug: using-vs-code-and-recommended-extensions
 date: 2016-08-22 00:00:00
 description: 'A break down of Visual Studio Code with five recommended extensions to get you up and running when moving from Sublime or Atom.'
-tags:
-  - tools
-  - vscode
+categories:
+  - Tools
+  - VS Code
 ---
 
 I constantly toy with which IDE/Text Editor I want to use in my workflow. I’ve tried six or seven in the last few months to find something that fits my personal work flow and always ended up reverting to [Sublime Text 3](https://www.sublimetext.com/).

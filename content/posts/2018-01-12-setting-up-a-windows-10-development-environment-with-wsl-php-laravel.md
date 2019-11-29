@@ -3,9 +3,10 @@ title: Setting Up A Windows 10 Development Environment with WSL, PHP & Laravel
 slug: setting-up-a-windows-10-development-environment-with-wsl-php-laravel
 date: 2018-01-12 00:00:00
 description: 'Guide & Tutorial on setting up WSL (Windows Subsystem for Linux) with a Laravel/PHP development stack for simplified coding on Windows 10.'
-tags:
-  - tools
-  - windows
+categories:
+  - Tools
+  - Windows
+  - WSL
 ---
 
 ## Preface

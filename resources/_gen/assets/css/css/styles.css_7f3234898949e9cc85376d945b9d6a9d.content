@@ -723,6 +723,20 @@ pre {
   padding: 20px;
   background-color: #FDF0F0;
   font-size: 0.875rem;
+  border-radius: 0.5rem;
+  overflow-x: scroll;
+}
+
+code {
+  padding: 5px;
+  background-color: #FDF0F0;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
 }
 
 a {

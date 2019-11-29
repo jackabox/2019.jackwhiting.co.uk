@@ -3,9 +3,9 @@ title: 'Using Accessors and Mutators to Abstract Common Functionality within Lar
 date: 2018-03-14 00:00:00
 slug: using-accessors-and-mutators-within-laravel
 description: 'Accessors and Mutators can help with abstracting common functionality in our application into one consistent location. By utilising them we can provide a more consistent codebase and improve the workflow between developers.'
-tags:
-  - laravel
-  - php
+categories:
+  - Laravel
+  - PHP
 ---
 
 A common thing I've found when analysing or revisiting code, is that logic will be repeatedly written throughout different parts of an application, be it in different controllers or views, or even extra database tables are created to store logic that is calculated, potentially increasing query counts.

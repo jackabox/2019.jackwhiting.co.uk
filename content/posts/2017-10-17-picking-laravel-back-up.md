@@ -3,8 +3,9 @@ title: Picking Laravel Back Up
 slug: picking-laravel-back-up
 date: 2017-10-17 00:00:00
 description: "Over the past few weeks I've finally got around to working with Laravel again. Oh, how happy I am!"
-tags:
-  - laravel
+categories:
+  - Thoughts
+  - Laravel
 ---
 
 Over the past few weeks, I've finally got around to working with [Laravel](https://laravel.com) again in my agency. The last time I used the framework on commercial projects was back at version 4, this was when I was working with a team on [Pancake App](https://pancakeapp.com).

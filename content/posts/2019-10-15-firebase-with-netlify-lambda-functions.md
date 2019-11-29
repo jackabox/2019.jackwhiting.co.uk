@@ -3,9 +3,10 @@ title: Using Firebase Admin SDK with Netlify Lambda Functions
 slug: using-firebase-admin-sdk-with-netlify-lambda-functions
 date: 2019-10-15T14:00:00.000+00:00
 description: 'Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request.'
-tags:
-  - firebase
-  - lambda
+categories:
+  - Firebase
+  - Lambda
+  - Netlify
 ---
 
 I've been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I've recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I'm not quite ready for yet.

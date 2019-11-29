@@ -3,11 +3,9 @@ title: 'Working on Local Packages in Laravel with Composer'
 date: 2018-05-20 00:00:00
 slug: working-with-local-packages-in-laravel
 description: 'Working on Packages for Laravel in a local environment can be a little annoying to start. Utilising Composer we can make this process as simple as cloning a repository.'
-tags:
-  - laravel
-  - php
-  - composer
-  - packages
+categories:
+  - Laravel
+  - Composer
 ---
 
 Recently, I've been working on developing a set of packages for Laravel to wrap up some of the code we write on a daily basis. Whilst developing I needed a way to reference a local package to my Laravel install and wanted to use `composer.json` to include, and update it's dependancies.

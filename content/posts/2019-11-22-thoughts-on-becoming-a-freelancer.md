@@ -3,9 +3,9 @@ title: A Few Thoughts on Being a Freelancer
 slug: a-few-thoughts-on-being-a-freelancer
 date: 2019-11-22T12:36:00.000+00:00
 description: "Freelancing is great, but as with any job it has a few downfalls. I've tried to articulate my feelings into a short article."
-tags:
-  - thoughts
-  - freelance
+categories:
+  - Thoughts
+  - Freelance
 ---
 
 Over the last few months, I've moved into Freelancing full-time and it's been both a breath of fresh air and also an overwhelming experience.

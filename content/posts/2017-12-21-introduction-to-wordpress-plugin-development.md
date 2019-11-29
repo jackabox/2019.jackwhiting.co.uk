@@ -3,13 +3,13 @@ title: An Introduction to WordPress Plugin Development
 slug: introduction-to-wordpress-plugin-development
 date: 2017-12-21 00:00:00
 description: 'Plugins play a key part in how we handle WordPress builds and offer services to clients. This article involves a brief write up of how to get started building your own WordPress plugins.'
-tags:
-  - php
-  - wordpress
-  - plugins
+categories:
+  - WordPress
+  - PHP
+  - Plugins
 ---
 
-_This post was written for internal development at Adtrak to help with stepping into WordPress Plugin development. Below is a copy of the article._
+_This post was written for internal development when working at Adtrak to help with stepping into WordPress Plugin development. The following article is a copy of this with some slight modifications._
 
 Plugins play a key part in how we handle WordPress builds and offer services to clients. Whether it is a plugin such as our “Core” which adds repeatedly used code to WordPress and cleans up the outputs of themes, or something a little more complex such as the “Skip Hire Plugin” which provides a full e-commerce solution for booking skips online. Using plugins allows us to be more efficient in the development of websites.
 
@@ -44,12 +44,12 @@ Every plugin requires a header. This allows WordPress to read the files and tell
 
 ```scss
 /*
-Plugin Name: Adtrak Plugin
+Plugin Name: Example Plugin
 Description: A quick excerpt about our plugin.
 Version: 1.0
-Author: Adtrak
-Author URI: http://plugins.adtrakdev.com/
-Plugin URI: http://plugins.adtrakdev.com/adtrak-plugin
+Author: Jackabox
+Author URI: http://jackwhiting.co.uk/
+Plugin URI: http://jackwhiting.co.uk/example-plugin
 */
 ```
 
@@ -71,13 +71,13 @@ create_post_type();
 Would become
 
 ```php
-if (! function_exists('adtrak_plugin_create_post_type') {
-  function adtrak_plugin_create_post_type() {
+if (! function_exists('jackabox_plugin_create_post_type') {
+  function jackabox_plugin_create_post_type() {
      // create page
   }
 }
 
-adtrak_plugin_create_post_type();
+jackabox_plugin_create_post_type();
 ```
 
 ## Actions & Filters
@@ -100,14 +100,14 @@ To execute any functions you write, and get WordPress to understand what’s goi
 - `$accepted_args` (optional, required when the action has one or more variables passed).
 
 ```php
-if (! function_exists('adtrak_plugin_create_post_type') {
-  function adtrak_plugin_create_post_type() {
+if (! function_exists('jackabox_plugin_create_post_type') {
+  function jackabox_plugin_create_post_type() {
      // create page
   }
 }
 
 // when init is triggered, register our custom post type
-add_action('init', 'adtrak_plugin_create_post_type');
+add_action('init', 'jackabox_plugin_create_post_type');
 ```
 
 When using WordPress actions you need to keep in mind that an action may have required/defined variables that you need to pass through. If we look at the `save_post` hook, we have something along the following:
@@ -150,7 +150,7 @@ echo apply_filters('the_excerpt', get_the_excerpt());
 Let’s look at an example. If we are displaying currency on a page, we may want to create a filter that configures the output of the data. We’d use the `apply_filters` function to tell WordPress that these can be changed by any function that hooks into it.
 
 ```php
-$price = apply_filters('adtrak_filter_display_price', '20.00');
+$price = apply_filters('jackabox_filter_display_price', '20.00');
 ```
 
 ### Utilising Filters
@@ -165,16 +165,16 @@ When you want to utilise a filter, you need to use the `add_filter()` function. 
 The `add_filter` function works similar to that of `add_action`. The minimum that you need to define is the name of the filter and the function you want to call. Below is an example of how you may do this with the above `apply_filters` example.
 
 ```php
-function adtrak_change_price_output($price)
+function jackabox_change_price_output($price)
 {
 	$price = '&pound' . $price;
 	return $price;
 }
 
-add_filter('adtrak_filter_display_price', 'adtrak_change_price_output');
+add_filter('jackabox_filter_display_price', 'jackabox_change_price_output');
 ```
 
-This will attach the `adtrak_change_price_output` function to the `adtrak_filter_display_price` filter and takes a single variable of `$price`.
+This will attach the `jackabox_change_price_output` function to the `jackabox_filter_display_price` filter and takes a single variable of `$price`.
 
 All filters **must return a value**, this is extremely important. If you do not return a value then things will break. The way WordPress chains multiple functions on a filter is by utilising the return value and passing it to the next function until all functions have been called.
 

@@ -3,8 +3,8 @@ title: Laracon Online 2018
 slug: laracon-online-2018
 date: 2018-02-11 00:00:00
 description: 'An overview of my personal highlights from the 2018 Laracon Online conference, including recaps of talks by Steve Schoger and Jonathan Reinink.'
-tags:
-  - conference
+categories:
+  - Conferences
 ---
 
 On the 7th February, I attended not only my first online conference but my first Laravel dedicated conference and simply put - it was amazing.
