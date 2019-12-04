@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/svelte/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/tailwind/</loc>
+    <lastmod>2019-12-04T01:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/a-few-thoughts-on-being-a-freelancer/</loc>
+    <lastmod>2019-11-22T12:36:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/freelance/</loc>
+    <lastmod>2019-11-22T12:36:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/thoughts/</loc>
+    <lastmod>2019-11-22T12:36:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/mss/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/wordpress/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/</loc>
+    <lastmod>2019-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/firebase/</loc>
+    <lastmod>2019-10-15T14:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/lambda/</loc>
+    <lastmod>2019-10-15T14:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/netlify/</loc>
+    <lastmod>2019-10-15T14:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/using-firebase-admin-sdk-with-netlify-lambda-functions/</loc>
+    <lastmod>2019-10-15T14:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/handling-redirects-in-nuxtjs-through-middlware/</loc>
+    <lastmod>2019-09-16T14:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/nuxt/</loc>
+    <lastmod>2019-09-16T14:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/seo/</loc>
+    <lastmod>2019-09-16T14:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/vue/</loc>
+    <lastmod>2019-09-16T14:42:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/handling-seo-redirects-in-a-laravel-application/</loc>
+    <lastmod>2019-08-14T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/laravel/</loc>
+    <lastmod>2019-08-14T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/awesome-laravel-nova-packages/</loc>
+    <lastmod>2019-05-22T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/nova/</loc>
+    <lastmod>2019-05-22T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/api-integration/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/laravel/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/pbfa/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/vue/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/craft/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/ensek/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/design/</loc>
+    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/moving-to-figma/</loc>
+    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/tools/</loc>
+    <lastmod>2018-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/composer/</loc>
+    <lastmod>2018-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/working-with-local-packages-in-laravel/</loc>
+    <lastmod>2018-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/php/</loc>
+    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</loc>
+    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/conferences/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/laracon-online-2018/</loc>
+    <lastmod>2018-02-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/</loc>
+    <lastmod>2018-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/windows/</loc>
+    <lastmod>2018-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/wsl/</loc>
+    <lastmod>2018-01-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/testing/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/plugins/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/wordpress/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/chrome-63-forces-dev-domains-to-https/</loc>
+    <lastmod>2017-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</loc>
+    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</loc>
+    <lastmod>2017-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/rollerdor/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/tags/woocommerce/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/works/holehearted/</loc>
+    <lastmod>2017-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/setting-up-and-using-yarn/</loc>
+    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/using-vs-code-and-recommended-extensions/</loc>
+    <lastmod>2016-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/categories/vs-code/</loc>
+    <lastmod>2016-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/posts/university-isnt-everything-part-2/</loc>
+    <lastmod>2016-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/craft-cms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/e-commerce/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/hosting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/laravel/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/playground/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/services/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/shopify/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/strategic-planning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/vue/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/web-applications/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/web-design/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/offerings/web-development/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jackwhiting.co.uk/technologies/wordpress/</loc>
+  </url>
+  
+</urlset>

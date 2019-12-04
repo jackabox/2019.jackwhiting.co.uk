@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Part 1, Utilising a framework in the development of WordPress Plugins. A brief explanation on how I begin rapid development.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>How I Build WordPress Plugins: Part 1 - Framework - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>How I Build WordPress Plugins: Part 1 - Framework</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p>I&rsquo;ve been writing custom WordPress plugins for a couple of years now and wanted to share some of the details on how I&rsquo;ve been working. There will be a few parts to these articles, and in this one we&rsquo;re starting with the Plugin Framework.</p>
+
+<h2 id="intro">Intro</h2>
+
+<p>Within the last year or so, I stumbled across <a href="http://getherbert.com">Herbet</a>. Herbert is a plugin framework for WordPress that allows for a structured approach, similar to that of Laravel but tailored for a WordPress context. I downloaded it, tested it, and loved how easy I found it to use.</p>
+
+<p>Unfortunately, the last update to Herbert was nearly 2 years ago and I didn&rsquo;t want to start writing commercial plugins on a framework that could break with the next WordPress core update. I looked for other solutions, even just writing Plugins from scratch, but I still had an itch to use a framework. Nothing came close to what I was looking for.</p>
+
+<p>I ended up building a framework for Plugins (nicknamed Billy), close to that of Herbert, but with custom functionality and removing redundant code I didn&rsquo;t need. Within Adtrak, this is what we use to write all of our plugins and there is currently 12 that are released on the framework.</p>
+
+<p>The following section explains a bit of how I&rsquo;d go about setting up a plugin to utilise the Billy Framework.</p>
+
+<h2 id="setting-up-billy">Setting Up Billy</h2>
+
+<p>You can find Billy at <a href="https://github.com/getbilly/boilerplate">https://github.com/getbilly/boilerplate</a>.</p>
+
+<p>Download or clone the repo onto your computer in Terminal, like so:</p>
+
+<pre><code class="language-bash">git clone https://github.com/getbilly/boilerplate.git my-plugin
+</code></pre>
+
+<p>Once you&rsquo;ve cloned the repo, you&rsquo;ll want to move open the folder in your text editor. In the <code>app</code> folder go through each of the files and replace the namespace with your own, for example:</p>
+
+<pre><code class="language-php">namespace MyPlugin
+</code></pre>
+
+<p>becomes..</p>
+
+<pre><code class="language-php">namespace Jackabox\PluginName
+</code></pre>
+
+<p>Update the composer file&rsquo;s autoload so that it matches the namespace you just defined.</p>
+
+<pre><code class="language-json">&quot;autoload&quot;: {
+  &quot;psr-4&quot;: {
+    &quot;Jackabox\\PluginName\\&quot;: &quot;app/&quot;
+  }
+}
+</code></pre>
+
+<p>Once all that&rsquo;s done, open up the folder you cloned the repo to in Terminal and run composer install. This will download all of the needed dependencies.</p>
+
+<pre><code class="language-bash">cd my-plugin
+composer install
+</code></pre>
+
+<p>The plugin files are now setup and ready to work with, from here we can build anything that our heart desires.</p>
+
+<p>For more information about Billy and how to work with it, you can view the initial docs on the <a href="https://getbilly.github.io/website/">website</a> or have a look at an <a href="https://github.com/getbilly/plugin-examples">example plugin</a>.</p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">05 Nov 2017</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/wordpress/">WordPress</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/php/">PHP</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+<section class="mt-20 container">
+    <div class="p-8 rounded-lg bg-site-blue w-9/12">
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/using-accessors-and-mutators-within-laravel/" title="Link to Using Accessors and Mutators to Abstract Common Functionality within Laravel">Using Accessors and Mutators to Abstract Common Functionality within Laravel</a></h4>
+            <p class="text-sm">14 Nov 2018</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/beautiful-organised-results-in-phpunit/" title="Link to Beautiful, organised results in PHPUnit">Beautiful, organised results in PHPUnit</a></h4>
+            <p class="text-sm">22 Nov 2017</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/introduction-to-wordpress-plugin-development/" title="Link to An Introduction to WordPress Plugin Development">An Introduction to WordPress Plugin Development</a></h4>
+            <p class="text-sm">21 Nov 2017</p>
+          </li>
+        
+      </ul>
+    </div>
+</section>
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

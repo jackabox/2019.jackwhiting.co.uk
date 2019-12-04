@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Working on Packages for Laravel in a local environment can be a little annoying to start. Utilising Composer we can make this process as simple as cloning a repository.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>Working on Local Packages in Laravel with Composer - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>Working on Local Packages in Laravel with Composer</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p>Recently, I&rsquo;ve been working on developing a set of packages for Laravel to wrap up some of the code we write on a daily basis. Whilst developing I needed a way to reference a local package to my Laravel install and wanted to use <code>composer.json</code> to include, and update it&rsquo;s dependancies.</p>
+
+<p>To do this, I found it often easier to symbolic link my package into a directory within my Laravel project called <code>packages/namespace/package-name</code> and then set up Composer to read it automatically.</p>
+
+<ul>
+<li><strong>Packages</strong> is the folder I store all the local packages I&rsquo;m working on.</li>
+<li><strong>Package Group</strong> is usually the name (i.e. creator, user account on GitHub/composer)</li>
+<li><strong>Package Name</strong> is the name of the package I want to install.</li>
+</ul>
+
+<p>An example of this would be</p>
+
+<pre><code class="language-bash">packages/jackabox/admin
+</code></pre>
+
+<h2 id="create-the-symbolic-link">Create the symbolic link</h2>
+
+<p>I store all the packages I write in a separate directory on my computer but I also often work with other developers to implement and test their packages. To keep a consistent workflow, I often clone and keep all of the packages into their own directory, away from all the business of the main Laravel package.</p>
+
+<p>To include them in my Laravel project, I&rsquo;ll run a symlink which looks something like the following (changed to your own sources).</p>
+
+<pre><code class="language-bash">cd project
+mkdir packages
+mkdir packages/namespace
+ln -s ../packages/admin packages/namespace/admin
+</code></pre>
+
+<p>Perfect, now we just need to get composer to read the files.</p>
+
+<h2 id="setting-up-composer">Setting Up Composer</h2>
+
+<p>To get composer to read a local package, we have to manually add the reference to the repositories section of the JSON. This would look something along the lines of the following:</p>
+
+<pre><code class="language-json">&quot;repositories&quot;: [
+    {
+        &quot;type&quot;: &quot;path&quot;,
+        &quot;url&quot;: &quot;packages/namespace/admin&quot;,
+        &quot;options&quot;: {
+            &quot;symlink&quot;: true
+        }
+    }
+],
+</code></pre>
+
+<p>After that we need to require the file by adding it to our requires object, as so:</p>
+
+<pre><code class="language-bash">&quot;require&quot;: {
+    ...
+    &quot;namespace/admin&quot;: &quot;dev-develop&quot;
+},
+</code></pre>
+
+<p>After that, within our Laravel project, we can run <code>composer update</code> (or <code>install</code>) and Composer will read our local package, create a copy in the vendor folder, download all other required packages and set up the autoload.</p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">20 Nov 2018</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/laravel/">Laravel</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/composer/">Composer</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+<section class="mt-20 container">
+    <div class="p-8 rounded-lg bg-site-blue w-9/12">
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/handling-seo-redirects-in-a-laravel-application/" title="Link to Handling Redirects in a Laravel Application">Handling Redirects in a Laravel Application</a></h4>
+            <p class="text-sm">14 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/awesome-laravel-nova-packages/" title="Link to Awesome Laravel Nova Packages to Get You Started">Awesome Laravel Nova Packages to Get You Started</a></h4>
+            <p class="text-sm">22 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/using-accessors-and-mutators-within-laravel/" title="Link to Using Accessors and Mutators to Abstract Common Functionality within Laravel">Using Accessors and Mutators to Abstract Common Functionality within Laravel</a></h4>
+            <p class="text-sm">14 Nov 2018</p>
+          </li>
+        
+      </ul>
+    </div>
+</section>
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

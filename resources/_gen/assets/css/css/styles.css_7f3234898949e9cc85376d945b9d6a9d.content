@@ -614,6 +614,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
+  color: #1a202c;
 }
 
 main {
@@ -723,24 +724,23 @@ li {
   margin-bottom: 20px;
 }
 
-pre {
-  padding: 20px;
-  background-color: #FDF0F0;
+.wysiwyg li {
+  margin-bottom: 5px;
+}
+
+p > pre {
+  padding: 15px;
   font-size: 0.875rem;
   border-radius: 0.5rem;
   overflow-x: scroll;
+  background-color: #f8f8f8;
 }
 
-code {
+p > code {
   padding: 5px;
-  background-color: #FDF0F0;
   font-size: 0.875rem;
   border-radius: 0.25rem;
-}
-
-pre code {
-  padding: 0;
-  background-color: transparent;
+  background-color: #f7fafc;
 }
 
 a {
@@ -749,6 +749,8 @@ a {
   display: inline-block;
 }
 
+a.commento-forgot-link:after,
+a.commento-login-link:after,
 a.no-underscore:after {
   background-color: transparent;
 }
@@ -768,11 +770,41 @@ a:after {
 }
 
 a:hover:after {
-  height: 100%;
+  height: 80%;
 }
 
 a.no-underscore:hover:after {
   background-color: #E4FAEF;
+}
+
+a.commento-forgot-link:after:hover,
+a.commento-login-link:after:hover {
+  background-color: transparent;
+}
+
+.highlight {
+  font-size: 0.875rem;
+  margin-top: 25px;
+}
+
+.highlight td:nth-child(1) pre {
+  background: #f7fafc !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-radius: 0.25rem;
+  border-right-width: 1px;
+  border-color: #edf2f7;
+}
+
+.highlight td:nth-child(2) pre {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 0.25rem;
+  background: #f7fafc !important;
 }
 
 .post-items > .post-item {
@@ -802,6 +834,7 @@ a.no-underscore:hover:after {
           justify-content: center;
   margin-right: 5px;
   font-size: 0.875rem;
+  border-radius: 0.25rem;
   width: 30px;
   height: 30px;
   -webkit-transition: 0.2s all ease-in-out;
@@ -824,6 +857,26 @@ a.no-underscore:hover:after {
 .pagination li:first-child,
 .pagination li:last-child {
   display: none;
+}
+
+.commento-footer,
+#commento-markdown-button-root {
+  display: none;
+}
+
+#commento-comments-area {
+  margin-top: 70px;
+}
+
+#commento-submit-button-root {
+  margin-right: 0;
+  outline: 0;
+  box-shadow: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #1a202c;
 }
 
 /* Tailwind's utility classes - generated based on config file */

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WSL on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/wsl/</link>
+    <description>Recent content in WSL on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 12 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up A Windows 10 Development Environment with WSL, PHP &amp; Laravel</title>
+      <link>https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/</link>
+      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/</guid>
+      <description>Preface Recently, I&amp;rsquo;ve been toying around with the use of WSL (Windows Subsystem for Linux) for development. I&amp;rsquo;ve used a Mac for development work over better part of the last decade and required the Windows setup to mimic my workflow.
+Typically, I create Laravel applications along with the occasional WordPress site, using the following tools:
+ Nginx PHP MySql Dnsmasq Valet  After a bit of testing and reconfiguration, I managed to get WSL setup with the above in a few easy steps and I&amp;rsquo;m relatively happy with the workflow.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>api integration on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/tags/api-integration/</link>
+    <description>Recent content in api integration on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/tags/api-integration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PBFA</title>
+      <link>https://jackwhiting.co.uk/works/pbfa/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/pbfa/</guid>
+      <description>PBFA (Provincial Booksellers Fairs Association) used to run their organisation from a server located in the corner of their room. I worked with them to move their process online and automate several long tedious steps to reduce the admin required for planning out their fairs.</description>
+    </item>
+    
+  </channel>
+</rss>

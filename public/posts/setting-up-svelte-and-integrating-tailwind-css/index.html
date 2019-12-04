@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Part one of my getting start with Svelte series. In this part we will touch on how to setup Svelte and integrating Tailwind CSS">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>Getting Started With Svelte: Installation &amp; Integrating Tailwind CSS - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>Getting Started With Svelte: Installation &amp; Integrating Tailwind CSS</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p><em>This article is part of a series of posts with working on Svelte. This is part one in the series and will soon follow the integration of Routing and Firebase.</em></p>
+
+<p>Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript. You can find out more about Svelte through their <a href="https://svelte.dev/">website</a>.</p>
+
+<h2 id="install-svelte">Install Svelte</h2>
+
+<p>To get set up with Svelte, we will require the installation of <a href="https://nodejs.org/en/">Node.js</a> and <a href="https://github.com/Rich-Harris/degit">Degit</a>. I won&rsquo;t cover how to get these set up in this article as it expects a bit of knowledge of Node and the Terminal, you can follow the installation of each at their respective sites beforehand.</p>
+
+<p>Let&rsquo;s create a copy of the base template provided by Svelte, and install all the necessary libraries with the following.</p>
+
+<pre><code class="language-bash">npx degit sveltejs/template my-svelte-project
+cd my-svelte-project
+
+yarn # or npm install
+</code></pre>
+
+<p>To test everything is working properly, we can run <code>yarn dev</code> and we should be able to see the default page at <a href="https://localhost:5000">https://localhost:5000</a>. If you can&rsquo;t you may want to ensure nothing went wrong with the setup.</p>
+
+<h2 id="set-up-tailwind">Set Up Tailwind</h2>
+
+<p>I&rsquo;m a huge fan of Tailwind and use it on most projects, so working with Svelte would be no different. Staying in the directory we installed Svelte into, we will need to install a few dependancies, create a new <code>postcss.config.js</code> file and finally modify a couple of existing files.</p>
+
+<h3 id="install-dependencies">Install Dependencies</h3>
+
+<p>Install the necessary development dependencies with the following command:</p>
+
+<pre><code class="language-bash">yarn add --dev postcss postcss-load-config svelte-preprocess tailwindcss
+</code></pre>
+
+<p>If you want to make sure unused styles are removed when in production (keeping our file size lean), you can also add the following dependency.</p>
+
+<pre><code class="language-bash">yarn add @fullhuman/postcss-purgecss
+</code></pre>
+
+<h3 id="generate-tailwind-config">Generate Tailwind Config</h3>
+
+<p>To overwrite the default styles provided by Tailwind, we will need to make sure we have a <code>tailwind.config.js</code> in our route directory where we can put our necessary tweaks. You can do this by running the following command.</p>
+
+<pre><code class="language-bash">npx tailwind init
+</code></pre>
+
+<p>If you open up the file created you should see it looks similar to the below.</p>
+
+<pre><code class="language-js">module.exports = {
+  theme: {
+    extend: {}
+  },
+  variants: {},
+  plugins: []
+}
+</code></pre>
+
+<h3 id="creating-our-postcss-rules">Creating our PostCSS Rules</h3>
+
+<p>We will need to tell Svelte how to interpret and compile our necessary code. We can do this by creating a <code>postcss.config.js</code> file in the route directory. Manually create one or run the following in the terminal.</p>
+
+<pre><code class="language-bash">touch postcss.config.js
+</code></pre>
+
+<p>Open the file in your favourite editor and copy in the following code.</p>
+
+<pre><code class="language-js">const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: ['./src/**/*.svelte', './src/**/*.html'],
+  whitelistPatterns: [/svelte-/],
+  defaultExtractor: content =&gt; content.match(/[A-Za-z0-9-_:/]+/g) || []
+})
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    ...(!process.env.ROLLUP_WATCH ? [purgecss] : [])
+  ]
+}
+</code></pre>
+
+<p>To explain the above a little, we first create a ruleset for Purge CSS which will look through all Svelte and HTML files and remove any classes that do not match what is included. We&rsquo;ll also add a whitelist pattern to ensure that any Svelte generated classes are not removed unnecessarily.</p>
+
+<p>We then watch on whether the <code>process.env.ROLLUP_WATCH</code> equates to true, if not, we purge, if true then we are in development and we just compile the Tailwind classes.</p>
+
+<h3 id="integrating-with-svelte">Integrating with Svelte</h3>
+
+<p>We&rsquo;ll need to include the Tailwind helpers somewhere so that all of the necessary styles can be pulled in. Open up the <code>App.svelte</code> file in the <code>src/</code> folder, and add the following code to the bottom (replacing any styles that are already there).</p>
+
+<pre><code class="language-html">&lt;style global&gt;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+&lt;/style&gt;
+</code></pre>
+
+<p>Then we&rsquo;ll need to ensure Svelte runs the preprocessors on any code in our <code>&lt;style&gt;</code> tags. To do this, we&rsquo;ll need to open the <code>rollup.config.js</code> file in your editor and add the following at the top of the file.</p>
+
+<pre><code class="language-js">import sveltePreprocess from 'svelte-preprocess'
+</code></pre>
+
+<p>Then modify the section which looks similar to the following</p>
+
+<pre><code class="language-js">
+...
+svelte({
+  ...
+  preprocess: sveltePreprocess({ postcss: true }),
+  ...
+})
+...
+</code></pre>
+
+<p>We should now have Tailwind fully integrated into Svelte. If you rerun <code>yarn dev</code> in your terminal you should see it compile the styles before page load and you&rsquo;ll have a stripped back page to jump into.</p>
+
+<h3 id="usage">Usage</h3>
+
+<p>You can now include any of the styles as class attributes for values that already exist as seen below, or you can integrate by using the <code>@apply</code> method throughout your Svelte components.</p>
+
+<pre><code class="language-html">&lt;h1 class=&quot;font-bold&quot;&gt;Title&lt;/h1&gt;
+</code></pre>
+
+<pre><code class="language-html">&lt;style&gt;
+h1 {
+  @apply font-bold text-2xl;
+}
+&lt;/style&gt;
+</code></pre>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">04 Nov 2019</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/svelte/">Svelte</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/tailwind/">Tailwind</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/offerings/</link>
+    <description>Recent content in Services on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    
+	<atom:link href="https://jackwhiting.co.uk/offerings/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>E-commerce</title>
+      <link>https://jackwhiting.co.uk/offerings/e-commerce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/e-commerce/</guid>
+      <description>Sell products online? International or just locall? I&amp;rsquo;ll help you set up the perfect online store.</description>
+    </item>
+    
+    <item>
+      <title>Hosting &amp; After-care</title>
+      <link>https://jackwhiting.co.uk/offerings/hosting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/hosting/</guid>
+      <description>Websites and apps need somewhere to live. I can help keep your site secure and backed up.</description>
+    </item>
+    
+    <item>
+      <title>Strategic Planning</title>
+      <link>https://jackwhiting.co.uk/offerings/strategic-planning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/strategic-planning/</guid>
+      <description>Planning is fundamental to a successful project. I&amp;rsquo;ll work with you to find out all of your needs.</description>
+    </item>
+    
+    <item>
+      <title>Web Applications</title>
+      <link>https://jackwhiting.co.uk/offerings/web-applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-applications/</guid>
+      <description>TBC</description>
+    </item>
+    
+    <item>
+      <title>Web Design</title>
+      <link>https://jackwhiting.co.uk/offerings/web-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-design/</guid>
+      <description>Need a design? I&amp;rsquo;ll work with you by hand crafting the website to your project requirements.</description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://jackwhiting.co.uk/offerings/web-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-development/</guid>
+      <description>Written from the ground up with the best system for your needs — websites that are built to last years.</description>
+    </item>
+    
+  </channel>
+</rss>

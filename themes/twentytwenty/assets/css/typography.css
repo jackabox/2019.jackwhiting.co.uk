@@ -79,17 +79,19 @@ li {
   @apply mb-4;
 }
 
-pre {
-  @apply p-4 bg-site-pink text-sm rounded-lg;
+.wysiwyg li {
+  @apply mb-1;
+}
+
+p > pre {
+  @apply p-3 text-sm rounded-lg;
   overflow-x: scroll;
+  background-color: #f8f8f8;
 }
 
-code {
-  @apply p-1 bg-site-pink text-sm rounded;
-}
-
-pre code {
-  @apply p-0 bg-transparent;
+p > code {
+  @apply p-1 text-sm rounded;
+  @apply bg-gray-100;
 }
 
 a {
@@ -98,6 +100,8 @@ a {
   display: inline-block;
 }
 
+a.commento-forgot-link:after,
+a.commento-login-link:after,
 a.no-underscore:after {
   @apply bg-transparent;
 }
@@ -116,9 +120,14 @@ a:after {
 }
 
 a:hover:after {
-  height: 100%;
+  height: 80%;
 }
 
 a.no-underscore:hover:after {
   @apply bg-site-green;
+}
+
+a.commento-forgot-link:after:hover,
+a.commento-login-link:after:hover {
+  @apply bg-transparent;
 }

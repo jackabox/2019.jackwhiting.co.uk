@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Most websites will need to manage their redirects at some point. For this, we&#39;re going to utilise a Spatie package to read redirects from a configuration file and/or a database table.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>Handling Redirects in a Laravel Application - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>Handling Redirects in a Laravel Application</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p>In this article, we&rsquo;re going to talk about an easy way to manage our redirects within a Laravel application. The following will allow for the storing of redirects in a database (to hook into Nova, or another CRUD system) and also the reading of redirects from a config file.</p>
+
+<p>A lot of the hard work has been done for us by the wonderful team at Spatie whom have produced a redirector package which allows for route params to be read and parsed. You can find this package at [<a href="https://github.com/spatie/laravel-missing-page-redirector](">https://github.com/spatie/laravel-missing-page-redirector](</a>).</p>
+
+<p>Let’s get started on setting up our application.</p>
+
+<h2 id="setting-up-the-redirector-package">Setting up the Redirector Package</h2>
+
+<p>Install the required package via Composer.</p>
+
+<pre><code>composer require spatie/laravel-missing-page-redirector
+</code></pre>
+
+<p>Next, we’ll need to publish the package config, we can do this by running the following in our terminal.</p>
+
+<pre><code>php artisan vendor:publish --provider=&quot;Spatie\MissingPageRedirector\MissingPageRedirectorServiceProvider&quot;
+</code></pre>
+
+<p>In this file you will find an empty array of redirects, this is what we can edit with any redirects you wish to add, specifying the <strong>from</strong> and <strong>to</strong> destination as a <code>key =&gt; value</code> pairing, for example:</p>
+
+<pre><code>redirects = [
+    '/home' =&gt; '/',
+    '/blog/*' =&gt; '/news/*'
+],
+</code></pre>
+
+<p>For the redirector to work, we need to add the middleware to <code>app/Http/Kernel.php</code>, open it up and add modify the <code>$middleware</code> with the following:</p>
+
+<pre><code>protected $middleware = [
+  ...
+  \Spatie\MissingPageRedirector\RedirectsMissingPages::class,
+],
+</code></pre>
+
+<h2 id="connecting-with-our-database">Connecting with our Database</h2>
+
+<p>Sometimes, we will want to have access to all of our redirects in the database - for example if you are passing the site off to a client and want to give them control. To do this we will need to create the database structure for the redirects and then modify the config we published earlier to read them.</p>
+
+<p>Let&rsquo;s get started by making the migration to create our database.</p>
+
+<pre><code>php artisan make:migration create_redirects_table
+</code></pre>
+
+<p>Update the generated migration as below:</p>
+
+<pre><code class="language-php">&lt;?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRedirectsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('redirects', function (Blueprint $table) {
+            $table-&gt;bigIncrements('id');
+            $table-&gt;string('old_url');
+            $table-&gt;string('new_url');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('redirects');
+    }
+}
+</code></pre>
+
+<p>Run the migration so that the database is created.</p>
+
+<pre><code>php artisan migrate
+</code></pre>
+
+<p>Next, let&rsquo;s make the model to handle the retrieving/storing of our database entries.</p>
+
+<pre><code class="language-bash">php artisan make:model Models/Redirect
+</code></pre>
+
+<p>Again, replace all of the code in the newly created file with the following:</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
+
+class Redirect extends Model
+{
+    protected $guarded = ['id'];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::saved(function () {
+            Cache::forget('redirect_cache_routes');
+        });
+    }
+}
+</code></pre>
+
+<p>To explain the code above a little, we only have the ID as guarded and allow everything else to be mass assignable, you can update this to your preferences. You will also notice I am using the <code>boot()</code> function here to clear a cached value, this will come into play a little later when we handle the redirects. I would usually achieve this through a <a href="https://laravel.com/docs/5.8/eloquent#observers">model observer</a>, but for the purpose of this tutorial, I&rsquo;ve left it on the model.</p>
+
+<p>Next, let’s create a redirector class that inherits the Redirector interface defined by the Spatie package and update it to allow for population from the database also. Create a new file in <code>App\Services</code> (or wherever you wish to store this) called <strong>DatabaseRedirector</strong></p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App\Services;
+
+use App\Models\Redirect;
+use Spatie\MissingPageRedirector\Redirector\Redirector;
+use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Cache;
+
+class DatabaseRedirector implements Redirector
+{
+    public function getRedirectsFor(Request $request): array
+    {
+    	// Get from the database and remember forever
+		// we clear this on new model or updated model
+        $dbRedirects = Cache::rememberForever('redirect_cache_routes', function () {
+            return Redirect::all()-&gt;flatMap(function ($redirect) {
+                return [$redirect-&gt;old_url =&gt; $redirect-&gt;new_url];
+            })-&gt;toArray();
+        });
+
+		// Get the redirects from the config
+        $configRedirects = config('missing-page-redirector.redirects');
+
+		// Merge both values
+        return array_merge($dbRedirects, $configRedirects);
+    }
+}
+</code></pre>
+
+<p>Finally, let&rsquo;s update the <code>config/missing-page-redirector.php</code> to the below. This will overwrite the default handler to the one we just created and load all our redirections from the database alongside those manually defined in the <code>redirects</code> array.</p>
+
+<pre><code class="language-php">&lt;?php
+
+return [
+    /*
+     * This is the class responsible for providing the URLs which must be redirected.
+     */
+    'redirector' =&gt; \App\Services\DatabaseRedirector::class,
+
+    /*
+     * By default the package will only redirect 404s. If you want to redirect on other
+     * response codes, just add them to the array. Leave the array empty to redirect
+     * always no matter what the response code.
+     */
+    'redirect_status_codes' =&gt; [
+        \Symfony\Component\HttpFoundation\Response::HTTP_NOT_FOUND,
+    ],
+
+    /*
+     * When using the `ConfigurationRedirector` you can specify the redirects in this array.
+     * You can use Laravel's route parameters here.
+     */
+    'redirects' =&gt; [],
+];
+</code></pre>
+
+<p>Populate the database where needed, and enjoy!</p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">14 Nov 2019</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/laravel/">Laravel</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/seo/">SEO</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+<section class="mt-20 container">
+    <div class="p-8 rounded-lg bg-site-blue w-9/12">
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/handling-redirects-in-nuxtjs-through-middlware/" title="Link to Handling Redirects in Nuxt.js through Middleware">Handling Redirects in Nuxt.js through Middleware</a></h4>
+            <p class="text-sm">16 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/awesome-laravel-nova-packages/" title="Link to Awesome Laravel Nova Packages to Get You Started">Awesome Laravel Nova Packages to Get You Started</a></h4>
+            <p class="text-sm">22 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/working-with-local-packages-in-laravel/" title="Link to Working on Local Packages in Laravel with Composer">Working on Local Packages in Laravel with Composer</a></h4>
+            <p class="text-sm">20 Nov 2018</p>
+          </li>
+        
+      </ul>
+    </div>
+</section>
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

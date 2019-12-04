@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technologies on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/technologies/</link>
+    <description>Recent content in Technologies on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    
+	<atom:link href="https://jackwhiting.co.uk/technologies/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Craft CMS</title>
+      <link>https://jackwhiting.co.uk/technologies/craft-cms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/craft-cms/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Laravel</title>
+      <link>https://jackwhiting.co.uk/technologies/laravel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/laravel/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Shopify</title>
+      <link>https://jackwhiting.co.uk/technologies/shopify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/shopify/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Vue JS</title>
+      <link>https://jackwhiting.co.uk/technologies/vue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/vue/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>WordPress</title>
+      <link>https://jackwhiting.co.uk/technologies/wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/wordpress/</guid>
+      <description>orem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+  </channel>
+</rss>

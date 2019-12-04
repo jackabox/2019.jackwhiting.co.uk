@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Accessors and Mutators can help with abstracting common functionality in our application into one consistent location. By utilising them we can provide a more consistent codebase and improve the workflow between developers.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>Using Accessors and Mutators to Abstract Common Functionality within Laravel - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>Using Accessors and Mutators to Abstract Common Functionality within Laravel</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p>A common thing I&rsquo;ve found when analysing or revisiting code, is that logic will be repeatedly written throughout different parts of an application, be it in different controllers or views, or even extra database tables are created to store logic that is calculated, potentially increasing query counts.</p>
+
+<p>Laravel has a pretty awesome way of allowing us to utilise the model to contain this logic and reduce repetition.</p>
+
+<p>This is done via the use of Accessors and Mutators. Used right they can be really beneficial and make an application simpler, cleaner and much more accessible - which is great for everyone involved.</p>
+
+<h2 id="accessors">Accessors</h2>
+
+<p>Accessors are a way of telling a model how to get some form of information and the way it should be presented.</p>
+
+<p>This can be the manipulation of data that already exists in a models properties, for example to capitalize a name, or to create some new logic which we may want to use in several places.</p>
+
+<p>If we take the example of a product. Products usually have prices, you&rsquo;ll probably store this in the database which is fine but what if you also want to get the price with or without VAT (or other taxes) on top.</p>
+
+<p>We can handle this as an accessor in our model. To do this, we&rsquo;d create a function starting with <code>get</code> and ending in <code>Attribute</code>, creating something along the lines of the following.</p>
+
+<pre><code class="language-php">&lt;?php
+namespace App\Models;
+
+class Product {
+
+    /**
+     * Get the price including vat attribute
+     *
+     * @return string
+     */
+    public function getPriceIncVatAttribute()
+    {
+        return $this-&gt;price * 1.2;
+    }
+}
+</code></pre>
+
+<p>We can then utilize this code the same way you would any other property of a model and call it by doing the following</p>
+
+<pre><code class="language-php">$product = Product::find(1);
+echo $product-&gt;price_inc_vat;
+</code></pre>
+
+<p>To take this a step further, you may want to make the new attribute available within the the model properties by default, rather than just when we call it. This is really useful if we are creating an API or passing a lot of logic to a front end component (such as Vue.js).</p>
+
+<p>To do this we&rsquo;d need to add it to the <code>appends</code> variable in the model.</p>
+
+<pre><code class="language-php">&lt;?php
+namespace App;
+
+class Product {
+
+    protected $appends = ['price_inc_vat'];
+
+    /**
+     * Get the price including vat attribute
+     *
+     * @return string
+     */
+    public function getPriceIncVatAttribute()
+    {
+        return $this-&gt;price * 1.2;
+    }
+}
+</code></pre>
+
+<p>This will now automatically call the <code>getPriceIncVatAttribute</code> whenever we request the model. Incredibly useful.</p>
+
+<h3 id="accessors-with-queries">Accessors With Queries</h3>
+
+<p>You can also use accessors to handle the logic of relations or queries. This can be useful if you find yourself repeating a section of code a lot.</p>
+
+<p>If we carry on with the products example. Somewhere on your site you might want to count the items a user has added to their basket.</p>
+
+<p>We could define an accessor to reference the items and count them.</p>
+
+<pre><code class="language-php">public function getItemCountAttribute() {
+    return $this-&gt;items()-&gt;count();
+}
+</code></pre>
+
+<p>Then in our view we can just call the attribute, as such</p>
+
+<pre><code class="language-php">echo $basket-&gt;item_count;
+</code></pre>
+
+<p><strong>Note:</strong> It is always good to think about whether you need to add an accessor with a database query to the <code>$appends</code>. Doing so will make an extra query every time a model is loaded, rather then as and when it is needed. There is a use-case for both.</p>
+
+<h2 id="mutators">Mutators</h2>
+
+<p>Mutators work with the way that we <strong>set</strong> data in our model. They become really useful for when you want to always perform logic on data before it is stored.</p>
+
+<p>If we take a simple example of storing specifications for a product, we might want to store them as a json object. In our database we may have a column called <code>specifications</code> with the type of <code>json</code> and to store the data here we&rsquo;d need to make sure it was formatted correctly.</p>
+
+<p>We would then want to define a mutator on the model which will run <code>json_encode()</code> on the data.</p>
+
+<p>To do this, we&rsquo;d need to create a new function follows a structure of <code>setTableColumnAttribute</code>. Something along the lines of the following</p>
+
+<pre><code class="language-php">&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
+
+class Product extends Model
+{
+    /**
+     * Set the user's first name.
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setSpecificationsAttribute($value)
+    {
+        $this-&gt;attributes['specifications'] = json_encode($value);
+    }
+}
+</code></pre>
+
+<p>Then when we are updating or saving a new record, we could just pass our array, and the mutator would handle the encoding of the data.</p>
+
+<pre><code class="language-php">public function update(Request $request)
+{
+    $product = Product::find(1);
+    $product-&gt;specifications = $request-&gt;specifications; // passes an array
+    $product-&gt;save();
+}
+</code></pre>
+
+<p>This is a relatively simple use case for a mutator, but here we&rsquo;re abstracting the code that may be used in several places and ensuring it is constantly handled with the same logic, providing a nicer experience for developers to work with and a cleaner code base.</p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">14 Nov 2018</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/laravel/">Laravel</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/php/">PHP</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+<section class="mt-20 container">
+    <div class="p-8 rounded-lg bg-site-blue w-9/12">
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/handling-seo-redirects-in-a-laravel-application/" title="Link to Handling Redirects in a Laravel Application">Handling Redirects in a Laravel Application</a></h4>
+            <p class="text-sm">14 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/awesome-laravel-nova-packages/" title="Link to Awesome Laravel Nova Packages to Get You Started">Awesome Laravel Nova Packages to Get You Started</a></h4>
+            <p class="text-sm">22 Nov 2019</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/working-with-local-packages-in-laravel/" title="Link to Working on Local Packages in Laravel with Composer">Working on Local Packages in Laravel with Composer</a></h4>
+            <p class="text-sm">20 Nov 2018</p>
+          </li>
+        
+      </ul>
+    </div>
+</section>
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

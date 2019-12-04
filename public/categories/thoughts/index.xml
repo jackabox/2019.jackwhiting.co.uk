@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thoughts on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/thoughts/</link>
+    <description>Recent content in Thoughts on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 Nov 2019 12:36:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/thoughts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Few Thoughts on Being a Freelancer</title>
+      <link>https://jackwhiting.co.uk/posts/a-few-thoughts-on-being-a-freelancer/</link>
+      <pubDate>Fri, 22 Nov 2019 12:36:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/a-few-thoughts-on-being-a-freelancer/</guid>
+      <description>Over the last few months, I&amp;rsquo;ve moved into Freelancing full-time and it&amp;rsquo;s been both a breath of fresh air and also an overwhelming experience.
+I have always done freelance on the side for many years, and even worked freelancing while I was at university. The experience of working on many side projects and managing projects were great as I stepped into freelancing full-time, but there was nothing that really prepared me for the mental hurdles other than jumping in.</description>
+    </item>
+    
+    <item>
+      <title>Picking Laravel Back Up</title>
+      <link>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</guid>
+      <description>Over the past few weeks, I&amp;rsquo;ve finally got around to working with Laravel again in my agency. The last time I used the framework on commercial projects was back at version 4, this was when I was working with a team on Pancake App.
+The majority of my time these days is spent building Wordpress sites and plugins such as; Raw Halo. (A commerce store built on WooCommerce) and the Skip Hire Plugin to allow skip companies to purchase skips from their websites.</description>
+    </item>
+    
+    <item>
+      <title>University Isn&#39;t Everything (pt. 2)</title>
+      <link>https://jackwhiting.co.uk/posts/university-isnt-everything-part-2/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/university-isnt-everything-part-2/</guid>
+      <description>This post was originally published in 2014, it was updated in 2016.
+I had previously written a blog post titled “University Isn’t Everything”, this continues the thoughts expressed in that post.
+When I wrote the first post on this subject, I wanted to express my thoughts on why university didn&amp;rsquo;t feel all that fulfilling or stimulating with regards to moving into the Web Design Industry. It requires a lot more then a degree to become successful and I don&amp;rsquo;t think this is portrayed well within university.</description>
+    </item>
+    
+  </channel>
+</rss>

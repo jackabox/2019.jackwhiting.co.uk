@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/testing/</link>
+    <description>Recent content in Testing on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Beautiful, organised results in PHPUnit</title>
+      <link>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</guid>
+      <description>PHPUnit Pretty Result Printer is a beautiful little extension for PHPUnit that cleans up and organises the output of tests. I&amp;rsquo;d highly recommend this for anyone using PHPUnit.
+For installation instructions visit the official repository https://github.com/mikeerickson/phpunit-pretty-result-printer.</description>
+    </item>
+    
+  </channel>
+</rss>

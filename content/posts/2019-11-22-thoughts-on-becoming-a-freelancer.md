@@ -7,7 +7,6 @@ categories:
   - Thoughts
   - Freelance
 ---
-
 Over the last few months, I've moved into Freelancing full-time and it's been both a breath of fresh air and also an overwhelming experience.
 
 I have always done freelance on the side for many years, and even worked freelancing while I was at university. The experience of working on many side projects and managing projects were great as I stepped into freelancing full-time, but there was nothing that really prepared me for the mental hurdles other than jumping in.

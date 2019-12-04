@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/</link>
+    <description>Recent content in Home on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 04 Dec 2019 01:38:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started With Svelte: Installation &amp; Integrating Tailwind CSS</title>
+      <link>https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/</link>
+      <pubDate>Wed, 04 Dec 2019 01:38:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/</guid>
+      <description>This article is part of a series of posts with working on Svelte. This is part one in the series and will soon follow the integration of Routing and Firebase.
+Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript.</description>
+    </item>
+    
+    <item>
+      <title>A Few Thoughts on Being a Freelancer</title>
+      <link>https://jackwhiting.co.uk/posts/a-few-thoughts-on-being-a-freelancer/</link>
+      <pubDate>Fri, 22 Nov 2019 12:36:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/a-few-thoughts-on-being-a-freelancer/</guid>
+      <description>Over the last few months, I&amp;rsquo;ve moved into Freelancing full-time and it&amp;rsquo;s been both a breath of fresh air and also an overwhelming experience.
+I have always done freelance on the side for many years, and even worked freelancing while I was at university. The experience of working on many side projects and managing projects were great as I stepped into freelancing full-time, but there was nothing that really prepared me for the mental hurdles other than jumping in.</description>
+    </item>
+    
+    <item>
+      <title>MSS</title>
+      <link>https://jackwhiting.co.uk/works/mss/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/mss/</guid>
+      <description>I was commisioned by an agency to help update the web presence of MSS. This involved completely redesigning their site and I worked on implementing the design into WordPress whilst adding a little bit of flair to the site.</description>
+    </item>
+    
+    <item>
+      <title>Using Firebase Admin SDK with Netlify Lambda Functions</title>
+      <link>https://jackwhiting.co.uk/posts/using-firebase-admin-sdk-with-netlify-lambda-functions/</link>
+      <pubDate>Tue, 15 Oct 2019 14:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-firebase-admin-sdk-with-netlify-lambda-functions/</guid>
+      <description>I&amp;rsquo;ve been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I&amp;rsquo;ve recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I&amp;rsquo;m not quite ready for yet.</description>
+    </item>
+    
+    <item>
+      <title>Handling Redirects in Nuxt.js through Middleware</title>
+      <link>https://jackwhiting.co.uk/posts/handling-redirects-in-nuxtjs-through-middlware/</link>
+      <pubDate>Mon, 16 Sep 2019 14:42:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/handling-redirects-in-nuxtjs-through-middlware/</guid>
+      <description>I recently published an article about how to handle redirects in Laravel, since I also use Nuxt.js I thought it would be good to write up how to handle redirects simplistically through pure Nuxt (no server, no advanced configuration).
+To do this we&amp;rsquo;ll need to leverage the serverMiddleware, you can learn more about this from the official Nuxt.js docs, but in short, it allows for us to handle additional routes that aren&amp;rsquo;t defined within the folder structure (for example an API).</description>
+    </item>
+    
+    <item>
+      <title>Handling Redirects in a Laravel Application</title>
+      <link>https://jackwhiting.co.uk/posts/handling-seo-redirects-in-a-laravel-application/</link>
+      <pubDate>Wed, 14 Aug 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/handling-seo-redirects-in-a-laravel-application/</guid>
+      <description>In this article, we&amp;rsquo;re going to talk about an easy way to manage our redirects within a Laravel application. The following will allow for the storing of redirects in a database (to hook into Nova, or another CRUD system) and also the reading of redirects from a config file.
+A lot of the hard work has been done for us by the wonderful team at Spatie whom have produced a redirector package which allows for route params to be read and parsed.</description>
+    </item>
+    
+    <item>
+      <title>Awesome Laravel Nova Packages to Get You Started</title>
+      <link>https://jackwhiting.co.uk/posts/awesome-laravel-nova-packages/</link>
+      <pubDate>Wed, 22 May 2019 23:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/awesome-laravel-nova-packages/</guid>
+      <description>I&amp;rsquo;ve been using Laravel Nova a lot since it&amp;rsquo;s release and find myself using the same packages across projects just because they&amp;rsquo;re awesome and work well. In this post I&amp;rsquo;ve compiled a list of my five favourite packages to include in your Laravel Nova install.
+If you haven&amp;rsquo;t used Nova before, it&amp;rsquo;s an admin package written for Laravel and allows for rapid prototyping of a CRUD admin system quickly. It&amp;rsquo;s also extensible and all written within Vue/Tailwind.</description>
+    </item>
+    
+    <item>
+      <title>PBFA</title>
+      <link>https://jackwhiting.co.uk/works/pbfa/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/pbfa/</guid>
+      <description>PBFA (Provincial Booksellers Fairs Association) used to run their organisation from a server located in the corner of their room. I worked with them to move their process online and automate several long tedious steps to reduce the admin required for planning out their fairs.</description>
+    </item>
+    
+    <item>
+      <title>Ensek</title>
+      <link>https://jackwhiting.co.uk/works/ensek/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/ensek/</guid>
+      <description>Ensek wanted a new online presence to show off the company ethos and help them target new prospects. This site was built using Craft CMS to provide the best experience for updating and managing their content.</description>
+    </item>
+    
+    <item>
+      <title>Moving to Figma</title>
+      <link>https://jackwhiting.co.uk/posts/moving-to-figma/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/moving-to-figma/</guid>
+      <description>In the last 6 months, I&amp;rsquo;ve moved to using Figma on a permanent basis. I&amp;rsquo;d spent a fair bit of time in and out of the beta, and now with the official launch, it feels more stable and ready for full time use than ever.
+With I first tried Figma up it was a bit rough around the edges, it needed refinement and missed some of the fundamentals I was used to, such as Symbols (Sketch had tainted me).</description>
+    </item>
+    
+    <item>
+      <title>Working on Local Packages in Laravel with Composer</title>
+      <link>https://jackwhiting.co.uk/posts/working-with-local-packages-in-laravel/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/working-with-local-packages-in-laravel/</guid>
+      <description>Recently, I&amp;rsquo;ve been working on developing a set of packages for Laravel to wrap up some of the code we write on a daily basis. Whilst developing I needed a way to reference a local package to my Laravel install and wanted to use composer.json to include, and update it&amp;rsquo;s dependancies.
+To do this, I found it often easier to symbolic link my package into a directory within my Laravel project called packages/namespace/package-name and then set up Composer to read it automatically.</description>
+    </item>
+    
+    <item>
+      <title>Using Accessors and Mutators to Abstract Common Functionality within Laravel</title>
+      <link>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</link>
+      <pubDate>Wed, 14 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</guid>
+      <description>A common thing I&amp;rsquo;ve found when analysing or revisiting code, is that logic will be repeatedly written throughout different parts of an application, be it in different controllers or views, or even extra database tables are created to store logic that is calculated, potentially increasing query counts.
+Laravel has a pretty awesome way of allowing us to utilise the model to contain this logic and reduce repetition.
+This is done via the use of Accessors and Mutators.</description>
+    </item>
+    
+    <item>
+      <title>Laracon Online 2018</title>
+      <link>https://jackwhiting.co.uk/posts/laracon-online-2018/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/laracon-online-2018/</guid>
+      <description>On the 7th February, I attended not only my first online conference but my first Laravel dedicated conference and simply put - it was amazing.
+Laracon Online 2018 featured talks that covered both technical and theoretical topics and were delivered by speakers who possessed complete passion and charisma.
+One of my main highlights was Jonathan Reinink who delivered a talk about &amp;ldquo;Advanced Querying with Eloquent&amp;rdquo; which even now, 6 days later, had me astounded.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up A Windows 10 Development Environment with WSL, PHP &amp; Laravel</title>
+      <link>https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/</link>
+      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/setting-up-a-windows-10-development-environment-with-wsl-php-laravel/</guid>
+      <description>Preface Recently, I&amp;rsquo;ve been toying around with the use of WSL (Windows Subsystem for Linux) for development. I&amp;rsquo;ve used a Mac for development work over better part of the last decade and required the Windows setup to mimic my workflow.
+Typically, I create Laravel applications along with the occasional WordPress site, using the following tools:
+ Nginx PHP MySql Dnsmasq Valet  After a bit of testing and reconfiguration, I managed to get WSL setup with the above in a few easy steps and I&amp;rsquo;m relatively happy with the workflow.</description>
+    </item>
+    
+    <item>
+      <title>Beautiful, organised results in PHPUnit</title>
+      <link>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</guid>
+      <description>PHPUnit Pretty Result Printer is a beautiful little extension for PHPUnit that cleans up and organises the output of tests. I&amp;rsquo;d highly recommend this for anyone using PHPUnit.
+For installation instructions visit the official repository https://github.com/mikeerickson/phpunit-pretty-result-printer.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to WordPress Plugin Development</title>
+      <link>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</guid>
+      <description>This post was written for internal development when working at Adtrak to help with stepping into WordPress Plugin development. The following article is a copy of this with some slight modifications.
+Plugins play a key part in how we handle WordPress builds and offer services to clients. Whether it is a plugin such as our “Core” which adds repeatedly used code to WordPress and cleans up the outputs of themes, or something a little more complex such as the “Skip Hire Plugin” which provides a full e-commerce solution for booking skips online.</description>
+    </item>
+    
+    <item>
+      <title>Chrome 63 Forces Redirection of .dev Domains to HTTPS</title>
+      <link>https://jackwhiting.co.uk/posts/chrome-63-forces-dev-domains-to-https/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/chrome-63-forces-dev-domains-to-https/</guid>
+      <description>Chrome 63 (out since December 2017), will force all domains ending on .dev (and .foo) to be redirected to HTTPS via a preloaded HTTP Strict Transport Security (HSTS) header.
+ You can find out more about this change at https://ma.ttias.be/chrome-force-dev-domains-https-via-preloaded-hsts/
+As long as I can remember, I&amp;rsquo;ve used .dev as a preference for local domains. It seemed like the industry standard and was recommend by a lot of developers. When I woke up to find all my .</description>
+    </item>
+    
+    <item>
+      <title>Picking Laravel Back Up</title>
+      <link>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</guid>
+      <description>Over the past few weeks, I&amp;rsquo;ve finally got around to working with Laravel again in my agency. The last time I used the framework on commercial projects was back at version 4, this was when I was working with a team on Pancake App.
+The majority of my time these days is spent building Wordpress sites and plugins such as; Raw Halo. (A commerce store built on WooCommerce) and the Skip Hire Plugin to allow skip companies to purchase skips from their websites.</description>
+    </item>
+    
+    <item>
+      <title>How I Build WordPress Plugins: Part 1 - Framework</title>
+      <link>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</guid>
+      <description>I&amp;rsquo;ve been writing custom WordPress plugins for a couple of years now and wanted to share some of the details on how I&amp;rsquo;ve been working. There will be a few parts to these articles, and in this one we&amp;rsquo;re starting with the Plugin Framework.
+Intro Within the last year or so, I stumbled across Herbet. Herbert is a plugin framework for WordPress that allows for a structured approach, similar to that of Laravel but tailored for a WordPress context.</description>
+    </item>
+    
+    <item>
+      <title>Rollerdor</title>
+      <link>https://jackwhiting.co.uk/works/rollerdor/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/rollerdor/</guid>
+      <description>Rollerdor wanted to move away from selling their products on eBay into their own environment. This site had two parts, a Larvel application which targeted the automating of creating specifications for custom doors and a WooCommerce store for selling their addon products.</description>
+    </item>
+    
+    <item>
+      <title>HoleHearted</title>
+      <link>https://jackwhiting.co.uk/works/holehearted/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/holehearted/</guid>
+      <description>While launching their clothing brand, HoleHearted needed an online store that could show off their personality and help them process all their orders with ease. The site was built and designed by myself on WordPress/WooCommerce to provide the client with ease in the management of their site.</description>
+    </item>
+    
+    <item>
+      <title>Setting Up and Using Yarn</title>
+      <link>https://jackwhiting.co.uk/posts/setting-up-and-using-yarn/</link>
+      <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/setting-up-and-using-yarn/</guid>
+      <description>If you haven&amp;rsquo;t heard of Yarn before, it is a Package Manager for JavaScript (which replaces the existing workflow used with the NPM client). Yarn shares a similar workflow, but puts security, speed and reliability at the forefront.
+Why Yarn Over NPM? So, what makes Yarn better than just carrying on using NPM?
+Speed, Yarn caches packages so it doesn&amp;rsquo;t need to downloaded it again and again. It also runs the process parallel so the runtime is a lot shorter.</description>
+    </item>
+    
+    <item>
+      <title>Using Visual Studio Code (with 5  Recommended Extensions)</title>
+      <link>https://jackwhiting.co.uk/posts/using-vs-code-and-recommended-extensions/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-vs-code-and-recommended-extensions/</guid>
+      <description>I constantly toy with which IDE/Text Editor I want to use in my workflow. I’ve tried six or seven in the last few months to find something that fits my personal work flow and always ended up reverting to Sublime Text 3.
+I require my editor to be customisable, is extendable and has support for colour schemes (it’s the little things). When I stumbled on Visual Studio (VS) Code recently and found that it and ticked all of my boxes, I decided to dive in and test it out.</description>
+    </item>
+    
+    <item>
+      <title>University Isn&#39;t Everything (pt. 2)</title>
+      <link>https://jackwhiting.co.uk/posts/university-isnt-everything-part-2/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/university-isnt-everything-part-2/</guid>
+      <description>This post was originally published in 2014, it was updated in 2016.
+I had previously written a blog post titled “University Isn’t Everything”, this continues the thoughts expressed in that post.
+When I wrote the first post on this subject, I wanted to express my thoughts on why university didn&amp;rsquo;t feel all that fulfilling or stimulating with regards to moving into the Web Design Industry. It requires a lot more then a degree to become successful and I don&amp;rsquo;t think this is portrayed well within university.</description>
+    </item>
+    
+    <item>
+      <title>Craft CMS</title>
+      <link>https://jackwhiting.co.uk/technologies/craft-cms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/craft-cms/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>E-commerce</title>
+      <link>https://jackwhiting.co.uk/offerings/e-commerce/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/e-commerce/</guid>
+      <description>Sell products online? International or just locall? I&amp;rsquo;ll help you set up the perfect online store.</description>
+    </item>
+    
+    <item>
+      <title>Hosting &amp; After-care</title>
+      <link>https://jackwhiting.co.uk/offerings/hosting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/hosting/</guid>
+      <description>Websites and apps need somewhere to live. I can help keep your site secure and backed up.</description>
+    </item>
+    
+    <item>
+      <title>Laravel</title>
+      <link>https://jackwhiting.co.uk/technologies/laravel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/laravel/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Shopify</title>
+      <link>https://jackwhiting.co.uk/technologies/shopify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/shopify/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Strategic Planning</title>
+      <link>https://jackwhiting.co.uk/offerings/strategic-planning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/strategic-planning/</guid>
+      <description>Planning is fundamental to a successful project. I&amp;rsquo;ll work with you to find out all of your needs.</description>
+    </item>
+    
+    <item>
+      <title>Vue JS</title>
+      <link>https://jackwhiting.co.uk/technologies/vue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/vue/</guid>
+      <description>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+    <item>
+      <title>Web Applications</title>
+      <link>https://jackwhiting.co.uk/offerings/web-applications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-applications/</guid>
+      <description>TBC</description>
+    </item>
+    
+    <item>
+      <title>Web Design</title>
+      <link>https://jackwhiting.co.uk/offerings/web-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-design/</guid>
+      <description>Need a design? I&amp;rsquo;ll work with you by hand crafting the website to your project requirements.</description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://jackwhiting.co.uk/offerings/web-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/offerings/web-development/</guid>
+      <description>Written from the ground up with the best system for your needs — websites that are built to last years.</description>
+    </item>
+    
+    <item>
+      <title>WordPress</title>
+      <link>https://jackwhiting.co.uk/technologies/wordpress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/technologies/wordpress/</guid>
+      <description>orem, ipsum dolor sit amet consectetur adipisicing elit. Soluta placeat pariatur eos illum nulla nostrum tempora molestiae voluptatibus culpa magni!</description>
+    </item>
+    
+  </channel>
+</rss>

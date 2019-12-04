@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>craft on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/tags/craft/</link>
+    <description>Recent content in craft on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/tags/craft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ensek</title>
+      <link>https://jackwhiting.co.uk/works/ensek/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/ensek/</guid>
+      <description>Ensek wanted a new online presence to show off the company ethos and help them target new prospects. This site was built using Craft CMS to provide the best experience for updating and managing their content.</description>
+    </item>
+    
+  </channel>
+</rss>

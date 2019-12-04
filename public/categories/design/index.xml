@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/design/</link>
+    <description>Recent content in Design on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 14 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving to Figma</title>
+      <link>https://jackwhiting.co.uk/posts/moving-to-figma/</link>
+      <pubDate>Thu, 14 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/moving-to-figma/</guid>
+      <description>In the last 6 months, I&amp;rsquo;ve moved to using Figma on a permanent basis. I&amp;rsquo;d spent a fair bit of time in and out of the beta, and now with the official launch, it feels more stable and ready for full time use than ever.
+With I first tried Figma up it was a bit rough around the edges, it needed refinement and missed some of the fundamentals I was used to, such as Symbols (Sketch had tainted me).</description>
+    </item>
+    
+  </channel>
+</rss>

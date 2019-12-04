@@ -8,7 +8,6 @@ categories:
   - Nuxt
   - SEO
 ---
-
 I recently published an article about [how to handle redirects in Laravel](/posts/handling-seo-redirects-in-a-laravel-application/), since I also use [Nuxt.js](https://nuxtjs.org/) I thought it would be good to write up how to handle redirects simplistically through pure Nuxt (no server, no advanced configuration).
 
 To do this we'll need to leverage the **serverMiddleware**, you can learn more about this [from the official Nuxt.js docs](https://nuxtjs.org/api/configuration-servermiddleware), but in short, it allows for us to handle additional routes that aren't defined within the folder structure (for example an API). In our case, we will be using the serverMiddleware to read the redirects and take us to the appropriate route.

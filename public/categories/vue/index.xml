@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/vue/</link>
+    <description>Recent content in Vue on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 16 Sep 2019 14:42:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Handling Redirects in Nuxt.js through Middleware</title>
+      <link>https://jackwhiting.co.uk/posts/handling-redirects-in-nuxtjs-through-middlware/</link>
+      <pubDate>Mon, 16 Sep 2019 14:42:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/handling-redirects-in-nuxtjs-through-middlware/</guid>
+      <description>I recently published an article about how to handle redirects in Laravel, since I also use Nuxt.js I thought it would be good to write up how to handle redirects simplistically through pure Nuxt (no server, no advanced configuration).
+To do this we&amp;rsquo;ll need to leverage the serverMiddleware, you can learn more about this from the official Nuxt.js docs, but in short, it allows for us to handle additional routes that aren&amp;rsquo;t defined within the folder structure (for example an API).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/php/</link>
+    <description>Recent content in PHP on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Accessors and Mutators to Abstract Common Functionality within Laravel</title>
+      <link>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</link>
+      <pubDate>Wed, 14 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</guid>
+      <description>A common thing I&amp;rsquo;ve found when analysing or revisiting code, is that logic will be repeatedly written throughout different parts of an application, be it in different controllers or views, or even extra database tables are created to store logic that is calculated, potentially increasing query counts.
+Laravel has a pretty awesome way of allowing us to utilise the model to contain this logic and reduce repetition.
+This is done via the use of Accessors and Mutators.</description>
+    </item>
+    
+    <item>
+      <title>Beautiful, organised results in PHPUnit</title>
+      <link>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/beautiful-organised-results-in-phpunit/</guid>
+      <description>PHPUnit Pretty Result Printer is a beautiful little extension for PHPUnit that cleans up and organises the output of tests. I&amp;rsquo;d highly recommend this for anyone using PHPUnit.
+For installation instructions visit the official repository https://github.com/mikeerickson/phpunit-pretty-result-printer.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to WordPress Plugin Development</title>
+      <link>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</guid>
+      <description>This post was written for internal development when working at Adtrak to help with stepping into WordPress Plugin development. The following article is a copy of this with some slight modifications.
+Plugins play a key part in how we handle WordPress builds and offer services to clients. Whether it is a plugin such as our “Core” which adds repeatedly used code to WordPress and cleans up the outputs of themes, or something a little more complex such as the “Skip Hire Plugin” which provides a full e-commerce solution for booking skips online.</description>
+    </item>
+    
+    <item>
+      <title>How I Build WordPress Plugins: Part 1 - Framework</title>
+      <link>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</guid>
+      <description>I&amp;rsquo;ve been writing custom WordPress plugins for a couple of years now and wanted to share some of the details on how I&amp;rsquo;ve been working. There will be a few parts to these articles, and in this one we&amp;rsquo;re starting with the Plugin Framework.
+Intro Within the last year or so, I stumbled across Herbet. Herbert is a plugin framework for WordPress that allows for a structured approach, similar to that of Laravel but tailored for a WordPress context.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netlify on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/netlify/</link>
+    <description>Recent content in Netlify on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 15 Oct 2019 14:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/netlify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Firebase Admin SDK with Netlify Lambda Functions</title>
+      <link>https://jackwhiting.co.uk/posts/using-firebase-admin-sdk-with-netlify-lambda-functions/</link>
+      <pubDate>Tue, 15 Oct 2019 14:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-firebase-admin-sdk-with-netlify-lambda-functions/</guid>
+      <description>I&amp;rsquo;ve been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I&amp;rsquo;ve recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I&amp;rsquo;m not quite ready for yet.</description>
+    </item>
+    
+  </channel>
+</rss>

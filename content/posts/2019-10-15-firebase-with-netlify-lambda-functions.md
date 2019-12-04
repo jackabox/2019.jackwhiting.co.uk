@@ -8,7 +8,6 @@ categories:
   - Lambda
   - Netlify
 ---
-
 I've been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I've recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I'm not quite ready for yet.
 
 Enter Netlify Lambda Functions, on the free plan you're given a generous amount of resources and it allows you to send requests to third parties. This article is designed to run through a very basic setup of a Netlify Function and how to communicate with Firebase.

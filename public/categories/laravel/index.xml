@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Laravel on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/laravel/</link>
+    <description>Recent content in Laravel on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Aug 2019 11:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Handling Redirects in a Laravel Application</title>
+      <link>https://jackwhiting.co.uk/posts/handling-seo-redirects-in-a-laravel-application/</link>
+      <pubDate>Wed, 14 Aug 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/handling-seo-redirects-in-a-laravel-application/</guid>
+      <description>In this article, we&amp;rsquo;re going to talk about an easy way to manage our redirects within a Laravel application. The following will allow for the storing of redirects in a database (to hook into Nova, or another CRUD system) and also the reading of redirects from a config file.
+A lot of the hard work has been done for us by the wonderful team at Spatie whom have produced a redirector package which allows for route params to be read and parsed.</description>
+    </item>
+    
+    <item>
+      <title>Awesome Laravel Nova Packages to Get You Started</title>
+      <link>https://jackwhiting.co.uk/posts/awesome-laravel-nova-packages/</link>
+      <pubDate>Wed, 22 May 2019 23:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/awesome-laravel-nova-packages/</guid>
+      <description>I&amp;rsquo;ve been using Laravel Nova a lot since it&amp;rsquo;s release and find myself using the same packages across projects just because they&amp;rsquo;re awesome and work well. In this post I&amp;rsquo;ve compiled a list of my five favourite packages to include in your Laravel Nova install.
+If you haven&amp;rsquo;t used Nova before, it&amp;rsquo;s an admin package written for Laravel and allows for rapid prototyping of a CRUD admin system quickly. It&amp;rsquo;s also extensible and all written within Vue/Tailwind.</description>
+    </item>
+    
+    <item>
+      <title>Working on Local Packages in Laravel with Composer</title>
+      <link>https://jackwhiting.co.uk/posts/working-with-local-packages-in-laravel/</link>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/working-with-local-packages-in-laravel/</guid>
+      <description>Recently, I&amp;rsquo;ve been working on developing a set of packages for Laravel to wrap up some of the code we write on a daily basis. Whilst developing I needed a way to reference a local package to my Laravel install and wanted to use composer.json to include, and update it&amp;rsquo;s dependancies.
+To do this, I found it often easier to symbolic link my package into a directory within my Laravel project called packages/namespace/package-name and then set up Composer to read it automatically.</description>
+    </item>
+    
+    <item>
+      <title>Using Accessors and Mutators to Abstract Common Functionality within Laravel</title>
+      <link>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</link>
+      <pubDate>Wed, 14 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/using-accessors-and-mutators-within-laravel/</guid>
+      <description>A common thing I&amp;rsquo;ve found when analysing or revisiting code, is that logic will be repeatedly written throughout different parts of an application, be it in different controllers or views, or even extra database tables are created to store logic that is calculated, potentially increasing query counts.
+Laravel has a pretty awesome way of allowing us to utilise the model to contain this logic and reduce repetition.
+This is done via the use of Accessors and Mutators.</description>
+    </item>
+    
+    <item>
+      <title>Picking Laravel Back Up</title>
+      <link>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/picking-laravel-back-up/</guid>
+      <description>Over the past few weeks, I&amp;rsquo;ve finally got around to working with Laravel again in my agency. The last time I used the framework on commercial projects was back at version 4, this was when I was working with a team on Pancake App.
+The majority of my time these days is spent building Wordpress sites and plugins such as; Raw Halo. (A commerce store built on WooCommerce) and the Skip Hire Plugin to allow skip companies to purchase skips from their websites.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conferences on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/conferences/</link>
+    <description>Recent content in Conferences on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 11 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/conferences/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Laracon Online 2018</title>
+      <link>https://jackwhiting.co.uk/posts/laracon-online-2018/</link>
+      <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/laracon-online-2018/</guid>
+      <description>On the 7th February, I attended not only my first online conference but my first Laravel dedicated conference and simply put - it was amazing.
+Laracon Online 2018 featured talks that covered both technical and theoretical topics and were delivered by speakers who possessed complete passion and charisma.
+One of my main highlights was Jonathan Reinink who delivered a talk about &amp;ldquo;Advanced Querying with Eloquent&amp;rdquo; which even now, 6 days later, had me astounded.</description>
+    </item>
+    
+  </channel>
+</rss>

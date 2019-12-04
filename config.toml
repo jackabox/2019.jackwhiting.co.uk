@@ -3,3 +3,9 @@ languageCode = "en-gb"
 title = "Jack Whiting"
 theme = "twentytwenty"
 isServer = "false"
+[markup]
+  [markup.highlight]
+		codeFences = true
+		style = "github"
+		tabWidth = 2
+		lineNos = true

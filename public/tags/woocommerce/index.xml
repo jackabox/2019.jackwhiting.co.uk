@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>woocommerce on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/tags/woocommerce/</link>
+    <description>Recent content in woocommerce on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/tags/woocommerce/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rollerdor</title>
+      <link>https://jackwhiting.co.uk/works/rollerdor/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/rollerdor/</guid>
+      <description>Rollerdor wanted to move away from selling their products on eBay into their own environment. This site had two parts, a Larvel application which targeted the automating of creating specifications for custom doors and a WooCommerce store for selling their addon products.</description>
+    </item>
+    
+    <item>
+      <title>HoleHearted</title>
+      <link>https://jackwhiting.co.uk/works/holehearted/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/holehearted/</guid>
+      <description>While launching their clothing brand, HoleHearted needed an online store that could show off their personality and help them process all their orders with ease. The site was built and designed by myself on WordPress/WooCommerce to provide the client with ease in the management of their site.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Plugins play a key part in how we handle WordPress builds and offer services to clients. This article involves a brief write up of how to get started building your own WordPress plugins.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>An Introduction to WordPress Plugin Development - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>An Introduction to WordPress Plugin Development</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p><em>This post was written for internal development when working at Adtrak to help with stepping into WordPress Plugin development. The following article is a copy of this with some slight modifications.</em></p>
+
+<p>Plugins play a key part in how we handle WordPress builds and offer services to clients. Whether it is a plugin such as our “Core” which adds repeatedly used code to WordPress and cleans up the outputs of themes, or something a little more complex such as the “Skip Hire Plugin” which provides a full e-commerce solution for booking skips online. Using plugins allows us to be more efficient in the development of websites.</p>
+
+<h2 id="what-is-a-wordpress-plugin">What is a WordPress Plugin?</h2>
+
+<p>A plugin is a PHP script (or group of) which modifies and extends the native functionality. WordPress is built with a <a href="https://codex.wordpress.org/Plugin_API">Plugin API</a> that gives us some distinct benefits such as:</p>
+
+<ul>
+<li>Removing the need to modify any core files, providing a much easier update and maintenance process.</li>
+<li>Allows the update of plugins separately from any other code, providing critical fixes where needed across multiple sites.</li>
+<li>Abstracts the functionality from Themes, making our files both cleaner and more maintainable.</li>
+<li>Allows for the use of Object Orientated Programming with the ability to still hook into WordPress functions, classes and APIs.</li>
+</ul>
+
+<h2 id="plugin-names-structure">Plugin Names &amp; Structure</h2>
+
+<p>Plugins should always have a unique name, this is to ensure we do not get conflicts with other plugins (both installed and on the public plugin repository) or have problems with updates.</p>
+
+<p>At Adtrak, we tend to prefix everything with <code>adtrak</code> which removes any problems with conflicts, as well as providing a clear view of what plugins are ours in the WordPress admin.</p>
+
+<h3 id="structure">Structure</h3>
+
+<p>It is crucial you keep everything organised when building a plugin, as this makes maintenance easier. Typically, a good starting point for a WordPress plugin is with the following file structure.</p>
+
+<p style="text-align:center">
+    <img src="/img/wp-plugin-folder-structure.png" alt="WP Plugin Examlple Structure">
+</p>
+
+<p><em>Note: When you start to write plugins more often, you may use a framework which tend to follow a different structure.</em></p>
+
+<h3 id="plugin-header">Plugin Header</h3>
+
+<p>Every plugin requires a header. This allows WordPress to read the files and tells it how to interpret the code. The header of a plugin, similar to that of a theme, is a comment block at the top of our main plugin file.</p>
+
+<pre><code class="language-scss">/*
+Plugin Name: Example Plugin
+Description: A quick excerpt about our plugin.
+Version: 1.0
+Author: Jackabox
+Author URI: http://jackwhiting.co.uk/
+Plugin URI: http://jackwhiting.co.uk/example-plugin
+*/
+</code></pre>
+
+<h3 id="plugin-conflicts">Plugin Conflicts</h3>
+
+<p>Typically, within a plugin you’ll create functions which handle specific tasks. If you have a multitude of plugins installed, or you use very generic naming of functions, you’re going to encounter some conflicts. There are two main ways to resolve this, these are:</p>
+
+<ul>
+<li>Always prefix your functions with the name of your plugin.</li>
+
+<li><p>Always wrap any declarations of functions in an if statement to check if a function with the same name already exists.</p>
+
+<pre><code class="language-php">function create_post_type() {
+// create page
+}
+
+create_post_type();
+</code></pre></li>
+</ul>
+
+<p>Would become</p>
+
+<pre><code class="language-php">if (! function_exists('jackabox_plugin_create_post_type') {
+  function jackabox_plugin_create_post_type() {
+     // create page
+  }
+}
+
+jackabox_plugin_create_post_type();
+</code></pre>
+
+<h2 id="actions-filters">Actions &amp; Filters</h2>
+
+<p>The WordPress Plugin API provides a quick way to access the core of WordPress through the use of <strong>actions</strong> and <strong>filters</strong>. Let’s breakdown what these do and how they can be used within Plugin Development.</p>
+
+<h3 id="actions">Actions</h3>
+
+<p>Actions are called at specific times. When they are triggered WordPress will find any functions which have been declared to an action and execute them in the order of priority. Whenever you are going to interact with the WordPress core this will usually be done via an action.</p>
+
+<p>For example, you might want to create a custom post type and register it when the site is initialised, to do this you might call the action of <code>init</code> which will ensure the custom post type is registered whenever WordPress is initialised.</p>
+
+<h4 id="executing-your-functions">Executing Your Functions</h4>
+
+<p>To execute any functions you write, and get WordPress to understand what’s going on, you’ll need to use the <a href="https://developer.wordpress.org/reference/functions/add_action/"><code>add_action()</code></a> function, this takes the following parameters.</p>
+
+<ul>
+<li><code>$hook</code> (required, the hook in WordPress we wish to call upon).</li>
+<li><code>$function_to_add</code> (required, your defined function that we wish to call).</li>
+<li><code>$priority</code> (optional, the order to load the action in, the smaller number the sooner it will execute).</li>
+
+<li><p><code>$accepted_args</code> (optional, required when the action has one or more variables passed).</p>
+
+<pre><code class="language-php">if (! function_exists('jackabox_plugin_create_post_type') {
+function jackabox_plugin_create_post_type() {
+ // create page
+}
+}
+
+// when init is triggered, register our custom post type
+add_action('init', 'jackabox_plugin_create_post_type');
+</code></pre></li>
+</ul>
+
+<p>When using WordPress actions you need to keep in mind that an action may have required/defined variables that you need to pass through. If we look at the <code>save_post</code> hook, we have something along the following:</p>
+
+<pre><code class="language-php">// the save post action, defined in WordPress
+do_action('save_post', $post_ID, $post, $update);
+
+// add our function onto the 'save_post' hook, supplying priority and args
+add_action('save_post', 'save_my_page_extended', 10, 3);
+
+// function executed on save (we want all three variables)
+function save_my_page_extended($post_ID, $post, $update) {
+    // access all of our variables to do some work
+}
+</code></pre>
+
+<p>The <code>do_action()</code> defines the hook and has three additional args passed through, therefore when we call our action we have to specify “3” as the last <code>$args</code> parameter. Any of the actions can be found on the <a href="https://developer.wordpress.org/">WordPress developer site</a> or you can search your local WordPress files.</p>
+
+<h2 id="filters">Filters</h2>
+
+<p>Filters are a way to accept variables and return them back after being modified. Filters are often used when you want to manipulate the way default information is displayed.</p>
+
+<p>WordPress comes with a lot of filters in by default and can be utilised by using the <code>apply_filters()</code> function. <code>apply_filters</code> takes the following arguments:</p>
+
+<ul>
+<li><code>$tag</code> (required, name of filter)</li>
+<li><code>$value</code> (required, the variable we wish to filter)</li>
+<li><code>$var</code> (optional, any extra values you wish to pass to your function)</li>
+</ul>
+
+<p>When writing plugins, you’ll often create filters so that users can modify elements without having to alter the source code.</p>
+
+<p>You would call the <code>apply_filters</code> function by doing something similar to the following:</p>
+
+<pre><code class="language-php">echo apply_filters('the_excerpt', get_the_excerpt());
+</code></pre>
+
+<h3 id="creating-filters">Creating Filters</h3>
+
+<p>Let’s look at an example. If we are displaying currency on a page, we may want to create a filter that configures the output of the data. We’d use the <code>apply_filters</code> function to tell WordPress that these can be changed by any function that hooks into it.</p>
+
+<pre><code class="language-php">$price = apply_filters('jackabox_filter_display_price', '20.00');
+</code></pre>
+
+<h3 id="utilising-filters">Utilising Filters</h3>
+
+<p>When you want to utilise a filter, you need to use the <code>add_filter()</code> function. This takes the following arguments:</p>
+
+<ul>
+<li><code>$tag</code> (required, name of the filter).</li>
+<li><code>$function_to_add</code> (required, the function you wish to call).</li>
+<li><code>$priority</code> (optional, priority of the call)</li>
+<li><code>$accepted_args</code> (optional, required if we pass multiple arguments through).</li>
+</ul>
+
+<p>The <code>add_filter</code> function works similar to that of <code>add_action</code>. The minimum that you need to define is the name of the filter and the function you want to call. Below is an example of how you may do this with the above <code>apply_filters</code> example.</p>
+
+<pre><code class="language-php">function jackabox_change_price_output($price)
+{
+	$price = '&amp;pound' . $price;
+	return $price;
+}
+
+add_filter('jackabox_filter_display_price', 'jackabox_change_price_output');
+</code></pre>
+
+<p>This will attach the <code>jackabox_change_price_output</code> function to the <code>jackabox_filter_display_price</code> filter and takes a single variable of <code>$price</code>.</p>
+
+<p>All filters <strong>must return a value</strong>, this is extremely important. If you do not return a value then things will break. The way WordPress chains multiple functions on a filter is by utilising the return value and passing it to the next function until all functions have been called.</p>
+
+<h2 id="building-a-plugin">Building a Plugin</h2>
+
+<p>The way you build a plugin will completely depend on the circumstances and what you are trying to achieve with it. For reference there are various APIs/methods you can access, these can be found on the developer documentation. Some examples include:</p>
+
+<ul>
+<li><a href="https://codex.wordpress.org/Shortcode_API">Shortcode API « WordPress Codex</a> - Shortcodes allow you to define a function, with parameters, that can be executed from inside of the content editor. Typical reasons for these are contact forms, galleries or sliders.</li>
+<li><a href="https://codex.wordpress.org/Widgets_API">Widgets API « WordPress Codex</a> - Widgets allow you to define blocks of executable code, with optional fields, which can be placed within the WordPress sidebar feature.</li>
+</ul>
+
+<h2 id="continued-learning">Continued Learning</h2>
+
+<p>This post is a brief summary to the basic features you’ll access and use when writing WordPress plugins as well as an introductory outline of structure. This should be enough for you to create a basic plugin. Why not try creating one? Some example projects include:</p>
+
+<ul>
+<li>Creation of a custom post type and adding meta fields.</li>
+<li>Adding a custom options page to the admin that you can utilise in a theme.</li>
+<li>Providing common functionality in a helper plugin.</li>
+</ul>
+
+<p>In a future post we’ll cover the ways in which we can expand on this with our internal framework and go over the building of a plugin.</p>
+
+<p><em>References: WordPress Developer Docs, Sitepoint, Smashing Magazine</em></p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">21 Nov 2017</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/wordpress/">WordPress</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/php/">PHP</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/plugins/">Plugins</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+<section class="mt-20 container">
+    <div class="p-8 rounded-lg bg-site-blue w-9/12">
+      <h2 class="mb-4">Related Posts</h2>
+
+      <ul>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/using-accessors-and-mutators-within-laravel/" title="Link to Using Accessors and Mutators to Abstract Common Functionality within Laravel">Using Accessors and Mutators to Abstract Common Functionality within Laravel</a></h4>
+            <p class="text-sm">14 Nov 2018</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/beautiful-organised-results-in-phpunit/" title="Link to Beautiful, organised results in PHPUnit">Beautiful, organised results in PHPUnit</a></h4>
+            <p class="text-sm">22 Nov 2017</p>
+          </li>
+        
+          <li class="mt-4">
+            <h4><a class="no-underscore" href="/posts/how-i-build-wordpress-plugins-framework/" title="Link to How I Build WordPress Plugins: Part 1 - Framework">How I Build WordPress Plugins: Part 1 - Framework</a></h4>
+            <p class="text-sm">05 Nov 2017</p>
+          </li>
+        
+      </ul>
+    </div>
+</section>
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

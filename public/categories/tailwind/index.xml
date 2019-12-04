@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tailwind on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/tailwind/</link>
+    <description>Recent content in Tailwind on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 04 Dec 2019 01:38:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/tailwind/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started With Svelte: Installation &amp; Integrating Tailwind CSS</title>
+      <link>https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/</link>
+      <pubDate>Wed, 04 Dec 2019 01:38:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/setting-up-svelte-and-integrating-tailwind-css/</guid>
+      <description>This article is part of a series of posts with working on Svelte. This is part one in the series and will soon follow the integration of Routing and Firebase.
+Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript.</description>
+    </item>
+    
+  </channel>
+</rss>

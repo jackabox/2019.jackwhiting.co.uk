@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request.">
+  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	    
+	    <link rel="stylesheet" href="https://jackwhiting.co.uk/css/styles.min.ba84a23349edcde8c799924bbf34db341530d0db75c789f20f8519d924687229.css" integrity="sha256-uoSiM0ntzejHmZJLvzTbNBUw0Nt1x4nyD4UZ2SRocik=">
+	
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Jack Whiting">
+  <title>Using Firebase Admin SDK with Netlify Lambda Functions - Jack Whiting</title>
+</head>
+
+<body>
+
+<header class="mb-8 container">
+  <div class="flex justify-between py-6 border-b border-gray-200">
+    <div><a class="font-medium text-xl tracking-wide no-underscore" href="https://jackwhiting.co.uk">Jack Whiting</a></div>
+
+    <nav class="ml-3">
+      <ul class="flex text-right">
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukworks" title="Works">Works</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukplayground" title="Playground">Playground</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukservices" title="Services">Services</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukposts" title="Posts">Posts</a>
+        </li>
+        <li class="ml-6">
+          <a href="https://jackwhiting.co.ukcontact" title="Contact Me">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+
+<article class="container my-20">
+  <div class="mb-14">
+    <h1>Using Firebase Admin SDK with Netlify Lambda Functions</h1>
+  </div> 
+
+  <div class="flex flex-wrap row justify-between">
+      <div class="column w-9/12 wysiwyg">
+        
+
+<p>I&rsquo;ve been recently leaning into spinning up applications with Nuxt and Firebase. These are pretty straight forward applications that handle user authentication and creating/reading of data. However, I&rsquo;ve recently come into a case where I needed to send out a request to a third party service and write that back to the database. You could do this within Firebase Functions, but it would require you to be signed up onto one of the paid plans - which I&rsquo;m not quite ready for yet.</p>
+
+<p>Enter Netlify Lambda Functions, on the free plan you&rsquo;re given a generous amount of resources and it allows you to send requests to third parties. This article is designed to run through a very basic setup of a Netlify Function and how to communicate with Firebase.</p>
+
+<p>The following article covers the following:</p>
+
+<ol>
+<li><a href="#structure">Setting up the Structure</a></li>
+<li><a href="#firebase">Integrating Firebase Admin SDK</a></li>
+<li><a href="#netlify">Configuring your Netlify Deployment</a></li>
+<li><a href="#deploy">Deploying to Netlify</a></li>
+</ol>
+
+<h2 id="structure">Project Structure</h2>
+
+<p>We&rsquo;re going to use a very barebones project structure for this demo that has no frontend and only really is used to deploy the functions. These files can easily be transferred into your working directory and the setup would remain the same.</p>
+
+<p>The structure will look a little something like the following:</p>
+
+<pre><code class="language-bash">.config
+.gitignore
+functions
+  test
+    test.js
+    package.json
+netlify.toml
+package.json
+</code></pre>
+
+<p>To get started, create a new directory somewhere on your local machine. Inside of the directory we&rsquo;ll need to create a couple of folders.</p>
+
+<p>First, the functions folder which is where any function you wish to run on Netlify will be housed.</p>
+
+<pre><code class="language-bash">mkdir functions
+</code></pre>
+
+<p>Next, let us make a directory for the function, the directory should be named whatever you want the endpoint URL to be accessed from. For this demo, we&rsquo;ll name this <strong>test</strong>. We&rsquo;ll also require two files, a JavaScript file named the same as the folder (which will be what Netlify tries to access) and a package.json to keep all of our requirements contained.</p>
+
+<p>Create the folder and files like so:</p>
+
+<pre><code class="language-bash">mkdir functions/test
+cd functions/test
+touch package.json
+touch test.js
+</code></pre>
+
+<p>Update your package.json with the following:</p>
+
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;functions&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;test.js&quot;,
+  &quot;scripts&quot;: {},
+  &quot;author&quot;: &quot;&quot;
+}
+</code></pre>
+
+<p>This is the basic scaffolding you&rsquo;ll need for any function your try and spin up (where you will use npm packages). If you don&rsquo;t plan to use any npm packages, you can not add a package.json.</p>
+
+<h2 id="firebase">Working with Firebase Admin</h2>
+
+<p>Now for the fun part, getting out function to communicate with the Firebase Admin SDK. The following example will feature a very basic creation of a document to show how everything would work, in your actual function you&rsquo;ll probably take this further.</p>
+
+<p>In our <code>functions/test</code> add in the Firebase Admin SDK, like so:</p>
+
+<pre><code class="language-bash">yarn add firebase-admin
+</code></pre>
+
+<p>Which should add the following to your <code>package.json</code></p>
+
+<pre><code class="language-json">&quot;dependencies&quot;: {
+  &quot;firebase-admin&quot;: &quot;^8.6.0&quot;
+}
+</code></pre>
+
+<p>We can then call this in our <code>test.js</code> file by declaring it at the top of the document</p>
+
+<pre><code class="language-js">const admin = require('firebase-admin')
+</code></pre>
+
+<h4 id="firebase-admin-authentication">Firebase Admin Authentication</h4>
+
+<p>To actually connect to Firebase we&rsquo;ll need to authenticate the account, this will require the generation of an authentication file from Firebase. This file should be kept <strong>private</strong> and never uploaded to a public Git repository.</p>
+
+<p>To generate the authentication file, follow these steps:</p>
+
+<ol>
+<li>Log in to the Google Console at <a href="https://console.firebase.google.com" title="https://console.firebase.google.com">https://console.firebase.google.com</a></li>
+<li>Click into the project you want to use the Admin SDK with, or create a new project.</li>
+<li>Head to the project settings.</li>
+<li>Click the &ldquo;<strong>Service Accounts</strong>&rdquo; tab.</li>
+<li>Click <strong>Firebase Admin SDK</strong>.</li>
+<li>On this tab, you&rsquo;ll see &ldquo;Admin SDK Configuration snippet&rdquo;. Check the <strong>node.js</strong> option and click &ldquo;<strong>Generate new private key</strong>&ldquo;</li>
+<li>A modal should pop up, click <strong>&ldquo;generate key&rdquo;</strong> again and this will download a JSON file.</li>
+<li>Move the JSON file into your project structure in the <code>functions/test</code> folder and rename it to <code>serviceAccountKey.json</code>.</li>
+<li>Update your <code>.gitignore</code> if you have one to ensure that this file does not get tracked.</li>
+</ol>
+
+<h4 id="writing-our-script">Writing our Script</h4>
+
+<p>To bring everything together and integrate the Firebase Admin SDK with our script we&rsquo;ll need to set up a few more things.</p>
+
+<p>Firstly, we need to configure the script to authenticate the Admin SDK with our firebase credentials. To do this update our <code>test.js</code> file with the following:</p>
+
+<pre><code class="language-js">const admin = require('firebase-admin')
+const serviceAccount = require('./serviceAccountKey.json') // Update this to your file
+
+// Initialise the admin with the credentials
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://&lt;YOUR-APP-URL&gt;.firebaseio.com'
+})
+</code></pre>
+
+<p>Update <code>&lt;YOUR-APP-URL&gt;</code> with the actual URL of your app. If you don&rsquo;t know this it can be seen in the Firebase Console.</p>
+
+<p>Next, we&rsquo;ll write a small script that adds a new record to the Firestore database and returns a message once complete. To ensure that data is processed before the response is returned we&rsquo;ll take advantage of <code>async/await</code>. See the example below:</p>
+
+<pre><code class="language-js">// Set up an instance of the DB
+const db = admin.firestore()
+
+// exports.handler is required by netlify to process.
+exports.handler = async (event, context, callback) =&gt; {
+  // wait for the record to be added
+  await db.collection('COLLECTION').add({
+    name: 'Test'
+  })
+
+  // Return a callback witha 200 response and a message.
+  return callback(null, {
+    statusCode: 200,
+    body: JSON.stringify({
+      data: `Test data added successfully`
+    })
+  })
+}
+</code></pre>
+
+<p>Don&rsquo;t forget to update the <code>COLLECTION</code> placeholder with the name of the collection you want to add a record to, if you are purely testing you can just use <code>test</code> here. The full code will look a little like this:</p>
+
+<pre><code class="language-js">const admin = require('firebase-admin')
+const serviceAccount = require('./serviceAccountKey.json')
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://&lt;YOUR-APP-URL&gt;.firebaseio.com'
+})
+
+const db = admin.firestore()
+
+exports.handler = async (event, context, callback) =&gt; {
+  await db.collection('COLLECTION').add({
+    name: 'Test'
+  })
+
+  return callback(null, {
+    statusCode: 200,
+    body: JSON.stringify({
+      data: `Test data added successfully`
+    })
+  })
+}
+</code></pre>
+
+<h2 id="netlify">Netlify Configuration</h2>
+
+<p>To make sure everything works when we deploy it to Netlify, we&rsquo;ll need to configure a few things and install a dependency in our main site directory. In the root folder, if you do not have a <code>package.json</code> create one with the following command. If you already have a <code>package.json</code> you can ignore this step</p>
+
+<pre><code class="language-bash">touch package.json
+</code></pre>
+
+<p>Netlify requires that your run <code>npm install</code> or <code>yarn install</code> for each function we create, this is due to the way we&rsquo;ve set up the files to keep things contained within each folder. To do this we can create a simple script in our <code>package.json</code> and tell Netlify to use it when we deploy. Update your package.json with the following:</p>
+
+<pre><code class="language-json">&quot;scripts&quot;: {
+  &quot;functions&quot;: &quot;cd functions/test &amp;&amp; yarn install&quot;
+}
+</code></pre>
+
+<p>Note, this will <code>cd</code> into the <code>functions/test</code> folder, we created and then run <code>yarn install</code> to download all our dependencies (in this case just Firebase Admin SDK).</p>
+
+<h4 id="netlify-configuration">Netlify Configuration</h4>
+
+<p>To tell Netlify to run the command, we&rsquo;ll need to create or update a <code>netlify.toml</code> file. Create a new file in the root directory with the following:</p>
+
+<pre><code class="language-bash">touch netlify.toml
+</code></pre>
+
+<p>Inside the file add the following.</p>
+
+<pre><code class="language-toml">[build]
+command = &quot;yarn functions&quot;
+functions = &quot;functions&quot;
+</code></pre>
+
+<p>This will tell Netlify that the <code>functions</code> folder contains all of our functions we have set up (in this case just the <strong>test</strong>) and that we want to run the <code>yarn functions</code> command on initial deploy which will download all the assets.</p>
+
+<p>If you have existing code in your repository, such as a react app, you may need to take a look at <a href="https://www.npmjs.com/package/concurrently" title="Concurrently NPM">Concurrently</a> which will allow you to run multiple commands.</p>
+
+<h4 id="node-environment">Node Environment</h4>
+
+<p>Firebase Admin SDK requires Node v10 for it to work. By default, Netlify Lambda runs in Node v8 so we&rsquo;ll need to add an environment file that tells Netlify to use v10 on the Lambda instance instead. To set the variable, you&rsquo;ll need to do the following:</p>
+
+<ol>
+<li>Log in to the <a href="https://app.netlify.com/" title="netlify">Netlify Console</a>. Click into (or create) the site you want.</li>
+<li>Click into the <strong>Settings</strong> tab.</li>
+<li>Click <strong>Build &amp; Deploy</strong> in the sidebar.</li>
+<li>Click <strong>Environment</strong> under the <strong>Build &amp; Deploy</strong> tab.</li>
+<li>Click <strong>Edit Variables.</strong></li>
+<li>Add the following key <code>AWS_LAMBDA_JS_RUNTIME</code> with the value <code>nodejs10.x</code></li>
+<li>Save</li>
+</ol>
+
+<h2 id="deploy">Deploy Your Code</h2>
+
+<p>Commit everything and push the code up to your preferred provider. If you have Netlify set to auto-deploy then everything will be processed and your functions will be created after deployment. You&rsquo;ll be able to see these by going to the <strong>Functions</strong> tab in the <strong>Netlify Console</strong>.</p>
+
+<p>If you click the <code>test.js</code> function in the Netlify Console, it will provide you with an endpoint URL which you can visit in your browser to test that everything works and your Firebase DB gets updated.</p>
+
+      </div>
+
+      <div class="column w-2/12">
+        <h5 class="mb-2">Date</h5>
+<p class="text-sm">15 Nov 2019</p>
+        <h5 class="mb-2 mt-6">Categories</h5>
+
+
+
+  <ul>
+    
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/firebase/">Firebase</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/lambda/">Lambda</a>
+        </li>
+      <li class="leading-normal">
+          <a class="text-sm" href="https://jackwhiting.co.uk/categories/netlify/">Netlify</a>
+        </li></ul>
+
+        <h5 class="mb-2 mt-6">Share</h5>
+<div>
+  <a href="#" class="mr-2">Tw</a>
+  <a href="#" class="mr-2">Fb</a>
+  <a href="#">Li</a>
+</div>
+      </div>
+  </div>
+</article>
+
+
+
+
+
+<div class="mt-20 mb-20 container">
+  <div class="w-9/12">
+    <h2 class="mb-4">Comments</h2>
+  	<div id="commento"></div>
+  </div>
+</div>
+
+<script src="https://cdn.commento.io/js/commento.js"></script>
+
+
+	</main>
+
+	<footer class="container mt-20">
+	  <div class="py-6 border-t border-t-gray-200">
+	    <span class="text-sm">&copy; 2019+ Jack Whiting</span>
+	  </div>
+	</footer>
+</body>
+</html>
+

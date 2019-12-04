@@ -1,0 +1,17 @@
+.highlight {
+	@apply text-sm;
+	@apply mt-5;
+}
+
+.highlight td:nth-child(1) pre {
+	background: #f7fafc !important;
+	@apply py-4 pr-1 pl-2;
+	@apply rounded;
+	@apply border-r border-gray-200;
+}
+
+.highlight td:nth-child(2) pre {
+	@apply py-4 px-3;
+	@apply rounded;
+	background: #f7fafc !important;
+}

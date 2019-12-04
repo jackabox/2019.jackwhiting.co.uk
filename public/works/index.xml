@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/works/</link>
+    <description>Recent content in Works on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/works/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MSS</title>
+      <link>https://jackwhiting.co.uk/works/mss/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/mss/</guid>
+      <description>I was commisioned by an agency to help update the web presence of MSS. This involved completely redesigning their site and I worked on implementing the design into WordPress whilst adding a little bit of flair to the site.</description>
+    </item>
+    
+    <item>
+      <title>PBFA</title>
+      <link>https://jackwhiting.co.uk/works/pbfa/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/pbfa/</guid>
+      <description>PBFA (Provincial Booksellers Fairs Association) used to run their organisation from a server located in the corner of their room. I worked with them to move their process online and automate several long tedious steps to reduce the admin required for planning out their fairs.</description>
+    </item>
+    
+    <item>
+      <title>Ensek</title>
+      <link>https://jackwhiting.co.uk/works/ensek/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/ensek/</guid>
+      <description>Ensek wanted a new online presence to show off the company ethos and help them target new prospects. This site was built using Craft CMS to provide the best experience for updating and managing their content.</description>
+    </item>
+    
+    <item>
+      <title>Rollerdor</title>
+      <link>https://jackwhiting.co.uk/works/rollerdor/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/rollerdor/</guid>
+      <description>Rollerdor wanted to move away from selling their products on eBay into their own environment. This site had two parts, a Larvel application which targeted the automating of creating specifications for custom doors and a WooCommerce store for selling their addon products.</description>
+    </item>
+    
+    <item>
+      <title>HoleHearted</title>
+      <link>https://jackwhiting.co.uk/works/holehearted/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/works/holehearted/</guid>
+      <description>While launching their clothing brand, HoleHearted needed an online store that could show off their personality and help them process all their orders with ease. The site was built and designed by myself on WordPress/WooCommerce to provide the client with ease in the management of their site.</description>
+    </item>
+    
+  </channel>
+</rss>

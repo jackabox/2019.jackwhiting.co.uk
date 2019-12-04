@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WordPress on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/categories/wordpress/</link>
+    <description>Recent content in WordPress on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 21 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Introduction to WordPress Plugin Development</title>
+      <link>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/introduction-to-wordpress-plugin-development/</guid>
+      <description>This post was written for internal development when working at Adtrak to help with stepping into WordPress Plugin development. The following article is a copy of this with some slight modifications.
+Plugins play a key part in how we handle WordPress builds and offer services to clients. Whether it is a plugin such as our “Core” which adds repeatedly used code to WordPress and cleans up the outputs of themes, or something a little more complex such as the “Skip Hire Plugin” which provides a full e-commerce solution for booking skips online.</description>
+    </item>
+    
+    <item>
+      <title>How I Build WordPress Plugins: Part 1 - Framework</title>
+      <link>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/posts/how-i-build-wordpress-plugins-framework/</guid>
+      <description>I&amp;rsquo;ve been writing custom WordPress plugins for a couple of years now and wanted to share some of the details on how I&amp;rsquo;ve been working. There will be a few parts to these articles, and in this one we&amp;rsquo;re starting with the Plugin Framework.
+Intro Within the last year or so, I stumbled across Herbet. Herbert is a plugin framework for WordPress that allows for a structured approach, similar to that of Laravel but tailored for a WordPress context.</description>
+    </item>
+    
+  </channel>
+</rss>

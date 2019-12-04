@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Jack Whiting</title>
+    <link>https://jackwhiting.co.uk/tags/</link>
+    <description>Recent content in Tags on Jack Whiting</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jackwhiting.co.uk/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://jackwhiting.co.uk/tags/wordpress/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api integration</title>
+      <link>https://jackwhiting.co.uk/tags/api-integration/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/api-integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>laravel</title>
+      <link>https://jackwhiting.co.uk/tags/laravel/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://jackwhiting.co.uk/tags/vue/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>craft</title>
+      <link>https://jackwhiting.co.uk/tags/craft/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/craft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>woocommerce</title>
+      <link>https://jackwhiting.co.uk/tags/woocommerce/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jackwhiting.co.uk/tags/woocommerce/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
