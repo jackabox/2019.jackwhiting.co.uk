@@ -1,8 +1,8 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container mt-20">
-  <div class="lg:w-8/12 mb-30">
+<section class="container mt-10 lg:mt-20">
+  <div class="w-full lg:w-8/12 mb-20 lg:mb-30">
     <h1 class="mb-4">{{.Title}}</h1>
     {{.Content}}
   </div>
@@ -18,7 +18,7 @@
       {{ partial "blog/item-large.html" . }}
       
       {{ if (eq $index 2) }}
-      <div class="mb-20 pb-20 post-item">
+      <div class="mb-10 lg:mb-20 pb-10 lg:pb-20 post-item">
           {{ partial "newsletter.html" . }}
       </div>
       {{ end }}

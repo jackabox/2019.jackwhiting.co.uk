@@ -1,11 +1,11 @@
-<div class="mb-20 pb-20 post-item">
-    <div class="w-9/12">
+<div class="mb-10 lg:mb-20 pb-10 lg:pb-20 post-item">
+    <div class="w-full lg:w-9/12">
       <p class="inline-block text-sm mb-3 p-2 bg-site-pink rounded"><b>&star; Featured Post</b></p>
       <h2 class="mb-4"><a href="{{.Permalink}}" class="no-underscore">{{.Title}}</a></h2>
     </div>
 
     <div class="flex flex-wrap row justify-between">  
-      <div class="column w-9/12">
+      <div class="column w-full lg:w-9/12">
         <p>{{ .Summary }}</p>
 
         <p class="mt-6">
@@ -13,7 +13,7 @@
         </p>
       </div>
 
-      <div class="column w-2/12">
+      <div class="column hidden lg:block lg:w-3/12 xl:w-2/12">
         {{ partial "blog/date.html" . }}
         {{ partial "blog/categories.html" . }}
       </div>
