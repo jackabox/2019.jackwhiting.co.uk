@@ -622,6 +622,67 @@ main {
           flex: 1 0 auto;
 }
 
+form {
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  border-width: 1px;
+  border-color: #e2e8f0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+  outline: 0;
+}
+
+label span,
+.fake-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 6px 15px;
+  outline: 0;
+  letter-spacing: 1px;
+  line-height: 24px;
+  -webkit-transition: .2s all ease-in-out;
+  transition: .2s all ease-in-out;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  color: #fff;
+  background-color: #1a202c;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+a.btn:after {
+  display: none;
+}
+
+.btn:hover {
+  background-color: #E4FAEF;
+  color: #1a202c;
+}
+
 .container {
   width: 100%;
   max-width: 990px;

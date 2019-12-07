@@ -1,25 +1,44 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container mb-20">
-	<div class="lg:w-8/12 content">
+<section class="container mt-10 lg:mt-20 mb-20 lg:mb-30">
+	<div class="w-full lg:w-8/12 content">
 		{{ .Content }}
 	</div>
 </section>
 
-<section class="container mb-20">
-	<h2>Recent Works</h2>
-	<p>Insert 2x works here</p>
+{{ $recentWorks := (where .Site.RegularPages "Section" "in" "works") }}
+<section class="container mb-20 lg:mb-40">
+	<h2 class="mb-2">Recent Works</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nulla.</p>
+	
+	{{ range first 2 $recentWorks }}
+		{{ partial "works/item.html" . }}
+	{{ end }}
+
+	<p class="mt-10 text-center"><a class="btn" href="/works">See More Works</a></p>
 </section>
 
-<section class="container mb-20">
-	<h2>Latest Posts</h2>
-	<p>5 latest articles + dates</p>
+
+{{ $recentBlogs := (where .Site.RegularPages "Section" "in" "posts") }}
+<section class="container mb-20 lg:mb-30">
+	<h2 class="mb-2">Latest Posts</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem.</p>
+
+	<ul class="mt-10">
+		{{ range first 5 $recentBlogs }}
+      <li class="mt-4 lg:flex lg:justify-between">
+        <h3><a class="no-underscore" href="{{ .RelPermalink }}" title="Link to {{ .Title }}">{{ .Title }}</a></h3>
+        <p class="lg:mt-1 text-sm">{{.Date.Format "02 Jan 2006"}}</p>
+      </li>
+		{{ end }}
+	</ul>
+
+	<p class="mt-8"><a class="btn" title="Link to blog posts" href="/posts">See More Posts</a></p>
 </section>
 
-<section class="container mb-20">
-	<h2>Newsletter</h2>
-	<p>Mailchimp?</p>
+<section class="container">
+	{{ partial "newsletter.html" . }}
 </section>
 
 {{ partial "footer.html" . }}

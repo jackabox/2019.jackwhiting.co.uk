@@ -1,0 +1,64 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<section class="container mt-10 lg:mt-20 mb-20">
+  <div class="lg:w-9/12 content">
+    <h1>{{ .Title }}</h1>
+		{{ .Content }}
+	</div>
+</section>
+
+<div class="container">
+	<div class="flex flex-wrap row justify-between">
+		<div class="column order-2 lg:order-1 w-full lg:w-7/12">
+			<form method="POST" netlify-honeypot="dumbo-field" data-netlify="true">
+				<label class="hidden">
+					<span>Don’t fill this out if you're human:</span>
+					<input name="dumbo-field" />
+	      </label>
+
+	      <label>
+	        <span class="block">Your Name:</span>
+	        <input type="text" name="name" class="border" id="name" required>
+	      </label>
+
+	      <label>
+	        <span class="block">Your Email:</span>
+	        <input type="email" name="email" id="email" required>
+	      </label>
+	     
+	      <label>
+	        <span class="block">Message Details:</span>
+	        <textarea name="message" id="message" required placeholder="Tell me a little about your project"></textarea>
+	      </label>
+	             
+	      <p>
+	      	<button type="submit" class="btn">Send</button>
+	      </p>
+	    </form>
+		</div>
+
+		<div class="column order-1 lg:order-2 mb-5 lg:mb-0 w-full lg:w-4/12">
+	    <p class="mb-6">
+	      <span class="block fake-label">Availability</span>
+	      <span>From Jan 2020</span>
+	    </p>
+
+	    <p class="mb-6">
+	      <span class="block fake-label">Email</span>
+	      <a
+	        href="mailto:hi@jackwhiting.co.uk"
+	        title="Email Jack Whiting"
+	        class="link"
+	      >hi@jackwhiting.co.uk</a>
+	    </p>
+
+	    <p class="mb-6">
+	      <span class="block fake-label">Location</span>
+	      <span>Nottingham, United Kingdom</span>
+	    </p>
+		</div>
+	</div>
+</div>
+
+{{ partial "footer.html" }}

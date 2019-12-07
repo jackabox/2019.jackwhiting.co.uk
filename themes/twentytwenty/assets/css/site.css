@@ -8,3 +8,46 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+
+form {
+	display: block;
+}
+
+input, select, textarea {
+	@apply w-full border border-gray-300;
+	@apply py-1 px-2;
+	@apply mb-5;
+	outline: 0;
+}
+
+label span,
+.fake-label {
+	@apply text-sm font-medium tracking-wide uppercase mb-2;
+}
+
+textarea {
+	min-height: 150px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 6px 15px;
+  outline: 0;
+  letter-spacing: 1px;
+	line-height: 24px;
+	transition: .2s all ease-in-out;
+
+	@apply inline-flex text-center items-center justify-center;
+  @apply text-white bg-gray-900 rounded;
+  @apply text-xs uppercase font-medium;
+}
+
+a.btn:after {
+	@apply hidden;
+}
+
+.btn:hover {
+	@apply bg-site-green;
+	@apply text-gray-900;
+}

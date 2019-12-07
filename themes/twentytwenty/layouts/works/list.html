@@ -11,11 +11,7 @@
 <section class="container">
   <!-- Ranges through content/posts/*.md -->
   {{ range .Pages }}
-      <div class="py-10">
-          <h2>{{.Title}}</h2>
-          {{ .Summary }}
-          <p><a href="{{ .Params.Link }}" title="Link to {{.Title}}" rel="nofollow noreferrer">Visit Website</a></p>
-      </div>
+    {{ partial "works/item.html" . }}
   {{ end }}
 </section>
 
