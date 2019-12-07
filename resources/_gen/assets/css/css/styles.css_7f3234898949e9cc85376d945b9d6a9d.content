@@ -628,8 +628,8 @@ form {
 
 input, select, textarea {
   width: 100%;
-  border-width: 1px;
-  border-color: #e2e8f0;
+  border-width: 2px;
+  border-color: #edf2f7;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;

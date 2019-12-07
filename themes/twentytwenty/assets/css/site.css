@@ -15,7 +15,7 @@ form {
 }
 
 input, select, textarea {
-	@apply w-full border border-gray-300;
+	@apply w-full border-2 border-gray-200;
 	@apply py-1 px-2;
 	@apply mb-5;
 	outline: 0;
