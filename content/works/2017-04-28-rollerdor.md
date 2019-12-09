@@ -6,7 +6,7 @@ summary: 'Rollerdor wanted to move away from selling their products on eBay into
 link: 'https://www.rollerdor.net/'
 image: '/img/rollerdor-small.jpg'
 tags:
-  - wordpress
-  - woocommerce
-  - laravel
+  - WordPress
+  - WooCommerce
+  - Laravel
 ---

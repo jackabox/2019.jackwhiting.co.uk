@@ -843,6 +843,10 @@ a.commento-login-link:after:hover {
   background-color: transparent;
 }
 
+a.no-underscore.no-hover:hover:after {
+  background-color: transparent;
+}
+
 .highlight {
   font-size: 0.875rem;
   margin-top: 25px;

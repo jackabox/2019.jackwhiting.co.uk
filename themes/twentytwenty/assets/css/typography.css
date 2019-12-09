@@ -131,3 +131,7 @@ a.commento-forgot-link:after:hover,
 a.commento-login-link:after:hover {
   @apply bg-transparent;
 }
+
+a.no-underscore.no-hover:hover:after {
+  @apply bg-transparent;
+}

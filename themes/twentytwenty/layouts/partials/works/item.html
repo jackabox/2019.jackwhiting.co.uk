@@ -1,11 +1,25 @@
-<div class="mt-14 flex flex-wrap row items-center justify-between">
+<div class="mt-14 mb-20 flex flex-wrap row items-center justify-between">
 	<div class="w-full lg:w-7/12 column mb-5 lg:mb-0">
 		<img src="{{ .Params.image }}" alt="" class="w-full h-auto rounded-lg">
 	</div>
 
-	<div class="w-full lg:w-4/12 column">
+	<div class="w-full lg:w-5/12 lg:pl-8 column">
 		<h3 class="mb-3">{{ .Title }}</h3>
-		{{ .Summary }}
-		<p class="mt-5"><a href="{{ .Params.link }}" rel="noreferrer noopener" title="Link to view website of {{ .Title }}">Visit site</a></p>
+		<p class="text-base">{{ .Summary }}</p>
+
+		{{ $taxonomy := "tags" }}
+		{{ with .Param $taxonomy }}
+		  <div class="flex mt-5">
+		    {{ range $index, $tag := . }}
+		      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+		        <span class="px-2 py-1 text-xs bg-site-pink rounded mr-2 text-xs uppercase tracking-wide">
+		          {{ $tag }}
+		        </span>
+		      {{- end -}}
+		    {{- end -}}
+		  </div>
+		{{ end }}
+
+		<p class="mt-5"><a href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener" title="Link to view website of {{ .Title }}">Visit site</a></p>
 	</div>
 </div>

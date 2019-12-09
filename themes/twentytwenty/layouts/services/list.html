@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container mt-20 mb-20 lg:mb-20 lg:mb-40">
+<section class="container mt-10 mb-20 lg:mt-20 lg:mb-40">
   <div class="lg:w-9/12 content">
     <h1>Why Hire Me?</h1>
 		{{ .Content }}
@@ -17,7 +17,7 @@
 
   <div class="flex flex-wrap row">
     {{ range (.Pages.ByParam "order")}}
-      <div class="w-4/12 column mb-8">
+      <div class="w-full md:w-6/12 lg:w-4/12 column mb-8">
         <div class="p-5 rounded-lg {{ .Params.Color }} h-full">
           <h4 class="mb-3">{{ .Title }}</h4>
           {{ .Content }}
@@ -37,11 +37,11 @@
 
   {{ range (.Pages.ByParam "order")}}
     <div class="flex flex-wrap row mb-10">
-      <div class="column w-3/12"><h3>{{ .Title }}</h3></div>
-      <div class="column w-9/12">
-        {{ .Content }}
-
-        <a href="#" class="mt-4">Read More</a>
+      <div class="column w-full mb-3 md:mb-0 md:w-3/12"><h3>{{ .Title }}</h3></div>
+      <div class="column w-full md:w-9/12">
+        <p class="technology-summary">{{ .Summary }}</p>
+        <div class="technology-content hidden">{{ .Content }}</div>
+        <a href="#" class="technology-read-more mt-4">Read More</a>
       </div>
     </div>
   {{ end }}
@@ -49,9 +49,9 @@
 {{ end }}
 
 <section class="container">
-  <div class="lg:w-9/12">
-    <h2 class="mb-4">Want to see more?</h2>
-    <p>Why not check out some of my <a href="{{ .Site.BaseURL }}works" title="Link to view works">selected works</a>, what I've been playing with in <a href="{{ .Site.BaseURL }}playground" title="Link to playground">the playground</a> or some of my <a href="{{ .Site.BaseURL }}posts" title="Link to recent posts">recent posts</a>.</p>
+  <div class="bg-site-orange text-center rounded-lg p-8">
+    <h2 class="mb-4">Want to work together?</h2>
+    <p class="w-9/12 text-base mx-auto">If you like what you see and feel we'd be a match, I would love to get together and create something amazing. You can find all my details on my <a href="/contact" class="no-underscore no-hover font-medium" title="Link to contact page">contact page</a>, so drop me a line I'll get back to you as soon as possible!</p>
   </div>
 </section>
 
