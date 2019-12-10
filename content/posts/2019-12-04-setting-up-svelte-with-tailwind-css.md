@@ -10,7 +10,7 @@ categories:
 series:
   - 'Working with Svelte'
 ---
-<div class="rounded-lg p-8 bg-site-pink mb-10">
+<div class="rounded-lg p-8 bg-site-orange mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
   <ol>
     <li>Setting up Svelte & Installing Tailwind CSS and PostCSS (Current Article)</li>

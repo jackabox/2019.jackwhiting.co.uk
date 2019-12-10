@@ -13,8 +13,7 @@
       {{ partial "blog/item-large.html" . }}
     {{ end }}
 
-    {{ range $index, $element := (.Paginator 8).Pages }}
-    
+    {{ range $index, $element := (.Paginate (where .Pages "Params.private" "!=" true) 8).Pages }}
       {{ partial "blog/item-large.html" . }}
       
       {{ if (eq $index 2) }}

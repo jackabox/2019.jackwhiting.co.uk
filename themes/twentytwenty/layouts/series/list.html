@@ -11,7 +11,9 @@
   <div class="flex flex-wrap row justify-between">
     {{ range $index, $element := (.Pages.ByParam "date") }}
       <article class="column w-full lg:w-6/12 xl:w-48% mb-14" id="{{ .Title  | urlize  }}">
-        <img src="https://placehold.it/600x350" alt="" class="w-full h-auto mb-5">
+        {{ if .Params.Feature }}
+        <img src="{{ .Params.Feature }}" alt="Image for {{ .Title }}" class="w-full h-auto mb-5">
+        {{ end }}
         
         <div class="flex">
           <div class="mr-5">
@@ -28,7 +30,7 @@
     {{ end }}
   </div>
 
-  <div class="mt-20 mb-10 lg:mb-20 pb-10 lg:pb-20">
+  <div class="mt-20 mb-10 lg:mb-20">
     {{ partial "newsletter.html" . }}
   </div>
 </section>
