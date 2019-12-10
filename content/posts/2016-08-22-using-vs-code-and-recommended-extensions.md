@@ -2,7 +2,7 @@
 title: 'Using Visual Studio Code (with 5  Recommended Extensions)'
 slug: using-vs-code-and-recommended-extensions
 date: 2016-08-22 00:00:00
-description: 'A break down of Visual Studio Code with five recommended extensions to get you up and running when moving from Sublime or Atom.'
+summary: 'A break down of Visual Studio Code with five recommended extensions to get you up and running when moving from Sublime or Atom.'
 categories:
   - Tools
   - VS Code

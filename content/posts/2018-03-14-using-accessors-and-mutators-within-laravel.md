@@ -2,7 +2,7 @@
 title: 'Using Accessors and Mutators to Abstract Common Functionality within Laravel'
 date: 2018-03-14 00:00:00
 slug: using-accessors-and-mutators-within-laravel
-description: 'Accessors and Mutators can help with abstracting common functionality in our application into one consistent location. By utilising them we can provide a more consistent codebase and improve the workflow between developers.'
+summary: 'Accessors and Mutators can help with abstracting common functionality in our application into one consistent location. By utilising them we can provide a more consistent codebase and improve the workflow between developers.'
 categories:
   - Laravel
   - PHP

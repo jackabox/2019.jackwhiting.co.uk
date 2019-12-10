@@ -2,8 +2,7 @@
 title: Awesome Laravel Nova Packages to Get You Started
 slug: awesome-laravel-nova-packages
 date: 2019-05-22 23:00:00
-description: A collection of five packages to kickstart your next project with Laravel
-  Nova. These are some of my personal favourites that I use on every project.
+summary: 'A collection of five packages to kickstart your next project with Laravel Nova. These are some of my personal favourites that I use on every project.'
 categories:
   - Laravel
   - Nova

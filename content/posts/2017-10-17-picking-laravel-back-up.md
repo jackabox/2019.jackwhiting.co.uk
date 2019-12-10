@@ -2,7 +2,7 @@
 title: Picking Laravel Back Up
 slug: picking-laravel-back-up
 date: 2017-10-17 00:00:00
-description: "Over the past few weeks I've finally got around to working with Laravel again. Oh, how happy I am!"
+summary: "Over the past few weeks I've finally got around to working with Laravel again. Oh, how happy I am!"
 categories:
   - Thoughts
   - Laravel

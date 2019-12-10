@@ -2,7 +2,7 @@
 title: Chrome 63 Forces Redirection of .dev Domains to HTTPS
 slug: chrome-63-forces-dev-domains-to-https
 date: 2017-12-13 00:00:00
-description: 'Chrome 63 now forces all domains ending in .dev to be redirected to HTTPS and directly killed my local stack overnight.'
+summary: 'Chrome 63 now forces all domains ending in .dev to be redirected to HTTPS and directly killed my local stack overnight.'
 categories:
   - Tools
 ---

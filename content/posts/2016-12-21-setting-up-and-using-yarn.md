@@ -2,7 +2,7 @@
 title: Setting Up and Using Yarn
 slug: setting-up-and-using-yarn
 date: 2016-12-21 00:00:00
-description: 'How to set up and use Yarn (a JavaScript package manager) in replace of NPM whilst keeping your usual workflow.'
+summary: 'How to set up and use Yarn (a JavaScript package manager) in replace of NPM whilst keeping your usual workflow.'
 categories:
   - Tools
 ---

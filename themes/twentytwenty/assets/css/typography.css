@@ -55,6 +55,7 @@ li {
 
 .wysiwyg * + h1 {
   @apply mt-10;
+  @apply text-3xl;
 }
 
 .wysiwyg * + h2,
@@ -98,6 +99,10 @@ a {
   position: relative;
   z-index: 2;
   display: inline-block;
+}
+
+hr {
+  @apply block mb-10 mt-10 border-t-2 border-gray-200;
 }
 
 a.commento-forgot-link:after,

@@ -1,13 +1,24 @@
 ---
-title: 'Getting Started With Svelte: Installation & Integrating Tailwind CSS'
+title: 'Installating Svelte & Integrating Tailwind CSS (and PostCSS)'
 slug: setting-up-svelte-and-integrating-tailwind-css
 date: 2019-12-04T01:38:00
-description: 'Part one of my getting start with Svelte series. In this part we will touch on how to setup Svelte and integrating Tailwind CSS'
+summary: 'Part One of my Working with Svelte series. In this part we will touch on how to setup Svelte and how to integrate Tailwind CSS (and PostCSS)'
+shortSummary: 'In Part 1, we cover setting up Svelte from a template and integrating Tailwind CSS with PostCSS.'
 categories:
   - Svelte
   - Tailwind
+series:
+  - 'Working with Svelte'
 ---
-_This article is part of a series of posts with working on Svelte. This is part one in the series and will soon follow the integration of Routing and Firebase._
+<div class="rounded-lg p-8 bg-site-pink mb-10">
+  <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
+  <ol>
+    <li>Setting up Svelte & Installing Tailwind CSS and PostCSS (Current Article)</li>
+    <li><a href="/posts/setting-up-routing-in-svelte-with-pagejs">Setting up Routing with Page.js</a></li>
+    <li>Optimising Our Router For Large Applications (Coming Soon)</li>
+    <li><i>.. and more</i></li>
+  </ol>
+</div>
 
 Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript. You can find out more about Svelte through their [website](https://svelte.dev/). 
 

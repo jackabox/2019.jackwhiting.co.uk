@@ -1,10 +1,19 @@
 <div class="mb-10 lg:mb-20 pb-10 lg:pb-20 post-item">
-  <div class="w-full lg:w-9/12">
-    <h2 class="mb-4"><a href="{{.Permalink}}" class="no-underscore">{{.Title}}</a></h2>
+  <div class="w-full flex">
+    {{ if .Params.Featured }}
+      <p class="inline-block mr-3 text-xs font-medium uppercase tracking-wide mb-3 px-3 py-2 bg-site-pink rounded">&star; Featured Post</p>
+    {{ end }}
+    
+    {{ range .Params.Series }}
+       <a href="/series/{{ . | urlize }}" class="inline-block mr-3 text-xs font-medium uppercase tracking-wide mb-3 px-3 py-2 bg-site-orange rounded no-underscore no-hover">
+       Series - {{ . }}</a>
+    {{ end }}
   </div>
 
   <div class="flex flex-wrap row justify-between">  
     <div class="column w-full lg:w-9/12">
+      <h2 class="mb-4"><a href="{{.Permalink}}" class="no-underscore">{{ .Title }}</a></h2>
+
       <p>{{ .Summary }}</p>
 
       <p class="mt-6">

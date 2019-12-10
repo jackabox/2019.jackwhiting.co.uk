@@ -9,3 +9,8 @@ isServer = "false"
 		style = "github"
 		tabWidth = 2
 		lineNos = true
+[markup.goldmark.renderer]
+	unsafe= true
+[taxonomies]
+  category = "categories"
+  series = "series"

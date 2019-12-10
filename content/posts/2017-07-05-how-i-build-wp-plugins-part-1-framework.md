@@ -2,7 +2,7 @@
 title: 'How I Build WordPress Plugins: Part 1 - Framework'
 slug: how-i-build-wordpress-plugins-framework
 date: 2017-07-05 00:00:00
-description: 'Part 1, Utilising a framework in the development of WordPress Plugins. A brief explanation on how I begin rapid development.'
+summary: 'Part 1, Utilising a framework in the development of WordPress Plugins. A brief explanation on how I begin rapid development.'
 categories:
   - WordPress
   - PHP

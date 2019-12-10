@@ -2,7 +2,7 @@
 title: An Introduction to WordPress Plugin Development
 slug: introduction-to-wordpress-plugin-development
 date: 2017-12-21 00:00:00
-description: 'Plugins play a key part in how we handle WordPress builds and offer services to clients. This article involves a brief write up of how to get started building your own WordPress plugins.'
+summary: 'Plugins play a key part in how we handle WordPress builds and offer services to clients. This article involves a brief write up of how to get started building your own WordPress plugins.'
 categories:
   - WordPress
   - PHP

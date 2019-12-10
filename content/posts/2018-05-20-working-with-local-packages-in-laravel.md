@@ -2,7 +2,7 @@
 title: 'Working on Local Packages in Laravel with Composer'
 date: 2018-05-20 00:00:00
 slug: working-with-local-packages-in-laravel
-description: 'Working on Packages for Laravel in a local environment can be a little annoying to start. Utilising Composer we can make this process as simple as cloning a repository.'
+summary: 'Working on Packages for Laravel in a local environment can be a little annoying to start. Utilising Composer we can make this process as simple as cloning a repository.'
 categories:
   - Laravel
   - Composer

@@ -2,7 +2,7 @@
 title: Handling Redirects in a Laravel Application
 slug: handling-seo-redirects-in-a-laravel-application
 date: 2019-08-14 11:00:00
-description: "Most websites will need to manage their redirects at some point. For this, we're going to utilise a Spatie package to read redirects from a configuration file and/or a database table."
+summary: "Most websites will need to manage their redirects at some point. For this, we're going to utilise a Spatie package to read redirects from a configuration file and/or a database table."
 categories:
   - Laravel
   - SEO

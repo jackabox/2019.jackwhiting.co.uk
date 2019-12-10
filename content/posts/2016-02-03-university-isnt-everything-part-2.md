@@ -2,7 +2,7 @@
 title: "University Isn't Everything (pt. 2)"
 slug: university-isnt-everything-part-2
 date: 2016-02-03 00:00:00
-description: "I wanted to express my thoughts on why university didn't feel all that fulfilling or stimulating with regards to moving into the Web Design Industry."
+summary: "I wanted to express my thoughts on why university didn't feel all that fulfilling or stimulating with regards to moving into the Web Design Industry."
 categories:
   - Thoughts
 ---

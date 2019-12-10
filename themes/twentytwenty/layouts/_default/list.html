@@ -10,7 +10,7 @@
   <!-- Ranges through content/posts/*.md -->
   <div class="flex flex-col post-items">
     {{ range first 1 (where .Pages "Params.featured" true) }}
-      {{ partial "blog/item-large-featured.html" . }}
+      {{ partial "blog/item-large.html" . }}
     {{ end }}
 
     {{ range $index, $element := (.Paginator 8).Pages }}

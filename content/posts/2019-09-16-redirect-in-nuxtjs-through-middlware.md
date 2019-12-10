@@ -2,7 +2,7 @@
 title: Handling Redirects in Nuxt.js through Middleware
 slug: handling-redirects-in-nuxtjs-through-middlware
 date: 2019-09-16 14:42:00
-description: 'We can utilise the serverMiddlware provided out of the box with Nuxt.js to read a JSON file and handle the redirects for our application.'
+summary: 'We can utilise the serverMiddlware provided out of the box with Nuxt.js to read a JSON file and handle the redirects for our application.'
 categories:
   - Vue
   - Nuxt

@@ -2,7 +2,7 @@
 title: Using Firebase Admin SDK with Netlify Lambda Functions
 slug: using-firebase-admin-sdk-with-netlify-lambda-functions
 date: 2019-10-15T14:00:00.000+00:00
-description: 'Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request.'
+summary: 'Setting up Netlify Lambda Functions for serverless websites and integrating with Firebase Admin SDK to update the database on request.'
 categories:
   - Firebase
   - Lambda

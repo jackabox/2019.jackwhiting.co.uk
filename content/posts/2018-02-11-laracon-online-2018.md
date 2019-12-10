@@ -2,7 +2,7 @@
 title: Laracon Online 2018
 slug: laracon-online-2018
 date: 2018-02-11 00:00:00
-description: 'An overview of my personal highlights from the 2018 Laracon Online conference, including recaps of talks by Steve Schoger and Jonathan Reinink.'
+summary: 'An overview of my personal highlights from the 2018 Laracon Online conference, including recaps of talks by Steve Schoger and Jonathan Reinink.'
 categories:
   - Conferences
 ---

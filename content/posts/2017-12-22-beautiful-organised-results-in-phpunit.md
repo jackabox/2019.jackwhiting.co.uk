@@ -2,7 +2,7 @@
 title: Beautiful, organised results in PHPUnit
 slug: beautiful-organised-results-in-phpunit
 date: 2017-12-22 00:00:00
-description: 'A small extension for PHPUnit to beautify and orgnaise tests. Where have you been?'
+summary: 'A small extension for PHPUnit to beautify and orgnaise tests. Where have you been?'
 categories:
   - Tools
   - PHP

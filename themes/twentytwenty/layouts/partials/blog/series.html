@@ -1,0 +1,12 @@
+{{ if .Params.Series }}
+	<h5 class="mb-2 mt-6">Series</h5>
+  <ul>
+	 {{ range .Params.Series }}
+    <li class="leading-normal">
+      <a class="text-sm" title="Link to series" href="/series/{{ . | urlize }}">{{ . }}</a>
+    </li>
+   {{ end }}
+  </ul>
+{{ end }}
+
+
