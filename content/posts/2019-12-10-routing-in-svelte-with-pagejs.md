@@ -12,7 +12,7 @@ series:
 <div class="rounded-lg p-8 bg-site-pink mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
   <ol>
-    <li><a href="/posts/setting-up-svelte-and-integrating-tailwind-css">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
+    <li><a class="no-underscore no-hover font-semibold" href="/posts/setting-up-svelte-and-integrating-tailwind-css">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
     <li>Setting up Routing with Page.js (Current Article)</li>
     <li>Optimising Our Router For Large Applications (Coming Soon)</li>
     <li><i>.. and more</i></li>

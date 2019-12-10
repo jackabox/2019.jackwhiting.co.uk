@@ -13,4 +13,5 @@ isServer = "false"
 	unsafe= true
 [taxonomies]
   category = "categories"
+  tag = "tags"
   series = "series"
