@@ -1,8 +1,7 @@
-baseURL = "https://jw-2020.netlify.com"
+baseURL = "https://jw-2020.netlify.com/"
 languageCode = "en-gb"
 title = "Jack Whiting"
 theme = "twentytwenty"
-isServer = "true"
 [markup]
   [markup.highlight]
 		codeFences = true
