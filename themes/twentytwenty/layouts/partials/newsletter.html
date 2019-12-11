@@ -1,4 +1,33 @@
-<div class="p-8 rounded-lg bg-site-blue text-center">
-    <h2 class="mb-4">Stay up to date...</h2>
-    <p>Newsletter</p>
-  </div>
+<div class="py-8 px-14 rounded-lg bg-site-blue text-center">
+	<div class="lg:w-11/12 mx-auto">
+	  <h2 class="mb-4">Want to stay up to date?</h2>
+  	<p>I am starting a monthly newsletter about my latest articles, courses, interesting posts from the community and more. If you want to join please feel free to sign up below.</p>
+	</div>
+
+  <form class="js-cm-form mt-8" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E905619D3A0A1E9078871F366E8F8C9E174DC36FEA014FC0EE3C6DBE067E9F274AD25FDF06963526E3C21330C84D1D3C74A11F8">
+  	<div class="flex flex-wrap row">
+  		<div class="column lg:w-4/12 text-left">
+  			<input aria-label="Name" id="fieldName" maxlength="200" name="cm-name" class="mb-0 border-0 h-full" placeholder="Name">
+			</div>	
+
+			<div class="column lg:w-4/12 text-left">
+  			<input autocomplete="Email" aria-label="Email" class="js-cm-email-input mb-0 border-0 h-full" id="fieldEmail" maxlength="200" name="cm-gdukdi-gdukdi" required="" type="email" placeholder="Email Address">
+  		</div>
+
+  		<div class="column lg:w-4/12 text-left flex flex-col">
+  			<button type="submit" class="mt-auto btn hover:bg-black hover:text-white">Subscribe</button>
+  		</div>
+
+  		<div class="column w-full mt-2 text-left">
+  			<label for="cm-privacy-consent" class="text-sm text-gray-600">
+					<input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox" class="mb-0 mr-1 w-auto">
+					I agree to be contacted by Jack Whiting. You can unsubscribe at any time.
+				</label>
+  		</div>
+  	</div>
+
+		<input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
+	</form>
+
+  <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+</div>

@@ -2,8 +2,8 @@
 title: 'Installating Svelte & Integrating Tailwind CSS (and PostCSS)'
 slug: setting-up-svelte-and-integrating-tailwind-css
 date: 2019-12-04T01:38:00
-summary: 'Part One of my Working with Svelte series. In this part we will touch on how to setup Svelte and how to integrate Tailwind CSS (and PostCSS)'
-shortSummary: 'In Part 1, we cover setting up Svelte from a template and integrating Tailwind CSS with PostCSS.'
+description: 'In Part 1 of the series on Working with Svelte we will take a glance at how to set up Svelte 3 from a template and then how to integrate PostCSS, PurgeCSS and Tailwind. You will be able to use this to then expand on any other PostCSS plugins (such as autoprefixer or import).'
+summary: 'In the first article we cover setting up Svelte 3 from a sample template and integrating Tailwind CSS with PostCSS.'
 categories:
   - Svelte
   - Tailwind

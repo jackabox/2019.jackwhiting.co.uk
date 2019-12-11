@@ -630,11 +630,10 @@ input, select, textarea {
   width: 100%;
   border-width: 2px;
   border-color: #edf2f7;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-bottom: 25px;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  padding: 6px 15px;
   outline: 0;
 }
 
