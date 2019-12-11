@@ -1,5 +1,5 @@
 ---
-title: 'Home'
+title: 'Jack Whiting'
 ---
 ## Freelance Web Developer
 

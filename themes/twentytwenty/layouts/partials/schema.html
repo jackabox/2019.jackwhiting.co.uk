@@ -1,0 +1,52 @@
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  { 
+    "@context": "http://schema.org", 
+    "@type": "WebSite", 
+    "url": "{{ .Permalink }}", 
+    "name": "{{ .Site.Title }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Site.Params.author }}"
+    },
+    "sameAs": [
+      "{{ .Site.Params.facebook }}", 
+      "{{ .Site.Params.twitterUrl }}", 
+      "{{ .Site.Params.github }}"
+    ], 
+    "description": "{{ .Site.Params.description }}",
+  }
+  </script>
+  {{ end }}
+      
+  {{ if .IsPage }}
+  <script type="application/ld+json">
+    {{ if eq .Section "posts" }}
+      { 
+        "@context": "http://schema.org", 
+        "@type": "Article",
+        "headline": "{{ .Title }}",
+        "genre": "{{ delimit .Params.Categories "," }}",  
+        "url": "{{ .Permalink }}",
+        "datePublished": "{{ time .Date }}",
+        "description": "{{ .Summary }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ .Site.Params.author }}"
+        }
+      }
+    {{ else }}
+      { 
+        "@context": "http://schema.org", 
+        "@type": "WebSite", 
+        "url": "{{ .Permalink }}", 
+        "name": "{{ .Title }}",
+        "description": "{{ .Site.Params.Description }}",
+        "author": {
+          "@type": "Person",
+          "name": "{{ .Site.Params.Author }}"
+        }
+      }
+    {{ end }}
+  </script>
+  {{ end }}

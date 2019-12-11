@@ -15,3 +15,13 @@ isServer = "false"
   category = "categories"
   tag = "tags"
   series = "series"
+[params]
+	description = "Freelance Web Developer in Nottingham, UK with over 10 years experience working with WordPress, Laravel, Craft and Vue. Currently available for new projects."
+	tagline = "Freelance Web Developer & Blogger"
+	keywords = ["Web", "Developer", "Freelance", "Nottingham", "Svelte", "PHP", "Laravel", "Vue", "JavaScript", "WordPress", "Craft", "Shopify", "WooCommerce", "E-Commerce"]
+	twitter = "@jackabox"
+	author = "Jack Whiting"
+	twitterUrl = "https://twitter.com/jackabox"
+	github = "https://github.com/jackabox"
+  facebook = "https://www.facebook.com/Jack-Whiting-Development-108935207166374"
+
