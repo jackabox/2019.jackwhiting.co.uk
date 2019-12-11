@@ -2,7 +2,7 @@ baseURL = "https://jackwhiting.co.uk"
 languageCode = "en-gb"
 title = "Jack Whiting"
 theme = "twentytwenty"
-isServer = "false"
+isServer = "true"
 [markup]
   [markup.highlight]
 		codeFences = true
