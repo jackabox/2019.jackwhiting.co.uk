@@ -10,6 +10,10 @@ html {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900;
+}
+
 h1 {
   @apply text-4xl;
   @apply font-semibold;
@@ -140,4 +144,8 @@ a.commento-login-link:after:hover {
 
 a.no-underscore.no-hover:hover:after {
   @apply bg-transparent;
+}
+
+.transition {
+ transition: 0.2s all ease-in-out;
 }

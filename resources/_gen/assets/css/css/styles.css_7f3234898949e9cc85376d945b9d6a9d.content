@@ -614,7 +614,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  color: #1a202c;
+  color: #4a5568;
 }
 
 main {
@@ -709,6 +709,10 @@ html {
   html {
     font-family: 'Inter var', sans-serif;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1a202c;
 }
 
 h1 {
@@ -853,6 +857,11 @@ a.commento-login-link:after:hover {
 
 a.no-underscore.no-hover:hover:after {
   background-color: transparent;
+}
+
+.transition {
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .highlight {

@@ -2,7 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  @apply text-gray-900;
+  @apply text-gray-700;
 }
 
 main {
