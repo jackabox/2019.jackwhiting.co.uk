@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container mt-10 mb-20 lg:mt-20 lg:mb-40">
+<section class="container mt-10 mb-20 lg:mt-20 lg:mb-30">
   <div class="lg:w-9/12 content">
     <h1>Why Hire Me?</h1>
 		{{ .Content }}
@@ -9,7 +9,7 @@
 </section>
 
 {{ with .Site.GetPage "sections" "offerings" }}
-<section class="container mb-20 lg:mb-40">
+<section class="container mb-20 lg:mb-30">
   <div class="lg:w-9/12 mb-14">
     <h2 class="mb-4">{{ .Title }}</h2>
     {{ .Content }}
@@ -29,7 +29,7 @@
 {{ end }}
 
 {{ with .Site.GetPage "sections" "technologies" }}
-<section class="container mb-20 lg:mb-40">
+<section class="container mb-20 lg:mb-30">
   <div class="lg:w-9/12 mb-14">
     <h2 class="mb-4">{{ .Title }}</h2>
     {{ .Content }}
@@ -38,9 +38,9 @@
   {{ range (.Pages.ByParam "order")}}
     <div class="flex flex-wrap row mb-10">
       <div class="column w-full mb-3 md:mb-0 md:w-3/12"><h3>{{ .Title }}</h3></div>
-      <div class="column w-full md:w-9/12">
+      <div class="column w-full md:w-9/12 technology-toggle">
         <p class="technology-summary">{{ .Summary }}</p>
-        <div class="technology-content hidden">{{ .Content }}</div>
+        <div class="wysiwyg technology-content hidden">{{ .Content }}</div>
         <a href="#" class="technology-read-more mt-4">Read More</a>
       </div>
     </div>
