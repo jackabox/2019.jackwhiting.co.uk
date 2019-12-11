@@ -1,4 +1,4 @@
-baseURL = "https://jw-2020.netfliy.com"
+baseURL = "https://jw-2020.netlify.com"
 languageCode = "en-gb"
 title = "Jack Whiting"
 theme = "twentytwenty"
