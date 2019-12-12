@@ -174,8 +174,8 @@ a.commento-login-link:after:hover {
   @apply bg-transparent;
 }
 
-a.no-underscore.no-hover:hover:after {
-  @apply bg-transparent;
+a.no-hover:hover:after {
+  background: transparent !important;
 }
 
 .transition {

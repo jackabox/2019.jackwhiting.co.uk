@@ -15,6 +15,6 @@ mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
       path.join(__dirname, 'themes/twentytwenty/assets/js/*.js'),
       path.join(__dirname, 'content/**/*.md'),
     ],
-  	whitelistPatterns: [/highlight/, /commento/],
+  	whitelistPatterns: [/highlight/, /commento/, /no-hover/],
     whitelistPatternsChildren: [/^highlight$/, /^commento$/, /^pagination$/],
   });
