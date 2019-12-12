@@ -17,6 +17,7 @@
 	  </div>
 	</footer>
 
+{{ if not .Site.IsServer }}
 <!-- Fathom - simple website analytics - https://usefathom.com -->
 <script>
 (function(f, a, t, h, o, m){
@@ -32,6 +33,7 @@ fathom('set', 'siteId', 'EYSFPPEA');
 fathom('trackPageview');
 </script>
 <!-- / Fathom -->
+{{ end }}
 
 </body>
 </html>
