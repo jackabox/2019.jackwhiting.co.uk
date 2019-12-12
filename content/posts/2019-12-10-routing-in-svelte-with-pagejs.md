@@ -29,7 +29,7 @@ For the purpose of routing within our application we are going to be utilising t
 
 To start, we need to install Page.js. Open up your terminal in your root directory of your site and run the following:
 
-```
+```bash
 yarn add page # or npm install page
 ```
 
@@ -55,7 +55,7 @@ When we look at how we will integrate Page.js into Svelte, I want to explain a f
 
 At the top of the `App.svelte` file include the router from the Page.js package. We'll also want to create a new file for our Home route so create a new file in the following location `routes/Home.svelte`.
 
-```js
+```html
 <script>
   import router from "page"
   
@@ -72,7 +72,7 @@ Make sure you populate the `routes/Home.svelte` file with some dummy text so you
 
 Next, back in our `App.svelte` file we will need to create a couple of variables that we will pass through to the child components and tell Svelte what route to load.
 
-```js
+```html
 <script>
   ... 
 
