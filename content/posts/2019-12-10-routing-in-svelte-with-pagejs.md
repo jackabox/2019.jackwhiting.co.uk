@@ -19,21 +19,21 @@ series:
   </ol>
 </div>
 
-In the last article we briefly looked at spinning up Svelte. This article doesn't require you to have done this but if you don't have a Svelte installation I really advise following the [quick start guide](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte website.
+In the last article, we briefly looked at spinning up Svelte. This article doesn't require you to have done this but if you don't have a Svelte installation I advise following the [quick start guide](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte website.
 
-There are several ways we can look at routing in Svelte, the first choice may be [Sapper](https://sapper.svelte.dev/) (which is in beta at the point of writing this post) which is a mini-framework built by the Svelte team. There are also a couple of packages which you can use to integrate routing such as **[svelte-routing](https://github.com/EmilTholin/svelte-routing)** or **[Page.js](https://visionmedia.github.io/page.js/)**. 
+There are several ways we can look at routing in Svelte, the first choice may be [Sapper](https://sapper.svelte.dev/) (currently in beta) which is a mini-framework built by the Svelte team. There are also a couple of packages that you can use to integrate routing such as **[svelte-routing](https://github.com/EmilTholin/svelte-routing)** or **[Page.js](https://visionmedia.github.io/page.js/)**. 
 
-For the purpose of routing within our application we are going to be utilising the awesome library [Page.js](https://visionmedia.github.io/page.js/). We have chosen Page.js as it offers a lot of granular control over our individual routes and works off any anchor (`<a>`) links in our site without requiring any custom components. I find this works a lot better as when content is rendered from a WYSIWYG or Markdown files all of the internal anchor links will work flawlessly.
+For this article, we are going to be utilising the awesome library [Page.js](https://visionmedia.github.io/page.js/). We have chosen Page.js as it offers a lot of granular control over our individual routes and works off any anchor (`<a>`) links in our site without requiring any custom components. I find this works a lot better as when content is rendered from a WYSIWYG or Markdown files all of the internal anchor links will work flawlessly.
 
 ## Setting Up Our Environment
 
-To start, we need to install Page.js. Open up your terminal in your root directory of your site and run the following:
+To start, we need to install Page.js. Open up your terminal in the root directory of your site and run the following:
 
 ```bash
 yarn add page # or npm install page
 ```
 
-We'll also need to make a tweak to our **package.json** file to ensure that if we reload on a page we have navigated to, for example _/blog_, we will not receive a server error and it will load the appropriate route. Open up your **package.json** and edit the following line:
+We will also need to make a tweak to our **package.json** file to ensure that if we reload on a page we have navigated to, for example, _/blog_, we will not receive a server error and it will load the appropriate route. Open up your **package.json** and edit the following line:
 
 ```js
 "start": "sirv public"
@@ -49,7 +49,7 @@ This should set up everything so we bump into as few errors as possible later on
 
 # Writing the Router
 
-When we look at how we will integrate Page.js into Svelte, I want to explain a few bits about how things work and show a few examples. Page.js is a extremely extensible so you can perform a lot of logic on a per route basis.
+When we look at how we will integrate Page.js into Svelte, I want to explain a few bits about how things work and show a few examples. Page.js is an extremely extensible so you can perform a lot of logic on a per route basis.
 
 ## Setup the Router
 
@@ -88,7 +88,7 @@ To get Page.js to watch, and change the component, based on the URL we are on, w
 router('/', () => page = Home)
 ``` 
 
-In the above code, we are watching for any requests to the root of our site at "/" and then setting the `page` variable to the `Home` component we imported earlier from the `./routes/Home.svelte` file.
+In the above code, we are watching for any requests to the root of our site at "/" and then set the `page` variable to the `Home` component we imported earlier from the `./routes/Home.svelte` file.
 
 We then need to make sure the router is always watching for changes, which we can do by running `router.start()`. This will look like the following:
 
@@ -130,11 +130,11 @@ If you run `yarn dev` from the root directory of your application, you should no
 
 ## Expanding On Our Router
 
-To get our router to actually route things, we will need to set up a couple more instances of routes and add them to our code. Create a two new files in the **routes** directory for `Blog.svelte` and `SingleBlog.svelte`.
+To get our router to, actually, route things, we will need to set up a couple more instances of routes and add them to our code. Create two new files in the **routes** directory for `Blog.svelte` and `SingleBlog.svelte`.
 
 ### Blog.svelte
 
-Do not worry if you do not fully understand everything that's going on here. I've included a bit of dummy code in the example for `Blog.svelte` as I wanted to show how we can dynamically load content based on route parameters. To summarise what is going on - we utilise the `onMount` from Svelte to fetch a list of JSON blog posts from a dummy API and then loop over them all and display a link to each individual item.
+Do not worry if you do not fully understand everything that's going on here. I've included a bit of dummy code in the example for `Blog.svelte` as I wanted to show how we can dynamically load content based on route parameters. To summarise what is going on - we utilise the `onMount` from Svelte to fetch a list of JSON blog posts from a dummy API and then loop over them all and display a link to each item.
 
 ```html
 <script>
@@ -215,7 +215,7 @@ router(
 );
 ```
 
-In this code we have another function in the middle which allows us to pass through both `ctx` (context) and a `next` function call. In this example, we are assigning the `params` defined in our URL to the `params` variable in the code before proceeding with updating the route component.
+In this code, we have another function in the middle which allows us to pass through both `ctx` (context) and a `next` function call. In this example, we are assigning the `params` defined in our URL to the `params` variable in the code before proceeding with updating the route component.
 
 If you look back at the code for the `routes/SingleBlog.svelte` file, you will see we used these params to allow us to get the ID of the post we are visiting from the remote API.
 
@@ -277,11 +277,11 @@ Test it out in your browser and you should see everything working without any pa
 
 ## Further Examples
 
-There is lots you can do by utilising Page.js and Svelte together. Although I feel this article is getting a little lengthy, I did want to cover over a few points which may come in super handy for anyone building a more complex application.
+There are lots you can do by utilising Page.js and Svelte together. Although I feel this article is getting a little lengthy, I did want to cover over a few points which may come in super handy for anyone building a more complex application.
 
 ### Authentication
 
-We can utilise the `router()` to check if there is a user variable stored, or if the user is authenticated, and then if not redirect to a login page. This is super useful for creating a locked down dashboard.
+We can utilise the `router()` to check if there is a user variable stored, or if the user is authenticated, and then if not redirect to a login page. This is super useful for creating a locked-down area.
 
 ```html
 <script>
@@ -320,4 +320,4 @@ What happens when a user hits a page where we don't have a route set up? Well, c
 
 ## Conclusion
 
-There is a lot of content in this article discussing the ways to implement Page.js into Svelte to create a dynamic router and I hope it has been useful. The way we have structured our document is not the cleanest at the moment as it will mean we have to repeat a lot of logic within our `router()` calls and in the main `App.svelete` file. In a future article I want to talk about how we can refactor this and set up the routes a bit more efficiently.
+There is a lot of content in this article discussing the ways to implement Page.js into Svelte to create a dynamic router and I hope it has been useful. The way we have structured our document is not the cleanest at the moment as it will mean we have to repeat a lot of logic within our `router()` calls and in the main `App.svelete` file. In a future article, I want to talk about how we can refactor this and set up the routes a bit more efficiently.
