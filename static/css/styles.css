@@ -714,22 +714,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-h3 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-h4 {
+h3 {
   font-size: 1.125rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -740,8 +740,39 @@ h5 {
 
 p,
 li {
-  font-size: 1.07rem;
+  font-size: 1rem;
   line-height: 1.7;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+@media (min-width: 560px) {
+  p, li {
+    font-size: 1.07rem;
+    line-height: 1.7;
+  }
+
+  h1  {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    @applt text-xl;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+
+  .wysiwyg * + h1 {
+    font-size: 1.875rem;
+  }
 }
 
 .content * + p {
@@ -758,7 +789,7 @@ li {
 
 .wysiwyg * + h1 {
   margin-top: 50px;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
 }
 
 .wysiwyg * + h2,

@@ -2,18 +2,18 @@
 title: 'Setting up Routing In Svelte with Page.js'
 slug: 'setting-up-routing-in-svelte-with-pagejs'
 date: 2019-12-10T16:00:00
-description: 'In Part 2 of our series on Working with Svelte we are going to take a look at how to implement basic routing into our Svelte application by leveraging Page.js. We will then go onto talk about further ways in which we can expand this router for authentication and passing page parameters.'
+description: 'In Part 2 of the series on Working with Svelte we are going to take a look at how to implement basic routing into our Svelte application by leveraging Page.js. We will then go onto talk about further ways in which we can expand this router for authentication and passing page parameters.'
 summary: 'In this article we cover integrating a router into Svelte by leveraging Page.js and dig into examples of authentication and API requests.'
 categories:
   - Svelte
 series:
   - 'Working with Svelte'
 ---
-<div class="rounded-lg p-8 bg-site-orange mb-10">
+<div class="rounded-lg p-6 lg:p-8 bg-site-orange mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
   <ol>
-    <li><a class="no-underscore no-hover font-semibold" href="/posts/setting-up-svelte-and-integrating-tailwind-css">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
-    <li>Setting up Routing with Page.js (Current Article)</li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="/posts/setting-up-svelte-and-integrating-tailwind-css">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="#">Setting up Routing with Page.js</a></li>
     <li>Optimising Our Router For Large Applications (Coming Soon)</li>
     <li><i>.. and more</i></li>
   </ol>

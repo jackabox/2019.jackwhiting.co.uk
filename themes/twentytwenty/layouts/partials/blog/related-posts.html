@@ -1,7 +1,7 @@
 {{ $related := (( where ( where .Site.Pages.ByDate.Reverse ".Params.categories" "intersect" .Params.categories ) "Permalink" "!=" .Permalink )) }}
 
 {{ if $related }}
-<section class="mt-14 lg:mt-20 container">
+<section class="mt-10 lg:mt-20 container">
     <div class="p-8 rounded-lg bg-site-blue w-full lg:w-9/12">
       <h2 class="mb-4">Related Posts</h2>
 

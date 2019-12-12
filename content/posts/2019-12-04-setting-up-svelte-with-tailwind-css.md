@@ -10,11 +10,11 @@ categories:
 series:
   - 'Working with Svelte'
 ---
-<div class="rounded-lg p-8 bg-site-orange mb-10">
+<div class="rounded-lg p-6 lg:p-8 bg-site-orange mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
   <ol>
-    <li>Setting up Svelte & Installing Tailwind CSS and PostCSS (Current Article)</li>
-    <li><a class="no-underscore no-hover font-semibold" href="/posts/setting-up-routing-in-svelte-with-pagejs">Setting up Routing with Page.js</a></li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="#">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="/posts/setting-up-routing-in-svelte-with-pagejs">Setting up Routing with Page.js</a></li>
     <li>Optimising Our Router For Large Applications (Coming Soon)</li>
     <li><i>.. and more</i></li>
   </ol>

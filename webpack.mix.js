@@ -8,4 +8,6 @@ mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
     	require('tailwindcss'),
     	require('autoprefixer')
    ])
-  .purgeCss();
+  .purgeCss({
+  	whitelistPatterns: [/highlight/]
+  });
