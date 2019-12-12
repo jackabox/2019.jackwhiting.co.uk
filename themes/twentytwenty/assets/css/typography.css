@@ -140,6 +140,7 @@ hr {
   @apply block mb-10 mt-10 border-t-2 border-gray-200;
 }
 
+a.commento-sort-policy-button:after,
 a.commento-forgot-link:after,
 a.commento-login-link:after,
 a.no-underscore:after {
@@ -167,7 +168,7 @@ a.no-underscore:hover:after {
   @apply bg-site-green;
 }
 
-
+a.commento-sort-policy-button:after:hover,
 a.commento-forgot-link:after:hover,
 a.commento-login-link:after:hover {
   @apply bg-transparent;
