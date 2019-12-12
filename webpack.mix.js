@@ -9,5 +9,12 @@ mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
     	require('autoprefixer')
    ])
   .purgeCss({
-  	whitelistPatterns: [/highlight/]
+    globs: [
+      path.join(__dirname, 'themes/twentytwenty/layouts/**/*.html'),
+      path.join(__dirname, 'themes/twentytwenty/assets/css/*.css'),
+      path.join(__dirname, 'themes/twentytwenty/assets/js/*.js'),
+      path.join(__dirname, 'content/**/*.md'),
+    ],
+  	whitelistPatterns: [/highlight/],
+    whitelistPatternsChildren: [/^highlight$/],
   });

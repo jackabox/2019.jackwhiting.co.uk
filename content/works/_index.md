@@ -1,5 +1,4 @@
 ---
 title: 'Works'
 ---
-
-A few of my selected works..
+Below are a few of my selected works from over the years. If you want more specific examples or to know more about a project? Feel free to [get in touch](/contact).
