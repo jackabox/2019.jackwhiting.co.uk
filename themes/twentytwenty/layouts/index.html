@@ -10,7 +10,7 @@
 {{ $recentWorks := (where .Site.RegularPages "Section" "in" "works") }}
 <section class="container mb-20 lg:mb-40">
 	<h2 class="mb-2">Recent Works</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nulla.</p>
+	<p>A few of my selected works from over the years.</p>
 	
 	{{ range first 2 $recentWorks }}
 		{{ partial "works/item.html" . }}
@@ -23,7 +23,7 @@
 {{ $recentBlogs := (where .Site.RegularPages "Section" "in" "posts") }}
 <section class="container mb-20 lg:mb-30">
 	<h2 class="mb-2">Latest Posts</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem.</p>
+	<p>See what I have been writing about recently.</p>
 
 	<ul class="mt-10">
 		{{ range first 5 $recentBlogs }}

@@ -2033,6 +2033,10 @@ enhanced-resolve@^4.1.0:
     memory-fs "^0.5.0"
     tapable "^1.0.0"
 
+enter-view@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/enter-view/-/enter-view-2.0.0.tgz#7e8a939294029680525c6772ea6e0e70922ad418"
+
 entities@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.0.0.tgz#68d6084cab1b079767540d80e56a39b423e4abf4"

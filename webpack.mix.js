@@ -8,4 +8,13 @@ mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
     	require('tailwindcss'),
     	require('autoprefixer')
    ])
-  .purgeCss();
+  .purgeCss({
+    globs: [
+      path.join(__dirname, 'themes/twentytwenty/layouts/**/*.html'),
+      path.join(__dirname, 'themes/twentytwenty/assets/css/*.css'),
+      path.join(__dirname, 'themes/twentytwenty/assets/js/*.js'),
+      path.join(__dirname, 'content/**/*.md'),
+    ],
+  	whitelistPatterns: [/highlight/, /commento/],
+    whitelistPatternsChildren: [/^highlight$/, /^commento$/],
+  });

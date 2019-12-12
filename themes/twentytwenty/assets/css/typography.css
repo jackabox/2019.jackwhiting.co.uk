@@ -15,22 +15,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @apply text-4xl;
+  @apply text-3xl;
   @apply font-semibold;
 }
 
 h2 {
-  @apply text-2xl;
-  @apply font-semibold;
-}
-
-h3 {
   @apply text-xl;
   @apply font-semibold;
 }
 
-h4 {
+h3 {
   @apply text-lg;
+  @apply font-semibold;
+}
+
+h4 {
+  @apply text-base;
   @apply font-medium;
 }
 
@@ -41,8 +41,39 @@ h5 {
 
 p,
 li {
-  font-size: 1.07rem;
+  @apply text-base;
   line-height: 1.7;
+}
+
+b, strong {
+  @apply font-semibold;
+}
+
+@screen md {
+  p, li {
+    font-size: 1.07rem;
+    line-height: 1.7;
+  }
+
+  h1  {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @applt text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  .wysiwyg * + h1 { 
+    @apply text-3xl;
+  }
 }
 
 .content * + p {
@@ -59,7 +90,7 @@ li {
 
 .wysiwyg * + h1 {
   @apply mt-10;
-  @apply text-3xl;
+  @apply text-2xl;
 }
 
 .wysiwyg * + h2,
@@ -109,6 +140,7 @@ hr {
   @apply block mb-10 mt-10 border-t-2 border-gray-200;
 }
 
+a.commento-sort-policy-button:after,
 a.commento-forgot-link:after,
 a.commento-login-link:after,
 a.no-underscore:after {
@@ -136,7 +168,7 @@ a.no-underscore:hover:after {
   @apply bg-site-green;
 }
 
-
+a.commento-sort-policy-button:after:hover,
 a.commento-forgot-link:after:hover,
 a.commento-login-link:after:hover {
   @apply bg-transparent;

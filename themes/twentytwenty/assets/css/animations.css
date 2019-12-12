@@ -1,0 +1,49 @@
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/****************
+	FADES
+*****************/
+[data-animate^='fade'] {
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-property: opacity, transform;
+  transition-duration: 0.75s;
+}
+
+[data-animate^='fade'].animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-animate='fade-up'] {
+  transform: translateY(50px);
+}
+
+[data-animate='fade-down'] {
+  transform: translateY(-50px);
+}
+
+[data-animate='slide-up'] {
+  /* positioning */
+  transform: translateY(100%);
+
+  /* visual */
+  opacity: 0;
+}
+
+[data-animate='slide-up'].animate {
+  /* animation */
+  animation: slide-up 0.9s cubic-bezier(0.47, 0.13, 0.46, 0.97) forwards;
+}

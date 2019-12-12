@@ -1,12 +1,12 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<article class="container my-20">
-  <div class="mb-14">
+<article class="container my-10 lg:my-20">
+  <div class="mb-10 lg:mb-14" data-animate="fade-up">
     <h1>{{ .Title }}</h1>
   </div> 
 
-  <div class="flex flex-wrap row justify-between">
+  <div class="flex flex-wrap row justify-between" data-animate="fade-up">
       <div class="column w-full lg:w-9/12 wysiwyg">
         {{ .Content }}
       </div>

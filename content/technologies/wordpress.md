@@ -1,7 +1,7 @@
 ---
 title: 'WordPress'
 order: 1
-summary: 'All of my WordPress sites developed are written from the ground up with no use of templates and no off the shelf solutions (which can cause a multitude of problems). I tend to keep plugins to a minimum, only utilising trusted sources.'
+summary: 'All WordPress sites developed are written from the ground up with no use of templates and no off the shelf solutions (which can cause a multitude of problems). I tend to keep plugins to a minimum, only utilising trusted sources.'
 ---
 WordPress powers roughly 30% of the sites on the internet and as such makes it an extremely popular platform to use. Over the many years of development with WordPress I’ve managed to flesh out the most optimal setup providing ease of maintenance as well as saving you time with some of the headaches that other developers may miss.
 

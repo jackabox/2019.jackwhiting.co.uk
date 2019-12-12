@@ -5,7 +5,6 @@ class ToggleTechnologies {
 		this.techToggles = document.querySelectorAll('.technology-toggle')
 
 		if (!isNull(this.techToggles)) {
-			console.log('init');
 			this.initToggles();
 		}
 	}
