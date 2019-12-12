@@ -1,7 +1,7 @@
 ---
 title: 'Setting up Routing In Svelte with Page.js'
 slug: 'setting-up-routing-in-svelte-with-pagejs'
-date: 2019-12-10T16:00:00
+date: 2019-12-11T16:00:00
 description: 'In Part 2 of the series on Working with Svelte we are going to take a look at how to implement basic routing into our Svelte application by leveraging Page.js. We will then go onto talk about further ways in which we can expand this router for authentication and passing page parameters.'
 summary: 'In this article we cover integrating a router into Svelte by leveraging Page.js and dig into examples of authentication and API requests.'
 categories:
