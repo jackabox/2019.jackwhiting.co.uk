@@ -24,7 +24,7 @@ Our JSON should contain an array of elements with a `from` and `to`, please see 
 [
   {
     "from": "/",
-    "new": "/home"
+    "to": "/home"
   },
   {
     "from": "/get-in-touch",
@@ -40,7 +40,7 @@ Next, we need to create a file which can handle the reading of the JSON and the 
 ```js
 const redirects = require('../data/redirects.json') // update to your file path
 
-export default function(req, rest, next) {
+export default function(req, res, next) {
   // find the redirect if it exists where the from === the requested url
   const redirect = redirects.find(r => r.from === req.url)
 

@@ -100,7 +100,7 @@ router.start()
 Finally, to get the router to load the correct component we can utilise [`svelte:component`](https://svelte.org) which will allow us to recreate and destroy the component on any page load (meaning that a different Route will load when you navigate to any anchors/ the browser history changes). After the closing `</script>` tag add the following:
 
 ```html
-<svelte:component this={route} params={params} />
+<svelte:component this={page} params={params} />
 ```
 
 Your `App.svelte` should look something similar to the following when all put together.
@@ -123,7 +123,7 @@ Your `App.svelte` should look something similar to the following when all put to
   router.start()
 </script>
 
-<svelte:component this={route} params={params} />
+<svelte:component this={page} params={params} />
 ```
 
 If you run `yarn dev` from the root directory of your application, you should now see the Home Page load and display any content you added to the `Home.svelte` file.
@@ -228,7 +228,7 @@ To actually be able to navigate to these routes, we need to add a bit of boilerp
 </nav>
 
 <main>
- <svelte:component this={route} params={params} />
+ <svelte:component this={page} params={params} />
 </main>
 ```
 
@@ -256,7 +256,7 @@ Our `App.svelte` file should now look a little like this:
      params = ctx.params
      next()
     }, 
-    () => route = SingleBlog
+    () => page = SingleBlog
   );
 
   // Set up the router to start and actively watch for changes
@@ -269,7 +269,7 @@ Our `App.svelte` file should now look a little like this:
 </nav>
 
 <main>
- <svelte:component this={route} params={params} />
+ <svelte:component this={page} params={params} />
 </main>
 ```
 
