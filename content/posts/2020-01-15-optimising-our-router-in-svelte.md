@@ -9,7 +9,7 @@ categories:
 series:
   - 'Working with Svelte'
 ---
-In the last article we covered integrating Page.js with our Svelte application to set up routing, along with a bit of an explanation in the ways of which we could use it. In this article, I want to cover how to improve our router and refactor the code to provide a more solid approach. If you haven't read the [last article](https://jackwhiting.co.uk/posts/setting-up-routing-in-svelte-with-pagejs/) I highly suggest having a read through to ensure you get the most from this one.
+In the last article, we covered integrating Page.js with our Svelte application to set up routing, along with a bit of an explanation in the ways of which we could use it. In this article, I want to cover how to improve our router and refactor the code to provide a more solid approach. If you haven't read the [last article](https://jackwhiting.co.uk/posts/setting-up-routing-in-svelte-with-pagejs/) I highly suggest having a read through to ensure you get the most from this one.
 
 At the end of the last article, you should have ended up with something that looks similar to the following.
 
@@ -52,11 +52,11 @@ At the end of the last article, you should have ended up with something that loo
 </main>
 ```
 
-In this article we will take the above code, expand on it and add in some simple refactoring.
+Now, let us take a look at how we can improve this code in our application.
 
 ## Create an Array of Routes and Components
 
-To start, let us create a new file in the route directory which will store our applications routes.
+To start, let us create a new file in the route directory which will store the routes of our application.
 
 ```bash
 cd src
@@ -107,7 +107,9 @@ export default [
 
 ## Updating App.svelte
 
-We need to head back to `App.svelte` and update our code to remove any redundancies and write a method for declaring the routes. Import our array of routes at the top of the file.
+We need to head back to `App.svelte` and update our code to remove any redundancies and write a few lines of code so that our Application understands and initialises the routes. 
+
+Import our array of routes we just created at the top of the file.
 
 ```html
 <script>
@@ -118,7 +120,7 @@ We need to head back to `App.svelte` and update our code to remove any redundanc
 </script>
 ```
 
-In our initial script, we had to initialise each route manually. This is not too much of a problem if you have a small application but it becomes cumbersome when our application starts to grow. Lets refactor the code to loop around each route from our `routes.js` file and then create a new instance of it. We are reusing code from the last article here but I've left a few comments in incase you haven't read it.
+In our initial script, we had to initialise each route manually. This is not too much of a problem if you have a small application but it becomes cumbersome when our application starts to grow. Let us refactor the code to loop around each route from our `routes.js` file and then create a new instance of it. We are reusing code from the last article here but I've left a few comments in incase you haven't read it.
 
 ```html
 <script>
