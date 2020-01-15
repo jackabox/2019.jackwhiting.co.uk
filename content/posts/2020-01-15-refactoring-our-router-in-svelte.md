@@ -2,7 +2,7 @@
 title: 'Refactoring and Optimising Our Router Within Svelte'
 slug: 'refactoring-our-router-within-svelte'
 date: 2020-01-15
-description: 'In Part 2 of the series on Working with Svelte, We are going to take a look at how to improve our router (implemented with Page.js) and refactor the code to provide a more solid approach. We will also set up our application to easily add in new routes.'
+description: 'In Part 3 of the series on Working with Svelte, We are going to take a look at how to improve our router (implemented with Page.js) and refactor the code to provide a more solid approach. We will also set up our application to easily add in new routes.'
 summary: 'In this article we take a look at how to improve our router and refactor the code to provide a more solid approach'
 categories:
   - Svelte
