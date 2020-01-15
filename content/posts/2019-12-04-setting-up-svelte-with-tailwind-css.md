@@ -15,7 +15,7 @@ series:
   <ol>
     <li><a class="no-underscore no-hover font-semibold inline" href="#">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
     <li><a class="no-underscore no-hover font-semibold inline" href="/posts/setting-up-routing-in-svelte-with-pagejs">Setting up Routing with Page.js</a></li>
-    <li>Optimising Our Router For Large Applications (Coming Soon)</li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="/posts/refactoring-our-router-within-svelte">Refactoring and Optimising Our Router</a></li>
     <li><i>.. and more</i></li>
   </ol>
 </div>

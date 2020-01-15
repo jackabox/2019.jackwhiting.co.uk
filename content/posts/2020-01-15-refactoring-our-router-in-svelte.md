@@ -1,7 +1,7 @@
 ---
 title: 'Refactoring and Optimising Our Router Within Svelte'
 slug: 'refactoring-our-router-within-svelte'
-date: 2020-01-15T16:00:00
+date: 2020-01-15
 description: 'In Part 2 of the series on Working with Svelte, We are going to take a look at how to improve our router (implemented with Page.js) and refactor the code to provide a more solid approach. We will also set up our application to easily add in new routes.'
 summary: 'In this article we take a look at how to improve our router and refactor the code to provide a more solid approach'
 categories:
@@ -9,6 +9,16 @@ categories:
 series:
   - 'Working with Svelte'
 ---
+<div class="rounded-lg p-6 lg:p-8 bg-site-orange mb-10">
+  <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
+  <ol>
+    <li><a class="no-underscore no-hover font-semibold inline" href="/posts/setting-up-svelte-and-integrating-tailwind-css">Setting up Svelte & Installing Tailwind CSS and PostCSS</a></li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="/posts/setting-up-routing-in-svelte-with-pagejs">Setting up Routing with Page.js</a></li>
+    <li><a class="no-underscore no-hover font-semibold inline" href="#">Refactoring and Optimising Our Router</a></li>
+    <li><i>.. and more</i></li>
+  </ol>
+</div>
+
 In the last article, we covered integrating Page.js with our Svelte application to set up routing, along with a bit of an explanation in the ways of which we could use it. In this article, I want to cover how to improve our router and refactor the code to provide a more solid approach. If you haven't read the [last article](https://jackwhiting.co.uk/posts/setting-up-routing-in-svelte-with-pagejs/) I highly suggest having a read through to ensure you get the most from this one.
 
 At the end of the last article, you should have ended up with something that looks similar to the following.
@@ -165,6 +175,6 @@ If we want to add more routes in the future we can simply edit the `routes.js` f
 
 Want to see this in action? Check out the CodeSandbox below.
 
-<iframe src="https://codesandbox.io/embed/polished-dew-pckm7?fontsize=14&hidenavigation=1&module=%2FApp.svelte&theme=dark" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="polished-dew-pckm7" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/polished-dew-pckm7?fontsize=14&hidenavigation=1&module=%2FApp.svelte&theme=dark" class="mt-6" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="polished-dew-pckm7" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Is there anything else you would have done here to improve on our router?
