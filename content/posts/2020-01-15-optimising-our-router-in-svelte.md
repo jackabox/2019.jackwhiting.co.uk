@@ -4,6 +4,7 @@ slug: 'optimising-our-router-within-svelte'
 date: 2020-01-15T16:00:00
 description: 'descert'
 summary: 'Summary'
+draft: true
 categories:
   - Svelte
 series:
