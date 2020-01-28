@@ -2,4 +2,4 @@
 title: 'Services'
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quae, id fuga ratione ipsum officia illo sint laboriosam praesentium iure.
+I have worked across a broad range of areas and have expertise in the following areas.
