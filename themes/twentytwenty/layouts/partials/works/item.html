@@ -1,25 +1,12 @@
-<div class="mt-10 lg:mt-14 mb-10 lg:mb-20 flex flex-wrap row items-center justify-between">
-	<div class="w-full lg:w-7/12 column mb-5 lg:mb-0">
-		<img src="{{ .Params.image }}" alt="" class="w-full h-auto rounded-lg">
+<div class="mt-10 lg:mt-14 mb-10 lg:mb-20 {{ .Params.background }} flex items-end justify-between overflow-hidden">
+	<div class="w-4/12 p-10">
+		<h2 class="text-2xl mb-2">{{ .Title }}</h2>
+		<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, sed!</p>
+		<p class="mt-5 mb-10 text-sm">
+			<a href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener" class='no-underscore no-hover' title="Link to view website of {{ .Title }}">Visit site</a>
+		</p>
 	</div>
-
-	<div class="w-full lg:w-5/12 lg:pl-8 column">
-		<h3 class="mb-3">{{ .Title }}</h3>
-		<p class="text-base">{{ .Summary }}</p>
-
-		{{ $taxonomy := "tags" }}
-		{{ with .Param $taxonomy }}
-		  <div class="flex mt-5">
-		    {{ range $index, $tag := . }}
-		      {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-		        <span class="px-2 py-1 text-xs bg-site-pink rounded mr-2 text-xs uppercase tracking-wide">
-		          {{ $tag }}
-		        </span>
-		      {{- end -}}
-		    {{- end -}}
-		  </div>
-		{{ end }}
-
-		<p class="mt-5"><a href="{{ .Params.link }}" target="_blank" rel="noreferrer noopener" title="Link to view website of {{ .Title }}">Visit site</a></p>
+	<div class="w-7/12 pt-10">
+		<img src="{{ .Params.image }}" alt="" class="w-full h-auto shadow-2xl">
 	</div>
 </div>

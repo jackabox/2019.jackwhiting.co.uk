@@ -1,19 +1,26 @@
 <header class="mb-8 container">
-  <div class="flex flex-wrap justify-between py-6 border-b border-gray-200">
-    <div class="w-full md:w-3/12 lg:w-2/12"><a class="font-medium text-xl tracking-wide no-underscore" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
+  <div class="flex flex-wrap justify-between py-6">
+    <div class="w-full md:w-3/12 lg:w-3/12">
+      <a class="uppercase flex text-lg tracking-wide no-underscore no-hover text-gray-900" href="{{ .Site.BaseURL }}">
+        <span class="font-bold">J</span>
+        <span class="font-bold">.</span>
+        <span class="font-bold">Whiting</span>
+        <span class="font-bold">.</span>
+      </a>
+    </div>
 
-    <nav class="w-full mt-3 md:mt-0 md:w-9/12 lg:ml-3">
+    <nav class="w-full mt-3 md:mt-0 md:w-8/12 lg:ml-3">
       <ul class="flex md:justify-end">
-        <li>
+        <li class="uppercase text-sm font-medium tracking-wide">
           <a href="{{ .Site.BaseURL }}works" title="Works">Works</a>
         </li>
-        <li class="ml-4 md:ml-6">
+        <li class="uppercase text-sm font-medium tracking-wide ml-4 md:ml-6">
           <a href="{{ .Site.BaseURL }}services" title="Services">Services</a>
         </li>
-        <li class="ml-4 md:ml-6">
+        <li class="uppercase text-sm font-medium tracking-wide ml-4 md:ml-6">
           <a href="{{ .Site.BaseURL }}posts" title="Posts">Posts</a>
         </li>
-        <li class="ml-4 md:ml-6">
+        <li class="uppercase text-sm font-medium tracking-wide ml-4 md:ml-6">
           <a href="{{ .Site.BaseURL }}contact" title="Contact Me">Contact</a>
         </li>
       </ul>
