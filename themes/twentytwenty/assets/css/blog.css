@@ -1,14 +1,26 @@
+
 .post-items > .post-item {
-  @apply border-b border-gray-200;
+  @apply bg-gray-100;
 }
 
-.post-items > .post-item:last-child {
-  @apply border-b-0;
-  @apply pb-0;
+.post-items > .post-item:nth-child(4n + 1) {
+  @apply bg-site-pink;
+}
+
+.post-items > .post-item:nth-child(4n + 4) {
+  @apply bg-site-green;
+}
+
+.post-items > .post-item:nth-child(4n + 2) {
+  @apply bg-site-blue;
+}
+
+.post-items > .post-item:nth-child(4n + 3) {
+  @apply bg-site-orange;
 }
 
 .pagination {
-  @apply flex justify-center;
+  @apply flex justify-end;
 }
 
 .pagination a {

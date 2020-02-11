@@ -1,10 +1,9 @@
-<div class="mb-10 lg:mb-14 p-8 rounded-lg flex flex-col post-item" data-animate="fade-up">
+<div class="mb-7 md:mb-10 lg:mb-14 p-8 rounded-lg flex flex-col post-item w-full md:w-47%" data-animate="fade-up">
     <p class="text-sm mb-4">{{.Date.Format "02 Jan 2006"}}</p>
 
-    <h2 class="mb-10">
+    <h2 class="mb-8 md:mb-14">
       <a href="{{ .Permalink }}" class="no-underscore no-hover" title="Link to { .Title }} Post">{{ .Title }}</a>
     </h2>
-
 
     <p class="mt-auto">
       <a class="btn hover:bg-white hover:text-gray-900" href="{{.Permalink}}" title="Link to { .Title }} Post">Read More</a>
@@ -14,4 +13,3 @@
       {{ partial "blog/categories.html" . }}
     </div>
 </div>
-

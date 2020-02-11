@@ -2,6 +2,7 @@
 
 - Removing commenting system as they're not used enough/unnecessary.
 - Integrating WebMentions as they're used throughout twitter, etc.
+- Refactoring blog posts to remove unnecessary junk and conform with site colours.
 
 # 2020-02-10
 

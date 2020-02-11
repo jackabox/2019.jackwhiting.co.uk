@@ -930,20 +930,30 @@ a.no-hover:hover:after {
 }
 
 .post-items > .post-item {
-  border-bottom-width: 1px;
-  border-color: #edf2f7;
+  background-color: #f7fafc;
 }
 
-.post-items > .post-item:last-child {
-  border-bottom-width: 0;
-  padding-bottom: 0;
+.post-items > .post-item:nth-child(4n + 1) {
+  background-color: #FDF0F0;
+}
+
+.post-items > .post-item:nth-child(4n + 4) {
+  background-color: #E4FAEF;
+}
+
+.post-items > .post-item:nth-child(4n + 2) {
+  background-color: #E6F7FF;
+}
+
+.post-items > .post-item:nth-child(4n + 3) {
+  background-color: #FEF2E2;
 }
 
 .pagination {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 
 .pagination a {
@@ -5528,6 +5538,10 @@ a.no-hover:hover:after {
   max-width: 48%;
 }
 
+.max-w-47\%{
+  max-width: 47%;
+}
+
 .max-w-full{
   max-width: 100%;
 }
@@ -5618,6 +5632,10 @@ a.no-hover:hover:after {
 
 .min-w-48\%{
   min-width: 48%;
+}
+
+.min-w-47\%{
+  min-width: 47%;
 }
 
 .min-w-full{
@@ -12224,6 +12242,10 @@ a.no-hover:hover:after {
   width: 48%;
 }
 
+.w-47\%{
+  width: 47%;
+}
+
 .w-full{
   width: 100%;
 }
@@ -16745,6 +16767,10 @@ a.no-hover:hover:after {
     max-width: 48%;
   }
 
+  .sm\:max-w-47\%{
+    max-width: 47%;
+  }
+
   .sm\:max-w-full{
     max-width: 100%;
   }
@@ -16835,6 +16861,10 @@ a.no-hover:hover:after {
 
   .sm\:min-w-48\%{
     min-width: 48%;
+  }
+
+  .sm\:min-w-47\%{
+    min-width: 47%;
   }
 
   .sm\:min-w-full{
@@ -23441,6 +23471,10 @@ a.no-hover:hover:after {
     width: 48%;
   }
 
+  .sm\:w-47\%{
+    width: 47%;
+  }
+
   .sm\:w-full{
     width: 100%;
   }
@@ -27963,6 +27997,10 @@ a.no-hover:hover:after {
     max-width: 48%;
   }
 
+  .md\:max-w-47\%{
+    max-width: 47%;
+  }
+
   .md\:max-w-full{
     max-width: 100%;
   }
@@ -28053,6 +28091,10 @@ a.no-hover:hover:after {
 
   .md\:min-w-48\%{
     min-width: 48%;
+  }
+
+  .md\:min-w-47\%{
+    min-width: 47%;
   }
 
   .md\:min-w-full{
@@ -34659,6 +34701,10 @@ a.no-hover:hover:after {
     width: 48%;
   }
 
+  .md\:w-47\%{
+    width: 47%;
+  }
+
   .md\:w-full{
     width: 100%;
   }
@@ -39181,6 +39227,10 @@ a.no-hover:hover:after {
     max-width: 48%;
   }
 
+  .lg\:max-w-47\%{
+    max-width: 47%;
+  }
+
   .lg\:max-w-full{
     max-width: 100%;
   }
@@ -39271,6 +39321,10 @@ a.no-hover:hover:after {
 
   .lg\:min-w-48\%{
     min-width: 48%;
+  }
+
+  .lg\:min-w-47\%{
+    min-width: 47%;
   }
 
   .lg\:min-w-full{
@@ -45877,6 +45931,10 @@ a.no-hover:hover:after {
     width: 48%;
   }
 
+  .lg\:w-47\%{
+    width: 47%;
+  }
+
   .lg\:w-full{
     width: 100%;
   }
@@ -50399,6 +50457,10 @@ a.no-hover:hover:after {
     max-width: 48%;
   }
 
+  .xl\:max-w-47\%{
+    max-width: 47%;
+  }
+
   .xl\:max-w-full{
     max-width: 100%;
   }
@@ -50489,6 +50551,10 @@ a.no-hover:hover:after {
 
   .xl\:min-w-48\%{
     min-width: 48%;
+  }
+
+  .xl\:min-w-47\%{
+    min-width: 47%;
   }
 
   .xl\:min-w-full{
@@ -57095,6 +57161,10 @@ a.no-hover:hover:after {
     width: 48%;
   }
 
+  .xl\:w-47\%{
+    width: 47%;
+  }
+
   .xl\:w-full{
     width: 100%;
   }
@@ -61617,6 +61687,10 @@ a.no-hover:hover:after {
     max-width: 48%;
   }
 
+  .xxl\:max-w-47\%{
+    max-width: 47%;
+  }
+
   .xxl\:max-w-full{
     max-width: 100%;
   }
@@ -61707,6 +61781,10 @@ a.no-hover:hover:after {
 
   .xxl\:min-w-48\%{
     min-width: 48%;
+  }
+
+  .xxl\:min-w-47\%{
+    min-width: 47%;
   }
 
   .xxl\:min-w-full{
@@ -68311,6 +68389,10 @@ a.no-hover:hover:after {
 
   .xxl\:w-48\%{
     width: 48%;
+  }
+
+  .xxl\:w-47\%{
+    width: 47%;
   }
 
   .xxl\:w-full{
