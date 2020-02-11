@@ -1,6 +1,7 @@
 # 2020-02-11
 
-- Removing comments as they're not used enough/unnecessary.
+- Removing commenting system as they're not used enough/unnecessary.
+- Integrating WebMentions as they're used throughout twitter, etc.
 
 # 2020-02-10
 

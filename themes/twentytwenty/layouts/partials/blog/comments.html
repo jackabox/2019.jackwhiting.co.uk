@@ -1,8 +1,21 @@
 <div class="my-10 lg:my-20 container">
   <div class="w-full lg:w-9/12">
-    <h2 class="mb-4">Comments</h2>
-  	<div id="commento"></div>
+    <h2 class="mb-4">Web Mentions</h2>
+  	<div data-webmentions="https://jackwhiting.co.uk{{ .RelPermalink }}">
+  		<p>No mentions at this time.</p>
+  	</div>
   </div>
 </div>
 
-<script src="https://cdn.commento.io/js/commento.js"></script>
+<template id="webmention-template">
+  <li>
+    <p class="webmention-header">
+      <a class="webmention-author no-underscore no-hover">
+        <img class="webmention-author-avatar"/>
+        <span class="webmention-author-name"></span>
+      </a>
+      <a class="webmention-action no-underscore no-hover"></a>
+    </p>
+    <div class="webmention-content wysiwyg mt-2"></div>
+  </li>
+</template>

@@ -11,6 +11,7 @@
 @import 'syntax';
 
 @import 'blog';
+@import 'webmentions';
 
 /* Tailwind's utility classes - generated based on config file */
 @import 'tailwindcss/utilities';

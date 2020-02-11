@@ -1,0 +1,32 @@
+.webmention-header {
+	@apply flex;
+	@apply items-center;
+	@apply text-base;
+}
+
+.webmention-author {
+	@apply flex;
+	@apply mr-2;
+	@apply font-semibold;
+	@apply items-center;
+}
+
+.webmention-author-avatar {
+	width: 30px;
+	height: 30px;
+	@apply mr-2;
+	@apply rounded-full;
+	@apply border-2 border-site-green;
+}
+
+.webmentions li {
+	@apply mb-4 pb-4 border-b border-gray-200;
+}
+
+.webmention-content {
+	@apply text-base;
+}
+
+.webmentions li:last-child {
+	@apply border-0;
+}
