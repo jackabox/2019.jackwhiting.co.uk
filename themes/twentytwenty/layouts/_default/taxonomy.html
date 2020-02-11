@@ -10,14 +10,7 @@
   <!-- Ranges through content/posts/*.md -->
   <div class="flex flex-col post-items">
     {{ range $index, $element := (.Paginator 8).Pages }}
-    
       {{ partial "blog/item-large.html" . }}
-      
-      {{ if (eq $index 3) }}
-      <div class="mb-20 pb-20 post-item">
-          {{ partial "newsletter.html" . }}
-      </div>
-      {{ end }}
     {{ end }}
   </div>
 

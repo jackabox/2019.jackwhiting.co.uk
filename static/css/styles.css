@@ -895,6 +895,15 @@ a.no-hover:hover:after {
   transition: 0.2s all ease-in-out;
 }
 
+.fake-bullet {
+  width: 10px;
+  height: 10px;
+  display: block;
+  content: ' ';
+  border-radius: 3px;
+  background-color: #4a5568;
+}
+
 .highlight {
   font-size: 0.875rem;
   margin-top: 25px;

@@ -2,7 +2,7 @@
 {{ partial "header.html" . }}
 
 <section class="container mt-10 lg:mt-20">
-  <div class="w-full lg:w-8/12 mb-10 lg:mb-30">
+  <div class="w-full lg:w-8/12 mb-10 lg:mb-20">
     <h1 class="mb-4">Series - {{ .Title }}</h1>
     <p>{{ .Content }}</p>
   </div>
@@ -30,8 +30,8 @@
     {{ end }}
   </div>
 
-  <div class="mt-20 mb-10 lg:mb-20">
-    {{ partial "newsletter.html" . }}
+  <div class="mt-10 mb-10">
+    {{ partial "patreon-alt.html" . }}
   </div>
 </section>
 

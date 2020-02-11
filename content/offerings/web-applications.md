@@ -1,6 +1,6 @@
 ---
-title: 'Web Applications'
+title: 'Web & Mobile Applications'
 order: 5
 color: 'bg-site-green'
 ---
-Need a web application for your business or idea? I can craft bespoke applications in Vue or Svelte.
+Looking to build out an application for your product or brand? Whether a mobile, desktop or web application I can help you to bring your idea to fruition.

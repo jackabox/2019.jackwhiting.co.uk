@@ -3,4 +3,4 @@ title: 'Web Design'
 order: 2
 color: 'bg-site-pink'
 ---
-Need a design? I'll work with you by hand crafting the website to your project requirements.
+Have an idea you need visualising? Need a lick of fresh paint to your website? I'll work with you by hand to mold something to your requirements.

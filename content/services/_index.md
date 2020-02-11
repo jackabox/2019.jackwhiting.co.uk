@@ -1,5 +1,16 @@
 ---
 title: 'Services'
+skills:
+- "CSS (Sass/PostCSS)"
+- "JavaScript (Vanilla, ES6)"
+- Vue
+- Svelte
+- PHP
+- WordPress
+- Craft CMS
+- Laravel
+- Shopify
+- Firebase
 ---
 If you've landed on this page you're probably wondering what makes me different? Well for a start I believe that every website is unique and should be treated as such. Your business needs are unique and require a thought out, strategic, approach.
 

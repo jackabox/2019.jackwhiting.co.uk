@@ -1,24 +1,41 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<section class="container mt-10 mb-20 lg:mt-20 lg:mb-30">
+<section class="container mt-10 lg:mt-20 mb-10 lg:mb-20">
   <div class="lg:w-9/12 content">
     <h1>Why Hire Me?</h1>
 		{{ .Content }}
-	</div>
+  </div>
+</section>
+
+<section class="container mb-10 lg:mb-20">
+  {{ $taxonomy := "skills" }}
+  {{ with .Param $taxonomy }}
+    <h2 class="mb-4">Skills</h2>
+    <p class="lg:w-9/12">I have worked with a lot of technologies overtime, below is a small sample of my favourite tools.</p>
+
+    <div class="flex flex-wrap row mt-5 lg:mt-10">
+      {{ range $index, $tag := . }}
+        <div class="column w-full md:w-6/12 lg:w-4/12 flex items-center mb-2">
+          <span class="fake-bullet mr-3"></span>
+          <span>{{ $tag }}</span>
+        </div>
+      {{- end -}}
+    </div>
+  {{ end }}
 </section>
 
 {{ with .Site.GetPage "sections" "offerings" }}
-<section class="container mb-20 lg:mb-30">
-  <div class="lg:w-9/12 mb-14">
+<section class="container mb-10 lg:mb-20">
+  <div class="lg:w-9/12 mb-5 lg:mb-10">
     <h2 class="mb-4">{{ .Title }}</h2>
     {{ .Content }}
   </div>
 
   <div class="flex flex-wrap row">
     {{ range (.Pages.ByParam "order")}}
-      <div class="w-full md:w-6/12 lg:w-4/12 column mb-8">
-        <div class="p-5 rounded-lg {{ .Params.Color }} h-full">
+      <div class="w-full md:w-6/12 lg:w-6/12 column mb-5 lg:mb-8">
+        <div class="p-5 lg:p-8 rounded-lg {{ .Params.Color }} h-full">
           <h4 class="mb-3">{{ .Title }}</h4>
           {{ .Content }}
         </div>
@@ -28,31 +45,10 @@
 </section>
 {{ end }}
 
-{{ with .Site.GetPage "sections" "technologies" }}
-<section class="container mb-20 lg:mb-30">
-  <div class="lg:w-9/12 mb-14">
-    <h2 class="mb-4">{{ .Title }}</h2>
-    {{ .Content }}
-  </div>
-
-  {{ range (.Pages.ByParam "order")}}
-    <div class="flex flex-wrap row mb-10">
-      <div class="column w-full mb-3 md:mb-0 md:w-3/12"><h3>{{ .Title }}</h3></div>
-      <div class="column w-full md:w-9/12 technology-toggle">
-        <p class="technology-summary">{{ .Summary }}</p>
-        <div class="wysiwyg technology-content hidden">{{ .Content }}</div>
-        <a href="#" class="technology-read-more mt-4">Read More</a>
-      </div>
-    </div>
-  {{ end }}
-</section>
-{{ end }}
 
 <section class="container">
-  <div class="bg-site-orange text-center rounded-lg p-6 lg:p-8">
     <h2 class="mb-4">Want to work together?</h2>
-    <p class="lg:w-9/12 text-base mx-auto">If you like what you see and feel we'd be a match, I would love to get together and create something amazing. You can find all my details on my <a href="/contact" class="no-underscore no-hover font-semibold" title="Link to contact page">contact page</a>, so drop me a line I'll get back to you as soon as possible!</p>
-  </div>
+    <p class="lg:w-9/12 text-base">If you like what you see and feel we'd be a match, I would love to get together and create something amazing. You can find all my details on my <a href="/contact" title="Link to contact page">contact page</a>, so drop me a line and I'll get back to you as soon as possible!</p>
 </section>
 
 {{ partial "footer.html" . }}

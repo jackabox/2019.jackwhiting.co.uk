@@ -181,3 +181,12 @@ a.no-hover:hover:after {
 .transition {
  transition: 0.2s all ease-in-out;
 }
+
+.fake-bullet {
+  width: 10px;
+  height: 10px;
+  display: block;
+  content: ' ';
+  border-radius: 3px;
+  @apply bg-gray-700;
+}
