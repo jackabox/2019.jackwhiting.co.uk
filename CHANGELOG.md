@@ -1,3 +1,7 @@
+# 2020-02-11
+
+- Removing comments as they're not used enough/unnecessary.
+
 # 2020-02-10
 
 - Revamped the works section to conform more with design
