@@ -1,5 +1,5 @@
 ---
-title: 'Why You should Use Fathom Analytics'
+title: 'Why You Should Use Fathom Analytics'
 slug: 'why-you-should-use-fathom-analytics'
 date: 2019-12-06T10:18:00
 description: 'I have been using Fathom Analytics since they launched Version 2 in October 2019, I was not sure I was going to carry on after my trial expired but I have not cancelled and have no plans to! In the following article, I want to talk a bit about why I use Fathom and provide a review so far.'
