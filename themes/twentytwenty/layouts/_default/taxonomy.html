@@ -2,15 +2,15 @@
 {{ partial "header.html" . }}
 
 <section class="container mt-20">
-  <div class="lg:w-8/12 mb-30">
+  <div class="lg:w-8/12 mb-14 lg:mb-20">
     <h1 class="mb-4">Posts In "{{.Title}}"</h1>
     {{.Content}}
   </div>
 
   <!-- Ranges through content/posts/*.md -->
-  <div class="flex flex-col post-items">
+  <div class="flex flex-wrap justify-between post-items">
     {{ range $index, $element := (.Paginator 8).Pages }}
-      {{ partial "blog/item-large.html" . }}
+      {{ partial "blog/item.html" . }}
     {{ end }}
   </div>
 

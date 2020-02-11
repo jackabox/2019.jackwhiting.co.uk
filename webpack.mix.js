@@ -1,7 +1,6 @@
 let mix = require('laravel-mix');
 require('laravel-mix-purgecss');
 
-
 mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
 	 .postCss('themes/twentytwenty/assets/css/styles.css', 'static/css', [
 	 		require('postcss-import'),
@@ -15,6 +14,6 @@ mix.js('themes/twentytwenty/assets/js/app.js', 'static/js')
       path.join(__dirname, 'themes/twentytwenty/assets/js/*.js'),
       path.join(__dirname, 'content/**/*.md'),
     ],
-  	whitelistPatterns: [/highlight/, /commento/, /no-hover/],
-    whitelistPatternsChildren: [/^highlight$/, /^commento$/, /^pagination$/],
+  	whitelistPatterns: [/highlight/, /no-hover/, /47%/],
+    whitelistPatternsChildren: [/^highlight$/, /^pagination$/],
   });

@@ -49,23 +49,3 @@
 .pagination li:last-child {
   @apply hidden;
 }
-
-
-.commento-footer,
-#commento-markdown-button-root {
-  @apply hidden;
-}
-
-#commento-comments-area {
-  @apply mt-14;
-}
-
-#commento-submit-button-root {
-  margin-right: 0;
-  outline: 0;
-  box-shadow: none;
-  font-weight: 500;
-  letter-spacing: 1px;
-  @apply px-3;
-  @apply bg-gray-900;
-}
