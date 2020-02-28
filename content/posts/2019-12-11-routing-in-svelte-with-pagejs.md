@@ -211,7 +211,7 @@ router(
   }, 
 
   // Finally set the component
-  () => route = SingleBlog
+  () => page = SingleBlog
 );
 ```
 
@@ -313,7 +313,7 @@ What happens when a user hits a page where we don't have a route set up? Well, c
   ...
   import ErrorPage from "./routes/ErrorPage.svelte"
   
-  router('/*', () => route = Error)
+  router('/*', () => page = Error)
   ...
 </script>
 ```
