@@ -1,3 +1,9 @@
+# 2020-02-28
+
+- Fixed some typos with Routing, Sveltejs and Pagejs
+- Removed share links as noone actually uses them...
+- Updating the home page to have a bit more personality.
+
 # 2020-02-11
 
 - Removing commenting system as they're not used enough/unnecessary.

@@ -93,7 +93,9 @@ module.exports = {
         'site-orange': '#FEF2E2',
         'site-blue': '#E6F7FF'
       }),
-      fontSize: theme => ({})
+      fontSize: theme => ({
+        '100px': '100px'
+      })
     }
   },
   variants: {

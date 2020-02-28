@@ -1,9 +1,7 @@
 ---
 title: 'Jack Whiting'
 ---
-## Freelance Web Developer & Blogger
-
-**Hello, I am Jack! Located in Nottingham, UK with over 10 years of experience.**
+**I'm a freelance web consultant located in Nottingham, UK with over 10 years of experience.**
 
 I specialise in crafting websites with PHP and JavaScript. A few of my favourite tools are Laravel, Craft, Shopify, WordPress, VueJS & Svelte. I use a broad range of tools to ensure that the best system is used for each project!
 

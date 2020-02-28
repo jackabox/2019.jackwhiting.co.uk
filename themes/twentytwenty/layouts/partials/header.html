@@ -1,12 +1,12 @@
 <header class="mb-8 container">
   <div class="flex flex-wrap justify-between py-6">
     <div class="w-full md:w-3/12 lg:w-3/12">
-      <a class="uppercase flex text-lg tracking-wide no-underscore no-hover text-gray-900" href="{{ .Site.BaseURL }}">
-        <span class="font-bold">J</span>
-        <span class="font-bold">.</span>
-        <span class="font-bold">Whiting</span>
-        <span class="font-bold">.</span>
+      {{ if .IsHome }}
+      {{ else }}
+      <a class="uppercase flex font-bold text-lg tracking-wide no-underscore no-hover text-gray-900" href="{{ .Site.BaseURL }}">
+        J.Whiting.
       </a>
+      {{ end }}
     </div>
 
     <nav class="w-full mt-3 md:mt-0 md:w-8/12 lg:ml-3">
