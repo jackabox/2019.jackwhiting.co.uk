@@ -3,6 +3,7 @@
 - Fixed some typos with Routing, Sveltejs and Pagejs
 - Removed share links as noone actually uses them...
 - Updating the home page to have a bit more personality.
+- Updated favicon to match brand more.
 
 # 2020-02-11
 
