@@ -15,9 +15,9 @@ theme = "twentytwenty"
   tag = "tags"
   series = "series"
 [params]
-	description = "Freelance Web Developer in Nottingham, UK with over 10 years experience working with WordPress, Laravel, Craft and Vue. Currently available for new projects."
-	tagline = "Freelance Web Developer & Blogger"
-	keywords = ["Web", "Developer", "Freelance", "Nottingham", "Svelte", "PHP", "Laravel", "Vue", "JavaScript", "WordPress", "Craft", "Shopify", "WooCommerce", "E-Commerce"]
+	description = "Freelance Web Consultant in Nottingham, UK with over 10 years experience working with PHP and JavaScript (Laravel, WordPress, Statamic, Craft, Vue and More). Available for new projects."
+	tagline = "Freelance Web Consultant"
+	keywords = ["Web", "Developer", "Consultant", "Freelance", "Nottingham", "Svelte", "PHP", "Laravel", "Vue", "JavaScript", "WordPress", "Craft", "Shopify", "Statamic", "WooCommerce", "E-Commerce"]
 	twitter = "@jackabox"
 	author = "Jack Whiting"
 	twitterUrl = "https://twitter.com/jackabox"
