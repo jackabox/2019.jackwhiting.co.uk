@@ -1,9 +1,10 @@
 # 2020-02-28
-
 - Fixed some typos with Routing, Sveltejs and Pagejs
 - Removed share links as noone actually uses them...
-- Updating the home page to have a bit more personality.
+- Updating the home page to have bigger branding.
 - Updated favicon to match brand more.
+- Added in OG Images
+- Refactored btn links on series
 
 # 2020-02-11
 

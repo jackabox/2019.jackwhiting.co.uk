@@ -43,6 +43,11 @@
   <meta property="og:image" content="{{ . | absURL }}" /> 
   <meta name="twitter:image" content="{{ . | absURL }}" />
   <meta name="twitter:image:src" content="{{ . | absURL }}" /> 
+  {{ else }}
+  <meta itemprop="image" content="/img/og-default.jpg" />
+  <meta property="og:image" content="/img/og-default.jpg" /> 
+  <meta name="twitter:image" content="/img/og-default.jpg" />
+  <meta name="twitter:image:src" content="/img/og-default.jpg" /> 
   {{ end }}
 
   <!-- RSS & Sitemap -->

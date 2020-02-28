@@ -9,6 +9,7 @@ categories:
   - Tailwind
 series:
   - 'Working with Svelte'
+ogImage: '/img/posts/og-setting-up-svelte-tailwind.jpg'
 ---
 <div class="rounded-lg p-6 lg:p-8 bg-site-orange mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
