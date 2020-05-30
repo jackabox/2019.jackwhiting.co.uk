@@ -6,7 +6,7 @@ summary: ''
 date: 2020-05-30T00:00:00
 categories:
   - Node
-ogImage: '/img/posts/oh-parsing-json-with-node-stream-hyperquest.jpg'
+ogImage: '/img/posts/og-parsing-json-with-node-stream-hyperquest.jpg'
 ---
 
 Working with large data files can be tough and cause a bottleneck within your application. We can't just simply load the file all at once and expect everything to work. We need to iterate over the data and parse it in chunks.
