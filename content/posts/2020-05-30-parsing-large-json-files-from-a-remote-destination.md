@@ -72,7 +72,7 @@ We are going to lean on a few more packages here to handle the data returned and
 
 Install them into the project.
 
-```
+```bash
 yarn add JSONStream event-stream
 ```
 
