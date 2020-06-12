@@ -1,5 +1,5 @@
 ---
-title: 'Installating Svelte & Integrating Tailwind CSS (and PostCSS)'
+title: 'Installing Svelte & Integrating Tailwind CSS (and PostCSS)'
 slug: setting-up-svelte-and-integrating-tailwind-css
 date: 2019-12-04T01:38:00
 description: 'In Part 1 of the series on Working with Svelte we will take a glance at how to set up Svelte 3 from a template and then how to integrate PostCSS, PurgeCSS and Tailwind. You will be able to use this to then expand on any other PostCSS plugins (such as autoprefixer or import).'
@@ -11,6 +11,7 @@ series:
   - 'Working with Svelte'
 ogImage: '/img/posts/og-setting-up-svelte-tailwind.jpg'
 ---
+
 <div class="rounded-lg p-6 lg:p-8 bg-site-orange mb-10">
   <p>This article is part of a series of posts about Working with Svelte. The topics and articles we have (or will) cover are as follows:</p>
   <ol>
@@ -21,7 +22,7 @@ ogImage: '/img/posts/og-setting-up-svelte-tailwind.jpg'
   </ol>
 </div>
 
-Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript. You can find out more about Svelte through their [website](https://svelte.dev/). 
+Svelte is an awesome underdog in JavaScript frameworks and is climbing the ranks currently due to the way it compiles your scripts and HTML. Svelte is inherently a compiler and all of your components files get compiled into pure JavaScript. You can find out more about Svelte through their [website](https://svelte.dev/).
 
 ## Install Svelte
 
@@ -40,7 +41,7 @@ To test everything is working properly, we can run `yarn dev` and we should be a
 
 ## Set Up Tailwind
 
-I'm a huge fan of Tailwind and use it on most projects, so working with Svelte would be no different. Staying in the directory we installed Svelte into, we will need to install a few dependancies, create a new `postcss.config.js` file and finally modify a couple of existing files. 
+I'm a huge fan of Tailwind and use it on most projects, so working with Svelte would be no different. Staying in the directory we installed Svelte into, we will need to install a few dependancies, create a new `postcss.config.js` file and finally modify a couple of existing files.
 
 ### Install Dependencies
 
@@ -49,13 +50,14 @@ Install the necessary development dependencies with the following command:
 ```bash
 yarn add --dev postcss postcss-load-config svelte-preprocess tailwindcss
 ```
+
 If you want to make sure unused styles are removed when in production (keeping our file size lean), you can also add the following dependency.
 
 ```bash
 yarn add @fullhuman/postcss-purgecss
 ```
 
-###  Generate Tailwind Config
+### Generate Tailwind Config
 
 To overwrite the default styles provided by Tailwind, we will need to make sure we have a `tailwind.config.js` in our route directory where we can put our necessary tweaks. You can do this by running the following command.
 
@@ -68,11 +70,11 @@ If you open up the file created you should see it looks similar to the below.
 ```js
 module.exports = {
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};
 ```
 
 ### Creating our PostCSS Rules
@@ -89,15 +91,12 @@ Open the file in your favourite editor and copy in the following code.
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: ['./src/**/*.svelte', './src/**/*.html'],
   whitelistPatterns: [/svelte-/],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-})
+  defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+});
 
 module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    ...(!process.env.ROLLUP_WATCH ? [purgecss] : [])
-  ]
-}
+  plugins: [require('tailwindcss'), ...(!process.env.ROLLUP_WATCH ? [purgecss] : [])],
+};
 ```
 
 To explain the above a little, we first create a ruleset for Purge CSS which will look through all Svelte and HTML files and remove any classes that do not match what is included. We'll also add a whitelist pattern to ensure that any Svelte generated classes are not removed unnecessarily.
@@ -119,7 +118,7 @@ We'll need to include the Tailwind helpers somewhere so that all of the necessar
 Then we'll need to ensure Svelte runs the preprocessors on any code in our `<style>` tags. To do this, we'll need to open the `rollup.config.js` file in your editor and add the following at the top of the file.
 
 ```js
-import sveltePreprocess from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess';
 ```
 
 Then modify the section which looks similar to the following
@@ -138,7 +137,7 @@ We should now have Tailwind fully integrated into Svelte. If you rerun `yarn dev
 
 ### Usage
 
-You can now include any of the styles as class attributes for values that already exist as seen below, or you can integrate by using the `@apply` method throughout your Svelte components. 
+You can now include any of the styles as class attributes for values that already exist as seen below, or you can integrate by using the `@apply` method throughout your Svelte components.
 
 ```html
 <h1 class="font-bold">Title</h1>
@@ -146,8 +145,8 @@ You can now include any of the styles as class attributes for values that alread
 
 ```html
 <style>
-h1 {
-  @apply font-bold text-2xl;
-}
+  h1 {
+    @apply font-bold text-2xl;
+  }
 </style>
 ```
