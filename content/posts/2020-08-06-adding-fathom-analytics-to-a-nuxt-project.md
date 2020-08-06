@@ -5,7 +5,7 @@ description: How to effectively add Fathom Analytics to your Nuxt project and st
   tracking on your development environment.
 summary: How to effectively add Fathom Analytics to your Nuxt project and stop it
   tracking on your development environment.
-date: 2020-08-06T23:00:00Z
+date: 2020-08-06T00:00:00Z
 categories:
 - Nuxt
 ogImage: ''
