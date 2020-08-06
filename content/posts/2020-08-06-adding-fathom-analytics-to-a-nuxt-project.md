@@ -5,7 +5,7 @@ description: How to effectively add Fathom Analytics to your Nuxt project and st
   tracking on your development environment.
 summary: How to effectively add Fathom Analytics to your Nuxt project and stop it
   tracking on your development environment.
-date: 2020-08-05T23:00:00Z
+date: 2020-08-06T23:00:00Z
 categories:
 - Nuxt
 ogImage: ''
@@ -15,7 +15,7 @@ If, like me, you have started using [Fathom Analytics](https://usefathom.com/ref
 
 The official Fathom docs (at the time of writing this article) involves overwriting the `app.html` file — this can cause issues with deployment and updating your application. Instead we are going to utilise the [Vue Meta](https://vue-meta.nuxtjs.org/) package to add a script tag to the site.
 
-<blockquote class="info">By default Vue Meta comes preinstalled when you create a Nuxt application</blockquote>
+By default Vue Meta comes preinstalled when you create a Nuxt application
 
 Open up your `nuxt.config.js` file in your favourite code editor. Look for the section starting with `head`. It might look a little like this if you haven't made any previous changes.
 
