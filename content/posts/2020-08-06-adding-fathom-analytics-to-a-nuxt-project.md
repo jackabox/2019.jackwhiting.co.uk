@@ -13,9 +13,9 @@ ogImage: ''
 
 If, like me, you have started using [Fathom Analytics](https://usefathom.com/ref/ULVWJ1)[^1] you might be wondering how to add it to your [Nuxt](https://nuxtjs.org) project properly.
 
-The official Fathom docs (at the time of writing this article) involves overwriting the `app.html` file — this can cause issues with deployment and updating your application. Instead we are going to utilise the [Vue Meta](https://vue-meta.nuxtjs.org/) package to add a script tag to the site.
+The official Fathom docs (at the time of writing this article) involves overwriting the `app.html` file — this can cause issues with deployment and updating your application. Instead, we are going to utilise the [Vue Meta](https://vue-meta.nuxtjs.org/) package to add a script tag to the site.
 
-By default Vue Meta comes preinstalled when you create a Nuxt application
+By default, Vue Meta comes preinstalled when you create a Nuxt application
 
 Open up your `nuxt.config.js` file in your favourite code editor. Look for the section starting with `head`. It might look a little like this if you haven't made any previous changes.
 
@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-Let us update the `nuxt.config.js` file to include the script. We're also going to set some healthy defaults to ensure that we only load the script once and only on the product server.
+Let us update the `nuxt.config.js` file to include the script. We're also going to set some healthy defaults to ensure that we only load the script once and only on the production server.
 
 ```js
 export default {
